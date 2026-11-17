@@ -1,0 +1,324 @@
+{
+  "precision": 57.58,
+  "recall": 54.53,
+  "f1": 56.01,
+  "total_gold": 1115,
+  "total_pred": 1056,
+  "true_positives": 608,
+  "macro_f1": 37.46,
+  "per_class": {
+    "positive": {
+      "precision": 57.91,
+      "recall": 61.1,
+      "f1": 59.46,
+      "tp": 454,
+      "n_pred": 784,
+      "n_gold": 743
+    },
+    "negative": {
+      "precision": 56.62,
+      "recall": 49.68,
+      "f1": 52.92,
+      "tp": 154,
+      "n_pred": 272,
+      "n_gold": 310
+    },
+    "neutral": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "tp": 0,
+      "n_pred": 0,
+      "n_gold": 62
+    }
+  },
+  "aspect_only": {
+    "precision": 66.95,
+    "recall": 64.74,
+    "f1": 65.83,
+    "tp": 707,
+    "n_pred": 1056,
+    "n_gold": 1092
+  },
+  "polarity_acc_on_matched_aspects": 84.09,
+  "n_matched_aspects": 723,
+  "polarity_confusion(gold->pred)": {
+    "positive": {
+      "positive": 454,
+      "negative": 26,
+      "neutral": 0
+    },
+    "negative": {
+      "positive": 50,
+      "negative": 154,
+      "neutral": 0
+    },
+    "neutral": {
+      "positive": 19,
+      "negative": 20,
+      "neutral": 0
+    }
+  },
+  "explicit_only": {
+    "precision": 57.52,
+    "recall": 53.98,
+    "f1": 55.69,
+    "tp": 482,
+    "n_pred": 838,
+    "n_gold": 893
+  },
+  "null_only": {
+    "precision": 57.8,
+    "recall": 56.76,
+    "f1": 57.27,
+    "tp": 126,
+    "n_pred": 218,
+    "n_gold": 222
+  },
+  "n_sentences": 950,
+  "per_domain": {
+    "hotel": {
+      "precision": 39.89,
+      "recall": 48.3,
+      "f1": 43.69,
+      "total_gold": 294,
+      "total_pred": 356,
+      "true_positives": 142,
+      "macro_f1": 26.26,
+      "per_class": {
+        "positive": {
+          "precision": 41.98,
+          "recall": 56.42,
+          "f1": 48.14,
+          "tp": 123,
+          "n_pred": 293,
+          "n_gold": 218
+        },
+        "negative": {
+          "precision": 30.16,
+          "recall": 31.15,
+          "f1": 30.65,
+          "tp": 19,
+          "n_pred": 63,
+          "n_gold": 61
+        },
+        "neutral": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "n_pred": 0,
+          "n_gold": 15
+        }
+      },
+      "aspect_only": {
+        "precision": 45.22,
+        "recall": 56.49,
+        "f1": 50.23,
+        "tp": 161,
+        "n_pred": 356,
+        "n_gold": 285
+      },
+      "polarity_acc_on_matched_aspects": 86.06,
+      "n_matched_aspects": 165,
+      "polarity_confusion(gold->pred)": {
+        "positive": {
+          "positive": 123,
+          "negative": 7,
+          "neutral": 0
+        },
+        "negative": {
+          "positive": 11,
+          "negative": 19,
+          "neutral": 0
+        },
+        "neutral": {
+          "positive": 2,
+          "negative": 3,
+          "neutral": 0
+        }
+      },
+      "explicit_only": {
+        "precision": 41.09,
+        "recall": 48.29,
+        "f1": 44.4,
+        "tp": 113,
+        "n_pred": 275,
+        "n_gold": 234
+      },
+      "null_only": {
+        "precision": 35.8,
+        "recall": 48.33,
+        "f1": 41.13,
+        "tp": 29,
+        "n_pred": 81,
+        "n_gold": 60
+      },
+      "n_sentences": 308
+    },
+    "laptop": {
+      "precision": 66.18,
+      "recall": 58.21,
+      "f1": 61.94,
+      "total_gold": 390,
+      "total_pred": 343,
+      "true_positives": 227,
+      "macro_f1": 42.23,
+      "per_class": {
+        "positive": {
+          "precision": 67.71,
+          "recall": 63.71,
+          "f1": 65.65,
+          "tp": 151,
+          "n_pred": 223,
+          "n_gold": 237
+        },
+        "negative": {
+          "precision": 63.33,
+          "recall": 58.91,
+          "f1": 61.04,
+          "tp": 76,
+          "n_pred": 120,
+          "n_gold": 129
+        },
+        "neutral": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "n_pred": 0,
+          "n_gold": 24
+        }
+      },
+      "aspect_only": {
+        "precision": 77.26,
+        "recall": 69.55,
+        "f1": 73.2,
+        "tp": 265,
+        "n_pred": 343,
+        "n_gold": 381
+      },
+      "polarity_acc_on_matched_aspects": 83.46,
+      "n_matched_aspects": 272,
+      "polarity_confusion(gold->pred)": {
+        "positive": {
+          "positive": 151,
+          "negative": 9,
+          "neutral": 0
+        },
+        "negative": {
+          "positive": 16,
+          "negative": 76,
+          "neutral": 0
+        },
+        "neutral": {
+          "positive": 8,
+          "negative": 12,
+          "neutral": 0
+        }
+      },
+      "explicit_only": {
+        "precision": 67.03,
+        "recall": 58.36,
+        "f1": 62.39,
+        "tp": 185,
+        "n_pred": 276,
+        "n_gold": 317
+      },
+      "null_only": {
+        "precision": 62.69,
+        "recall": 57.53,
+        "f1": 60.0,
+        "tp": 42,
+        "n_pred": 67,
+        "n_gold": 73
+      },
+      "n_sentences": 326
+    },
+    "restaurant": {
+      "precision": 66.95,
+      "recall": 55.45,
+      "f1": 60.66,
+      "total_gold": 431,
+      "total_pred": 357,
+      "true_positives": 239,
+      "macro_f1": 40.4,
+      "per_class": {
+        "positive": {
+          "precision": 67.16,
+          "recall": 62.5,
+          "f1": 64.75,
+          "tp": 180,
+          "n_pred": 268,
+          "n_gold": 288
+        },
+        "negative": {
+          "precision": 66.29,
+          "recall": 49.17,
+          "f1": 56.46,
+          "tp": 59,
+          "n_pred": 89,
+          "n_gold": 120
+        },
+        "neutral": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "n_pred": 0,
+          "n_gold": 23
+        }
+      },
+      "aspect_only": {
+        "precision": 78.71,
+        "recall": 65.96,
+        "f1": 71.78,
+        "tp": 281,
+        "n_pred": 357,
+        "n_gold": 426
+      },
+      "polarity_acc_on_matched_aspects": 83.57,
+      "n_matched_aspects": 286,
+      "polarity_confusion(gold->pred)": {
+        "positive": {
+          "positive": 180,
+          "negative": 10,
+          "neutral": 0
+        },
+        "negative": {
+          "positive": 23,
+          "negative": 59,
+          "neutral": 0
+        },
+        "neutral": {
+          "positive": 9,
+          "negative": 5,
+          "neutral": 0
+        }
+      },
+      "explicit_only": {
+        "precision": 64.11,
+        "recall": 53.8,
+        "f1": 58.51,
+        "tp": 184,
+        "n_pred": 287,
+        "n_gold": 342
+      },
+      "null_only": {
+        "precision": 78.57,
+        "recall": 61.8,
+        "f1": 69.18,
+        "tp": 55,
+        "n_pred": 70,
+        "n_gold": 89
+      },
+      "n_sentences": 316
+    }
+  },
+  "meta": {
+    "model_path": "checkpoints/best_model",
+    "data_dir": "data/multi_domain",
+    "split": "dev",
+    "num_beams": 1
+  }
+}

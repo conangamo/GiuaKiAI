@@ -1,0 +1,134 @@
+{
+  "train": {
+    "per_domain": {
+      "hotel": {
+        "num_sentences": 1255,
+        "num_triplets": 1630,
+        "num_unique_aspects": 221,
+        "polarity_distribution": {
+          "positive": 1335,
+          "negative": 253,
+          "neutral": 42
+        }
+      },
+      "laptop": {
+        "num_sentences": 1264,
+        "num_triplets": 1758,
+        "num_unique_aspects": 409,
+        "polarity_distribution": {
+          "positive": 1108,
+          "negative": 539,
+          "neutral": 111
+        }
+      },
+      "restaurant": {
+        "num_sentences": 1264,
+        "num_triplets": 1989,
+        "num_unique_aspects": 549,
+        "polarity_distribution": {
+          "positive": 1369,
+          "neutral": 62,
+          "negative": 558
+        }
+      }
+    },
+    "combined": {
+      "num_sentences": 3783,
+      "num_triplets": 5377,
+      "num_unique_aspects": 1157,
+      "polarity_distribution": {
+        "positive": 3812,
+        "negative": 1350,
+        "neutral": 215
+      }
+    }
+  },
+  "dev": {
+    "per_domain": {
+      "hotel": {
+        "num_sentences": 308,
+        "num_triplets": 354,
+        "num_unique_aspects": 76,
+        "polarity_distribution": {
+          "positive": 271,
+          "negative": 67,
+          "neutral": 16
+        }
+      },
+      "laptop": {
+        "num_sentences": 326,
+        "num_triplets": 440,
+        "num_unique_aspects": 156,
+        "polarity_distribution": {
+          "positive": 279,
+          "neutral": 24,
+          "negative": 137
+        }
+      },
+      "restaurant": {
+        "num_sentences": 316,
+        "num_triplets": 507,
+        "num_unique_aspects": 183,
+        "polarity_distribution": {
+          "negative": 143,
+          "positive": 341,
+          "neutral": 23
+        }
+      }
+    },
+    "combined": {
+      "num_sentences": 950,
+      "num_triplets": 1301,
+      "num_unique_aspects": 405,
+      "polarity_distribution": {
+        "negative": 347,
+        "positive": 891,
+        "neutral": 63
+      }
+    }
+  },
+  "test": {
+    "per_domain": {
+      "hotel": {
+        "num_sentences": 584,
+        "num_triplets": 975,
+        "num_unique_aspects": 146,
+        "polarity_distribution": {
+          "positive": 824,
+          "negative": 132,
+          "neutral": 19
+        }
+      },
+      "laptop": {
+        "num_sentences": 532,
+        "num_triplets": 757,
+        "num_unique_aspects": 223,
+        "polarity_distribution": {
+          "negative": 245,
+          "positive": 470,
+          "neutral": 42
+        }
+      },
+      "restaurant": {
+        "num_sentences": 544,
+        "num_triplets": 799,
+        "num_unique_aspects": 263,
+        "polarity_distribution": {
+          "negative": 176,
+          "positive": 583,
+          "neutral": 40
+        }
+      }
+    },
+    "combined": {
+      "num_sentences": 1660,
+      "num_triplets": 2531,
+      "num_unique_aspects": 615,
+      "polarity_distribution": {
+        "positive": 1877,
+        "negative": 553,
+        "neutral": 101
+      }
+    }
+  }
+}

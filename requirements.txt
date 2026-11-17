@@ -1,0 +1,19 @@
+# Python 3.11; PyTorch CUDA 12.4 (GTX 1650)
+--extra-index-url https://download.pytorch.org/whl/cu124
+torch==2.6.0+cu124
+
+# Pipeline mT5/UABSA
+transformers==5.23.0
+sentencepiece==0.2.3
+# Do not pin NumPy to a platform-specific wheel; pip resolves a compatible build.
+numpy>=1.24,<3
+tqdm==4.70.1
+editdistance==0.8.1
+
+# Streamlit dashboard
+pandas==3.1.1
+streamlit==1.67.0
+plotly==7.1.0
+
+# Regenerate figures for the report slides
+matplotlib==3.11.2

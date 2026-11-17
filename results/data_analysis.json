@@ -1,0 +1,245 @@
+{
+  "per_domain": {
+    "hotel": {
+      "train": {
+        "sentences": 1255,
+        "sentences_without_aspect": 298,
+        "triplets": 1630,
+        "unique_pairs_after_dedup": 1317,
+        "triplet_polarity": {
+          "positive": 1335,
+          "negative": 253,
+          "neutral": 42
+        },
+        "pair_polarity": {
+          "positive": 1043,
+          "negative": 232,
+          "neutral": 42
+        },
+        "unique_aspect_terms": 221,
+        "null_aspect_triplets": 381,
+        "aspects_with_comma_or_semicolon": 0
+      },
+      "dev": {
+        "sentences": 308,
+        "sentences_without_aspect": 120,
+        "triplets": 354,
+        "unique_pairs_after_dedup": 294,
+        "triplet_polarity": {
+          "positive": 271,
+          "negative": 67,
+          "neutral": 16
+        },
+        "pair_polarity": {
+          "positive": 218,
+          "negative": 61,
+          "neutral": 15
+        },
+        "unique_aspect_terms": 76,
+        "null_aspect_triplets": 74,
+        "aspects_with_comma_or_semicolon": 0
+      },
+      "test": {
+        "sentences": 584,
+        "sentences_without_aspect": 0,
+        "triplets": 975,
+        "unique_pairs_after_dedup": 786,
+        "triplet_polarity": {
+          "positive": 824,
+          "negative": 132,
+          "neutral": 19
+        },
+        "pair_polarity": {
+          "positive": 652,
+          "negative": 116,
+          "neutral": 18
+        },
+        "unique_aspect_terms": 146,
+        "null_aspect_triplets": 261,
+        "aspects_with_comma_or_semicolon": 0
+      }
+    },
+    "laptop": {
+      "train": {
+        "sentences": 1264,
+        "sentences_without_aspect": 0,
+        "triplets": 1758,
+        "unique_pairs_after_dedup": 1536,
+        "triplet_polarity": {
+          "positive": 1108,
+          "negative": 539,
+          "neutral": 111
+        },
+        "pair_polarity": {
+          "positive": 919,
+          "negative": 508,
+          "neutral": 109
+        },
+        "unique_aspect_terms": 409,
+        "null_aspect_triplets": 392,
+        "aspects_with_comma_or_semicolon": 0
+      },
+      "dev": {
+        "sentences": 326,
+        "sentences_without_aspect": 0,
+        "triplets": 440,
+        "unique_pairs_after_dedup": 390,
+        "triplet_polarity": {
+          "positive": 279,
+          "neutral": 24,
+          "negative": 137
+        },
+        "pair_polarity": {
+          "positive": 237,
+          "neutral": 24,
+          "negative": 129
+        },
+        "unique_aspect_terms": 156,
+        "null_aspect_triplets": 88,
+        "aspects_with_comma_or_semicolon": 0
+      },
+      "test": {
+        "sentences": 532,
+        "sentences_without_aspect": 0,
+        "triplets": 757,
+        "unique_pairs_after_dedup": 657,
+        "triplet_polarity": {
+          "negative": 245,
+          "positive": 470,
+          "neutral": 42
+        },
+        "pair_polarity": {
+          "negative": 231,
+          "positive": 386,
+          "neutral": 40
+        },
+        "unique_aspect_terms": 223,
+        "null_aspect_triplets": 147,
+        "aspects_with_comma_or_semicolon": 0
+      }
+    },
+    "restaurant": {
+      "train": {
+        "sentences": 1264,
+        "sentences_without_aspect": 0,
+        "triplets": 1989,
+        "unique_pairs_after_dedup": 1729,
+        "triplet_polarity": {
+          "positive": 1369,
+          "neutral": 62,
+          "negative": 558
+        },
+        "pair_polarity": {
+          "positive": 1183,
+          "neutral": 57,
+          "negative": 489
+        },
+        "unique_aspect_terms": 549,
+        "null_aspect_triplets": 446,
+        "aspects_with_comma_or_semicolon": 2
+      },
+      "dev": {
+        "sentences": 316,
+        "sentences_without_aspect": 0,
+        "triplets": 507,
+        "unique_pairs_after_dedup": 431,
+        "triplet_polarity": {
+          "negative": 143,
+          "positive": 341,
+          "neutral": 23
+        },
+        "pair_polarity": {
+          "negative": 120,
+          "positive": 288,
+          "neutral": 23
+        },
+        "unique_aspect_terms": 183,
+        "null_aspect_triplets": 104,
+        "aspects_with_comma_or_semicolon": 0
+      },
+      "test": {
+        "sentences": 544,
+        "sentences_without_aspect": 0,
+        "triplets": 799,
+        "unique_pairs_after_dedup": 742,
+        "triplet_polarity": {
+          "negative": 176,
+          "positive": 583,
+          "neutral": 40
+        },
+        "pair_polarity": {
+          "negative": 164,
+          "positive": 541,
+          "neutral": 37
+        },
+        "unique_aspect_terms": 263,
+        "null_aspect_triplets": 179,
+        "aspects_with_comma_or_semicolon": 1
+      }
+    }
+  },
+  "combined": {
+    "train": {
+      "sentences": 3783,
+      "sentences_without_aspect": 298,
+      "triplets": 5377,
+      "unique_pairs_after_dedup": 4582,
+      "triplet_polarity": {
+        "positive": 3812,
+        "negative": 1350,
+        "neutral": 215
+      },
+      "pair_polarity": {
+        "positive": 3145,
+        "negative": 1229,
+        "neutral": 208
+      },
+      "unique_aspect_terms": 1157,
+      "null_aspect_triplets": 1219,
+      "aspects_with_comma_or_semicolon": 2
+    },
+    "dev": {
+      "sentences": 950,
+      "sentences_without_aspect": 120,
+      "triplets": 1301,
+      "unique_pairs_after_dedup": 1115,
+      "triplet_polarity": {
+        "positive": 891,
+        "negative": 347,
+        "neutral": 63
+      },
+      "pair_polarity": {
+        "positive": 743,
+        "negative": 310,
+        "neutral": 62
+      },
+      "unique_aspect_terms": 405,
+      "null_aspect_triplets": 266,
+      "aspects_with_comma_or_semicolon": 0
+    },
+    "test": {
+      "sentences": 1660,
+      "sentences_without_aspect": 0,
+      "triplets": 2531,
+      "unique_pairs_after_dedup": 2185,
+      "triplet_polarity": {
+        "positive": 1877,
+        "negative": 553,
+        "neutral": 101
+      },
+      "pair_polarity": {
+        "positive": 1579,
+        "negative": 511,
+        "neutral": 95
+      },
+      "unique_aspect_terms": 615,
+      "null_aspect_triplets": 587,
+      "aspects_with_comma_or_semicolon": 1
+    }
+  },
+  "unique_aspect_terms_all_splits": 1767,
+  "sentence_overlap_with_train": {
+    "dev": 3,
+    "test": 6
+  }
+}

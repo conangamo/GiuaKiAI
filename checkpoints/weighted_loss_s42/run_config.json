@@ -1,0 +1,33 @@
+{
+  "model_name_or_path": "google/mt5-small",
+  "data_dir": "data/multi_domain",
+  "task": "uabsa",
+  "lang": "en",
+  "epochs": 3,
+  "batch_size": 4,
+  "eval_batch_size": 16,
+  "gradient_accumulation_steps": 4,
+  "lr": 0.0003,
+  "max_seq_len": 128,
+  "max_target_len": 64,
+  "max_eval_samples": 0,
+  "seed": 42,
+  "output_dir": "checkpoints/weighted_loss_s42",
+  "select_metric": "macro_f1",
+  "fp16": false,
+  "imbalance": "weighted_loss",
+  "power": 0.5,
+  "dry_run": false,
+  "train_polarity_counts": {
+    "positive": 3145,
+    "negative": 1229,
+    "neutral": 208,
+    "conflict": 1
+  },
+  "class_weights": {
+    "positive": 1.0,
+    "negative": 1.5996846719381443,
+    "neutral": 3.8884691470670445
+  },
+  "train_samples_per_epoch": 3780
+}
