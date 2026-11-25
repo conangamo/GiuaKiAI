@@ -180,20 +180,21 @@
   * Tiến trình hội tụ & kết quả Test: ![Tiến trình hội tụ](file:///f:/laptrinhPython/chuyenDe/github/ABSA/docs/picture/slide6_training_metrics.png)
   * Biểu đồ đối sánh khắc phục mất cân bằng: ![Khắc phục mất cân bằng](file:///f:/laptrinhPython/chuyenDe/github/ABSA/docs/picture/slide6_imbalance_comparison.png)
   * Minh họa phân tích lỗi: ![Phân tích lỗi](file:///f:/laptrinhPython/chuyenDe/github/ABSA/docs/picture/slide6_error_analysis.png)
-* **1. Bảng Kết quả Thực nghiệm Đối sánh (Trên 950 câu Dev & 1,660 câu Test - 2,185 cặp chuẩn):**
+* **1. Bảng Kết quả Thực nghiệm Đối sánh trên Tập Test Tiếng Anh Đa Miền (1,660 câu - 2,185 cặp chuẩn):**
 
-| Cấu hình mô hình | Tập dữ liệu | Micro-P (%) | Micro-R (%) | **Micro-F1 (%)** | **Macro-F1 (%)** | F1 `Positive` | F1 `Negative` | **F1 `Neutral`** | Aspect F1 | Polarity Acc* |
-| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| **Baseline (Standard CE)** | Dev | 57.58 | 54.53 | **56.01** | 37.46 | 59.46 | 52.92 | **0.00** *(0/62)* | 65.83 | 84.09% |
-| **Weighted Loss ($w_{\text{neu}}=3.89$)** | Dev | 55.48 | 50.85 | 53.07 | **41.56** (+4.10) | 58.65 | 44.97 | **21.05** *(14/62)* | 64.58 | 81.70% |
-| **Baseline (Standard CE)** | **Test** | **66.33** | **56.34** | **60.93** | 39.09 | **65.91** | **51.36** | **0.00** *(0/95)* | **70.77** | **84.96%** |
-| **Weighted Loss ($w_{\text{neu}}=3.89$)** | **Test** | 61.54 | 50.39 | 55.41 | **40.02** (+0.93) | 61.97 | 41.27 | **16.83** *(17/95)* | 67.89 | 80.54% |
+| Cấu hình mô hình | Micro-P (%) | Micro-R (%) | **Micro-F1 (%)** | **Macro-F1 (%)** | F1 `Positive` | F1 `Negative` | **F1 `Neutral`** | Aspect F1 | Polarity Acc* |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| **Baseline 3ep (CE chuẩn)** | 66.33 | 56.34 | 60.93 | 39.09 | 65.91 | 51.36 | **0.00** *(0/95)* | 70.77 | 84.96% |
+| **Baseline 8ep (Hội tụ)** | 66.46 | 62.75 | 64.55 | 46.43 | 68.48 | **57.96** | 12.84 *(7/95)* | **73.07** | 87.55% |
+| **Weighted Loss (`p=0.3`, 8ep — Tốt nhất)** | **66.54** | **62.79** | **64.61** | **52.23** | **68.84** | 57.35 | **30.51** *(27/95)* | 73.05 | **87.72%** |
 
-*(Chú thích *: Độ chính xác phân loại cảm xúc tính trên các khía cạnh đã trích xuất đúng ranh giới từ).*
+*(Chú thích *: Độ chính xác phân loại cảm xúc tính trên các khía cạnh đã trích xuất đúng ranh giới từ. Trên Dev 950 câu, `wl_p03_e8_s42` đạt Micro-F1 = **64.41%**, Macro-F1 = **54.56%**, Neutral F1 = **36.04%**).*
 
-* **2. Phân rã Hiệu năng theo từng Miền trên Tập Test (1,660 câu):**
-  * **Baseline:** Micro-F1 đồng đều giữa 3 miền (**Hotel: 63.02%**, **Laptop: 62.99%**, **Restaurant: 56.76%**), nhưng **Neutral F1 = 0.00% ở cả 3 miền** (sinh đúng 0 dự đoán neutral).
-  * **Weighted Loss:** Khôi phục thành công lớp `Neutral` trên **cả 3 miền**: **Hotel Neutral F1 = 17.65%**, **Laptop Neutral F1 = 15.24%**, **Restaurant Neutral F1 = 19.05%** (sinh 107 dự đoán neutral trên Test, bắt đúng 17/95 cặp chuẩn, Recall Neutral đạt **17.89%**).
+* **2. Phân rã Hiệu năng theo từng Miền trên Tập Test (1,660 câu — `wl_p03_e8_s42`):**
+  * **Hotel (584 câu):** Micro-F1 = **65.14%** | Macro-F1 = **47.24%** | Neutral F1 = **23.53%** *(Baseline 3ep: 0.00%)*.
+  * **Laptop (532 câu):** Micro-F1 = **65.12%** | Macro-F1 = **55.01%** | Neutral F1 = **31.46%** *(Baseline 3ep: 0.00%)*.
+  * **Restaurant (544 câu):** Micro-F1 = **63.57%** | Macro-F1 = **51.84%** | Neutral F1 = **33.33%** *(Baseline 3ep: 0.00%)*.
+  * 👉 **Đột phá không đánh đổi:** Khi huấn luyện hội tụ 8 epoch kết hợp Weighted Loss nhẹ (`power=0.3`, $w_{\text{pos}}=1.00, w_{\text{neg}}=1.33, w_{\text{neu}}=2.26$), mô hình **tăng đồng thời cả Micro-F1 (64.61%) lẫn Macro-F1 (52.23%, +13.14% so với baseline ban đầu)**!
 * **3. Phân tích Lỗi Định tính Thực tế (Qualitative Error Analysis):**
   * **Ca 1 (Khớp tuyệt đối 100%):** *"it works well as a tablet ."* $\rightarrow$ Gold: `(tablet, positive)` | Pred: `(tablet, positive)`.
   * **Ca 2 (Khôi phục Neutral thành công - Hotel #388):** *"Rooms are on the basic side , but they have everything that you ' d need ."* $\rightarrow$ Gold: `(Rooms, neutral)` | Baseline đoán sai thành `(Rooms, positive)` | **Weighted Loss đoán đúng `(Rooms, neutral)`**.

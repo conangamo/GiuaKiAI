@@ -1,4 +1,5 @@
 import os
+import json
 import matplotlib.pyplot as plt
 from matplotlib.patches import FancyBboxPatch
 import numpy as np
@@ -10,7 +11,13 @@ plt.rcParams['axes.edgecolor'] = '#CCCCCC'
 plt.rcParams['axes.linewidth'] = 0.8
 
 OUTPUT_DIR = os.path.dirname(os.path.abspath(__file__))
+REPO_ROOT = os.path.abspath(os.path.join(OUTPUT_DIR, "..", ".."))
 os.makedirs(OUTPUT_DIR, exist_ok=True)
+
+
+def _load_json(rel_path):
+    with open(os.path.join(REPO_ROOT, rel_path), "r", encoding="utf-8") as f:
+        return json.load(f)
 
 
 # -------------------------------------------------------------
@@ -246,58 +253,78 @@ def create_slide3_architecture():
 
 
 # -------------------------------------------------------------
-# CHART 5: Slide 6 - Training Loss & F1 Curve + Test Metrics
+# CHART 5: Slide 6 - Training Loss & F1 Curve (8 Epochs) + Test Metrics
 # -------------------------------------------------------------
 def create_slide6_training_metrics():
-    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(11.5, 4.9), dpi=300)
+    hist_wl = _load_json("checkpoints/wl_p03_e8_s42/history.json")
+    test_legacy = _load_json("results/legacy_baseline_test.json")
+    test_base8 = _load_json("results/baseline_e8_s42_test.json")
+    test_wl8 = _load_json("results/wl_p03_e8_s42_test.json")
 
-    # Subplot 1: Convergence across Epochs (True Train Loss, Val Loss & Dev F1)
-    epochs = [1, 2, 3]
-    base_train_loss = [6.5130, 0.7349, 0.5816]
-    wl_val_loss = [1.3320, 0.6227, 0.5454]
-    wl_macro_f1 = [9.45, 36.43, 41.56]
-    wl_micro_f1 = [23.24, 47.55, 53.07]
+    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(11.8, 4.9), dpi=300)
+
+    # Subplot 1: 8-Epoch Convergence (True Train Loss, Val Loss & Dev Micro/Macro F1)
+    epochs = [r["epoch"] for r in hist_wl]
+    train_loss = [r["train_loss"] for r in hist_wl]
+    val_loss = [r["val_loss"] for r in hist_wl]
+    dev_micro = [r["dev_f1"] for r in hist_wl]
+    dev_macro = [r["dev_macro_f1"] for r in hist_wl]
 
     color1 = '#C62828'
     ax1.set_xlabel('Epoch', fontsize=11, fontweight='bold')
     ax1.set_ylabel('Cross-Entropy Loss', color=color1, fontsize=11, fontweight='bold')
-    l1 = ax1.plot(epochs, base_train_loss, color='#E53935', marker='o', linestyle='--', lw=2, label='Train Loss (Baseline)')
-    l2 = ax1.plot(epochs, wl_val_loss, color='#8E24AA', marker='d', lw=2.5, label='Val Loss (Teacher-Forcing)')
+    l1 = ax1.plot(epochs, train_loss, color='#E53935', marker='o', linestyle='--', lw=1.8, label='Train Loss')
+    l2 = ax1.plot(epochs, val_loss, color='#8E24AA', marker='d', lw=2.3, label='Val Loss (Teacher-Forcing)')
     ax1.tick_params(axis='y', labelcolor=color1)
     ax1.set_xticks(epochs)
+    ax1.set_ylim(0, max(val_loss) * 1.6)
     ax1.grid(True, linestyle=':', alpha=0.6)
 
     ax1_twin = ax1.twinx()
     color2 = '#1565C0'
     ax1_twin.set_ylabel('Điểm F1 trên toàn bộ Dev 950 câu (%)', color=color2, fontsize=10.5, fontweight='bold')
-    l3 = ax1_twin.plot(epochs, wl_micro_f1, color='#1E88E5', marker='s', lw=2.2, label='Dev Micro-F1 (%)')
-    l4 = ax1_twin.plot(epochs, wl_macro_f1, color='#2E7D32', marker='^', lw=2.5, label='Dev Macro-F1 (%)')
+    l3 = ax1_twin.plot(epochs, dev_micro, color='#1E88E5', marker='s', lw=2.2, label='Dev Micro-F1 (%)')
+    l4 = ax1_twin.plot(epochs, dev_macro, color='#2E7D32', marker='^', lw=2.5, label='Dev Macro-F1 (%)')
     ax1_twin.tick_params(axis='y', labelcolor=color2)
-    ax1_twin.set_ylim(0, 65)
+    ax1_twin.set_ylim(0, 75)
 
     lines = l1 + l2 + l3 + l4
     labels = [l.get_label() for l in lines]
     ax1.legend(lines, labels, loc='center right', fontsize=8.5, frameon=True, facecolor='white')
-    ax1.set_title('Tiến Trình Hội Tụ Qua 3 Epoch', fontsize=12, fontweight='bold', pad=12, color='#1A237E')
+    ax1.set_title('Tiến Trình Hội Tụ Qua 8 Epoch (Weighted Loss p=0.3)', fontsize=11.5, fontweight='bold', pad=12, color='#1A237E')
 
-    # Subplot 2: Test Set Metrics Breakdown (Baseline on 1,660 sentences)
-    metrics = ['Trích xuất\nAspect (F1)', 'Độ chính xác\nCảm xúc*', 'Micro-F1\n(Cặp đầy đủ)', 'Macro-F1\n(Baseline)', 'Macro-F1\n(Weighted Loss)']
-    values = [70.77, 84.96, 60.93, 39.09, 40.02]
-    bar_colors = ['#0288D1', '#00897B', '#1976D2', '#E53935', '#2E7D32']
+    # Subplot 2: Test Set Metrics Breakdown (Best Model: wl_p03_e8_s42 on 1,660 sentences)
+    metrics = [
+        'Trích xuất\nAspect (F1)',
+        'Độ chính xác\nCảm xúc*',
+        'Micro-F1\n(WL 8ep)',
+        'Macro-F1\n(Base 3ep)',
+        'Macro-F1\n(Base 8ep)',
+        'Macro-F1\n(WL 8ep)',
+    ]
+    values = [
+        test_wl8["aspect_only"]["f1"],
+        test_wl8["polarity_acc_on_matched_aspects"],
+        test_wl8["f1"],
+        test_legacy["macro_f1"],
+        test_base8["macro_f1"],
+        test_wl8["macro_f1"],
+    ]
+    bar_colors = ['#0288D1', '#00897B', '#1976D2', '#E53935', '#FB8C00', '#2E7D32']
 
-    bars = ax2.bar(metrics, values, color=bar_colors, width=0.55, edgecolor='black', lw=0.9)
+    bars = ax2.bar(metrics, values, color=bar_colors, width=0.58, edgecolor='black', lw=0.9)
     ax2.set_ylabel('Phần trăm (%)', fontsize=11, fontweight='bold')
-    ax2.set_ylim(0, 96)
+    ax2.set_ylim(0, 98)
     ax2.set_title('ĐÁNH GIÁ TOÀN DIỆN TẬP TEST ĐA MIỀN\n(1,660 câu - 2,185 cặp khía cạnh chuẩn)', fontsize=11.5, fontweight='bold', pad=12, color='#1A237E')
     ax2.grid(axis='y', linestyle=':', alpha=0.6)
-    ax2.tick_params(axis='x', labelsize=9)
+    ax2.tick_params(axis='x', labelsize=8.5)
 
     for bar in bars:
         h = bar.get_height()
         ax2.annotate(f'{h:.2f}%',
                      xy=(bar.get_x() + bar.get_width() / 2, h),
                      xytext=(0, 4), textcoords="offset points",
-                     ha='center', va='bottom', fontsize=9.5, fontweight='bold')
+                     ha='center', va='bottom', fontsize=8.8, fontweight='bold')
 
     plt.tight_layout()
     out_path = os.path.join(OUTPUT_DIR, "slide6_training_metrics.png")
@@ -352,64 +379,76 @@ def create_slide6_error_analysis():
 
 
 # -------------------------------------------------------------
-# CHART 7: Slide 6 - Imbalance Mitigation Comparison
+# CHART 7: Slide 6 - Imbalance Mitigation Comparison (from real JSON)
 # -------------------------------------------------------------
 def create_slide6_imbalance_comparison():
-    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(11.5, 4.9), dpi=300)
+    test_legacy = _load_json("results/legacy_baseline_test.json")
+    test_base8 = _load_json("results/baseline_e8_s42_test.json")
+    test_wl8 = _load_json("results/wl_p03_e8_s42_test.json")
 
-    # Subplot 1: Overall Macro-F1 & Neutral F1
-    categories = ['Dev\nMacro-F1', 'Test\nMacro-F1', 'Dev\nNeutral F1', 'Test\nNeutral F1', 'Test\nNeutral Recall']
-    baseline_scores = [37.46, 39.09, 0.00, 0.00, 0.00]
-    weighted_scores = [41.56, 40.02, 21.05, 16.83, 17.89]
+    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(12.0, 5.0), dpi=300)
+
+    # Subplot 1: Test Micro-F1, Macro-F1, Positive, Negative, Neutral F1
+    categories = ['Micro-F1', 'Macro-F1', 'Positive\nF1', 'Negative\nF1', 'Neutral\nF1']
+    s_leg = [test_legacy["f1"], test_legacy["macro_f1"],
+             test_legacy["per_class"]["positive"]["f1"],
+             test_legacy["per_class"]["negative"]["f1"],
+             test_legacy["per_class"]["neutral"]["f1"]]
+    s_b8 = [test_base8["f1"], test_base8["macro_f1"],
+            test_base8["per_class"]["positive"]["f1"],
+            test_base8["per_class"]["negative"]["f1"],
+            test_base8["per_class"]["neutral"]["f1"]]
+    s_wl8 = [test_wl8["f1"], test_wl8["macro_f1"],
+             test_wl8["per_class"]["positive"]["f1"],
+             test_wl8["per_class"]["negative"]["f1"],
+             test_wl8["per_class"]["neutral"]["f1"]]
 
     x = np.arange(len(categories))
-    width = 0.36
+    width = 0.26
 
-    rects1 = ax1.bar(x - width/2, baseline_scores, width, label='Baseline (CE chuẩn - Sụp đổ Neutral)', color='#9E9E9E', edgecolor='black')
-    rects2 = ax1.bar(x + width/2, weighted_scores, width, label='Weighted Loss (w_neu=3.89 - Bước 2)', color='#2E7D32', edgecolor='black')
+    r1 = ax1.bar(x - width, s_leg, width, label='Baseline 3ep (CE chuẩn)', color='#BDBDBD', edgecolor='black', lw=0.7)
+    r2 = ax1.bar(x, s_b8, width, label='Baseline 8ep (Hội tụ)', color='#1976D2', edgecolor='black', lw=0.7)
+    r3 = ax1.bar(x + width, s_wl8, width, label='Weighted Loss p=0.3, 8ep (Tốt nhất)', color='#2E7D32', edgecolor='black', lw=0.7)
 
-    ax1.set_ylabel('Điểm số (%)', fontsize=11, fontweight='bold')
-    ax1.set_title('HIỆU QUẢ KHẮC PHỤC SỤP ĐỔ LỚP TRUNG TÍNH', fontsize=12, fontweight='bold', pad=12, color='#1A237E')
+    ax1.set_ylabel('Điểm F1 trên tập Test (%)', fontsize=11, fontweight='bold')
+    ax1.set_title('ĐỐI SÁNH HIỆU NĂNG TẬP TEST (1,660 CÂU)', fontsize=12, fontweight='bold', pad=12, color='#1A237E')
     ax1.set_xticks(x)
     ax1.set_xticklabels(categories, fontsize=9.5, fontweight='bold')
-    ax1.set_ylim(0, 50)
-    ax1.legend(frameon=True, fontsize=9.5)
+    ax1.set_ylim(0, 90)
+    ax1.legend(frameon=True, fontsize=8.8, loc='upper right')
     ax1.grid(axis='y', linestyle=':', alpha=0.6)
 
-    for r in rects1:
-        h = r.get_height()
-        ax1.annotate(f'{h:.2f}%', xy=(r.get_x() + r.get_width() / 2, h), xytext=(-3, 3),
-                     textcoords="offset points", ha='center', va='bottom', fontsize=8.0, fontweight='bold', color='#424242')
-    for r in rects2:
-        h = r.get_height()
-        ax1.annotate(f'{h:.2f}%', xy=(r.get_x() + r.get_width() / 2, h), xytext=(3, 4),
-                     textcoords="offset points", ha='center', va='bottom', fontsize=8.0, fontweight='bold', color='#1B5E20')
+    for rects, col in [(r1, '#616161'), (r2, '#0D47A1'), (r3, '#1B5E20')]:
+        for r in rects:
+            h = r.get_height()
+            ax1.annotate(f'{h:.1f}', xy=(r.get_x() + r.get_width() / 2, h), xytext=(0, 3),
+                         textcoords="offset points", ha='center', va='bottom', fontsize=7.5, fontweight='bold', color=col)
 
     # Subplot 2: Neutral F1 per Domain on Test Set
+    dom_keys = ['hotel', 'laptop', 'restaurant']
     domains = ['Hotel\n(584 câu)', 'Laptop\n(532 câu)', 'Restaurant\n(544 câu)']
-    base_neu = [0.00, 0.00, 0.00]
-    weighted_neu = [17.65, 15.24, 19.05]
+    leg_neu = [test_legacy["per_domain"][d]["per_class"]["neutral"]["f1"] for d in dom_keys]
+    b8_neu = [test_base8["per_domain"][d]["per_class"]["neutral"]["f1"] for d in dom_keys]
+    wl8_neu = [test_wl8["per_domain"][d]["per_class"]["neutral"]["f1"] for d in dom_keys]
 
     xd = np.arange(len(domains))
-    rectsd1 = ax2.bar(xd - width/2, base_neu, width, label='Baseline (0.00% ở cả 3 miền)', color='#E57373', edgecolor='black')
-    rectsd2 = ax2.bar(xd + width/2, weighted_neu, width, label='Weighted Loss (Khôi phục cả 3 miền)', color='#1976D2', edgecolor='black')
+    rd1 = ax2.bar(xd - width, leg_neu, width, label='Baseline 3ep (0.0%)', color='#E57373', edgecolor='black', lw=0.7)
+    rd2 = ax2.bar(xd, b8_neu, width, label='Baseline 8ep', color='#64B5F6', edgecolor='black', lw=0.7)
+    rd3 = ax2.bar(xd + width, wl8_neu, width, label='Weighted Loss p=0.3, 8ep', color='#2E7D32', edgecolor='black', lw=0.7)
 
     ax2.set_ylabel('Neutral F1-Score (%)', fontsize=11, fontweight='bold')
-    ax2.set_title('F1 LỚP NEUTRAL PHÂN RÃ THEO TỪNG MIỀN (TEST)', fontsize=12, fontweight='bold', pad=12, color='#1A237E')
+    ax2.set_title('F1 LỚP NEUTRAL THEO TỪNG MIỀN (TEST)', fontsize=12, fontweight='bold', pad=12, color='#1A237E')
     ax2.set_xticks(xd)
     ax2.set_xticklabels(domains, fontsize=10.5, fontweight='bold')
-    ax2.set_ylim(0, 25)
-    ax2.legend(frameon=True, fontsize=9.5)
+    ax2.set_ylim(0, 42)
+    ax2.legend(frameon=True, fontsize=9)
     ax2.grid(axis='y', linestyle=':', alpha=0.6)
 
-    for r in rectsd1:
-        h = r.get_height()
-        ax2.annotate('0.00%', xy=(r.get_x() + r.get_width() / 2, h), xytext=(0, 3),
-                     textcoords="offset points", ha='center', va='bottom', fontsize=9, fontweight='bold', color='#B71C1C')
-    for r in rectsd2:
-        h = r.get_height()
-        ax2.annotate(f'{h:.2f}%', xy=(r.get_x() + r.get_width() / 2, h), xytext=(0, 3),
-                     textcoords="offset points", ha='center', va='bottom', fontsize=9.5, fontweight='bold', color='#0D47A1')
+    for rects, col in [(rd1, '#B71C1C'), (rd2, '#1565C0'), (rd3, '#1B5E20')]:
+        for r in rects:
+            h = r.get_height()
+            ax2.annotate(f'{h:.1f}%', xy=(r.get_x() + r.get_width() / 2, h), xytext=(0, 3),
+                         textcoords="offset points", ha='center', va='bottom', fontsize=8.5, fontweight='bold', color=col)
 
     plt.tight_layout()
     out_path = os.path.join(OUTPUT_DIR, "slide6_imbalance_comparison.png")

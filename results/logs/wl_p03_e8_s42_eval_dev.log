@@ -1,0 +1,35 @@
+Model: checkpoints\wl_p03_e8_s42\best_model | Data: data/multi_domain (dev) | Device: cuda
+Loading weights:   0%|          | 0/190 [00:00<?, ?it/s]Loading weights: 100%|██████████| 190/190 [00:00<00:00, 38002.75it/s]
+[transformers] The tied weights mapping and config for this model specifies to tie shared.weight to lm_head.weight, but both are present in the checkpoints with different values, so we will NOT tie them. You should update the config with `tie_word_embeddings=False` to silence this warning.
+F:\laptrinhPython\chuyenDe\github\ABSA\src\dataset.py:162: UserWarning: [dev.txt] bị cắt cụt: nguồn=1, đích=0 (max_len=128, max_target_len=64)
+  warnings.warn(
+Evaluating dev:   0%|          | 0/60 [00:00<?, ?it/s]Evaluating dev:   2%|▏         | 1/60 [00:00<00:41,  1.44it/s]Evaluating dev:   3%|▎         | 2/60 [00:01<00:36,  1.61it/s]Evaluating dev:   5%|▌         | 3/60 [00:01<00:27,  2.08it/s]Evaluating dev:   7%|▋         | 4/60 [00:01<00:23,  2.37it/s]Evaluating dev:   8%|▊         | 5/60 [00:02<00:22,  2.48it/s]Evaluating dev:  10%|█         | 6/60 [00:02<00:21,  2.52it/s]Evaluating dev:  12%|█▏        | 7/60 [00:03<00:21,  2.44it/s]Evaluating dev:  13%|█▎        | 8/60 [00:03<00:18,  2.78it/s]Evaluating dev:  15%|█▌        | 9/60 [00:03<00:18,  2.69it/s]Evaluating dev:  17%|█▋        | 10/60 [00:04<00:17,  2.83it/s]Evaluating dev:  18%|█▊        | 11/60 [00:04<00:16,  2.94it/s]Evaluating dev:  20%|██        | 12/60 [00:04<00:18,  2.58it/s]Evaluating dev:  22%|██▏       | 13/60 [00:06<00:28,  1.63it/s]Evaluating dev:  23%|██▎       | 14/60 [00:06<00:27,  1.70it/s]Evaluating dev:  25%|██▌       | 15/60 [00:06<00:21,  2.06it/s]Evaluating dev:  27%|██▋       | 16/60 [00:07<00:18,  2.38it/s]Evaluating dev:  28%|██▊       | 17/60 [00:08<00:27,  1.57it/s]Evaluating dev:  30%|███       | 18/60 [00:09<00:32,  1.30it/s]Evaluating dev:  32%|███▏      | 19/60 [00:09<00:25,  1.63it/s]Evaluating dev:  33%|███▎      | 20/60 [00:09<00:21,  1.87it/s]Evaluating dev:  35%|███▌      | 21/60 [00:11<00:28,  1.39it/s]Evaluating dev:  37%|███▋      | 22/60 [00:11<00:21,  1.75it/s]Evaluating dev:  38%|███▊      | 23/60 [00:12<00:26,  1.38it/s]Evaluating dev:  40%|████      | 24/60 [00:12<00:21,  1.66it/s]Evaluating dev:  42%|████▏     | 25/60 [00:12<00:17,  2.01it/s]Evaluating dev:  43%|████▎     | 26/60 [00:13<00:14,  2.36it/s]Evaluating dev:  45%|████▌     | 27/60 [00:13<00:12,  2.71it/s]Evaluating dev:  47%|████▋     | 28/60 [00:14<00:18,  1.72it/s]Evaluating dev:  48%|████▊     | 29/60 [00:15<00:21,  1.44it/s]Evaluating dev:  50%|█████     | 30/60 [00:15<00:16,  1.79it/s]Evaluating dev:  52%|█████▏    | 31/60 [00:16<00:20,  1.39it/s]Evaluating dev:  53%|█████▎    | 32/60 [00:17<00:17,  1.64it/s]Evaluating dev:  55%|█████▌    | 33/60 [00:17<00:13,  2.04it/s]Evaluating dev:  57%|█████▋    | 34/60 [00:17<00:10,  2.46it/s]Evaluating dev:  58%|█████▊    | 35/60 [00:17<00:08,  2.80it/s]Evaluating dev:  60%|██████    | 36/60 [00:18<00:07,  3.16it/s]Evaluating dev:  62%|██████▏   | 37/60 [00:18<00:07,  3.20it/s]Evaluating dev:  63%|██████▎   | 38/60 [00:18<00:06,  3.39it/s]Evaluating dev:  65%|██████▌   | 39/60 [00:19<00:09,  2.12it/s]Evaluating dev:  67%|██████▋   | 40/60 [00:19<00:08,  2.46it/s]Evaluating dev:  68%|██████▊   | 41/60 [00:20<00:11,  1.62it/s]Evaluating dev:  70%|███████   | 42/60 [00:21<00:09,  1.85it/s]Evaluating dev:  72%|███████▏  | 43/60 [00:21<00:08,  1.97it/s]Evaluating dev:  73%|███████▎  | 44/60 [00:22<00:10,  1.46it/s]Evaluating dev:  75%|███████▌  | 45/60 [00:23<00:08,  1.73it/s]Evaluating dev:  77%|███████▋  | 46/60 [00:23<00:06,  2.12it/s]Evaluating dev:  78%|███████▊  | 47/60 [00:23<00:05,  2.26it/s]Evaluating dev:  80%|████████  | 48/60 [00:24<00:07,  1.53it/s]Evaluating dev:  82%|████████▏ | 49/60 [00:25<00:06,  1.83it/s]Evaluating dev:  83%|████████▎ | 50/60 [00:26<00:07,  1.40it/s]Evaluating dev:  85%|████████▌ | 51/60 [00:27<00:07,  1.17it/s]Evaluating dev:  87%|████████▋ | 52/60 [00:27<00:05,  1.48it/s]Evaluating dev:  88%|████████▊ | 53/60 [00:28<00:05,  1.25it/s]Evaluating dev:  90%|█████████ | 54/60 [00:28<00:03,  1.55it/s]Evaluating dev:  92%|█████████▏| 55/60 [00:29<00:02,  1.91it/s]Evaluating dev:  93%|█████████▎| 56/60 [00:29<00:01,  2.09it/s]Evaluating dev:  95%|█████████▌| 57/60 [00:30<00:01,  1.50it/s]Evaluating dev:  97%|█████████▋| 58/60 [00:31<00:01,  1.60it/s]Evaluating dev:  98%|█████████▊| 59/60 [00:32<00:00,  1.46it/s]Evaluating dev: 100%|██████████| 60/60 [00:32<00:00,  1.80it/s]                                                               ========================================================================
+KẾT QUẢ DEV - wl_p03_e8_s42
+========================================================================
+Số câu: 950 | cặp gold: 1115 | cặp dự đoán: 1071 | đúng: 704
+OVERALL (micro)   P=65.73  R=63.14  F1=64.41   | MACRO-F1 (3 lớp cảm xúc) = 54.56
+Chỉ trích xuất khía cạnh (bỏ qua cảm xúc): P=74.56 R=72.99 F1=73.76
+Độ chính xác cảm xúc khi đã tìm đúng khía cạnh: 86.27% (trên 816 khía cạnh)
+Khía cạnh hiện (không NULL): P=65.94 R=64.39 F1=65.16 (gold=893)
+Khía cạnh ẩn NULL        : P=64.82 R=58.11 F1=61.28 (gold=222)
+------------------------------------------------------------------------
+Lớp cảm xúc  Precision    Recall      F1    Gold    Pred
+positive         68.13     69.04   68.58     743     753
+negative         63.57     55.16   59.07     310     269
+neutral          40.82     32.26   36.04      62      49
+Ma trận nhầm lẫn cảm xúc (hàng = gold, cột = dự đoán; chỉ các khía cạnh đã tìm đúng):
+              positive  negative   neutral
+positive           513        23        13
+negative            41       171         8
+neutral             15        12        20
+------------------------------------------------------------------------
+Miền           Câu       P       R      F1  MacroF1  F1 neu
+hotel          308   58.39   56.80   57.59    44.17   25.00
+laptop         326   66.75   66.41   66.58    58.26   40.82
+restaurant     316   70.03   64.50   67.15    56.68   36.84
+========================================================================
+
+Đã lưu: results\wl_p03_e8_s42_dev.json
+        results\wl_p03_e8_s42_dev_predictions.tsv
+
+--- 0 mẫu dự đoán đầu tiên ---

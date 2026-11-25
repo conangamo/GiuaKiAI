@@ -1,10 +1,16 @@
 import os
 import sys
+import math
 import json
 import time
 import random
 import argparse
 from collections import Counter
+
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+if hasattr(sys.stderr, "reconfigure"):
+    sys.stderr.reconfigure(encoding="utf-8", errors="replace")
 
 import numpy as np
 import torch
@@ -39,6 +45,8 @@ def parse_args():
     p.add_argument("--output_dir", type=str, default="checkpoints/run")
     p.add_argument("--select_metric", type=str, default="f1", choices=["f1", "macro_f1"],
                    help="chỉ số trên dev dùng để chọn checkpoint tốt nhất")
+    p.add_argument("--early_stopping_patience", type=int, default=0,
+                   help="dừng sớm nếu dev không cải thiện sau N epoch liên tiếp (0 = tắt)")
     p.add_argument("--fp16", action="store_true", default=False,
                    help="mT5 dễ NaN khi fp16 (đã gặp trên GTX 1650) nên mặc định tắt")
     # --- xử lý mất cân bằng nhãn (Bước 2) ---
@@ -168,7 +176,7 @@ def main():
         {"params": [p for n, p in model.named_parameters() if any(nd in n for nd in no_decay)], "weight_decay": 0.0},
     ]
     optimizer = AdamW(params, lr=args.lr)
-    total_steps = max(1, (len(train_loader) // args.gradient_accumulation_steps) * args.epochs)
+    total_steps = max(1, math.ceil(len(train_loader) / args.gradient_accumulation_steps) * args.epochs)
     scheduler = get_linear_schedule_with_warmup(optimizer, int(0.1 * total_steps), total_steps)
     use_amp = args.fp16 and device.type == "cuda"
     scaler = torch.amp.GradScaler("cuda", enabled=use_amp)
@@ -178,7 +186,7 @@ def main():
                    "class_weights": weights, "train_samples_per_epoch": len(train_loader) * args.batch_size},
                   f, indent=2, ensure_ascii=False)
 
-    history, best_score, t0 = [], -1.0, time.time()
+    history, best_score, no_improve, t0 = [], -1.0, 0, time.time()
     for epoch in range(1, args.epochs + 1):
         model.train()
         run_loss, n_steps = 0.0, 0
@@ -231,25 +239,34 @@ def main():
 
         row = {"epoch": epoch, "train_loss": round(train_loss, 4), "val_loss": round(val_loss, 4),
                "dev_precision": rep["precision"], "dev_recall": rep["recall"], "dev_f1": rep["f1"],
-               "dev_macro_f1": rep["macro_f1"], "dev_n_sentences": len(res["preds"]),
+               "dev_macro_f1": rep["macro_f1"], "dev_aspect_f1": rep["aspect_only"]["f1"],
+               "dev_polarity_acc": rep["polarity_acc_on_matched_aspects"],
+               "dev_n_sentences": len(res["preds"]),
                "dev_f1_per_class": {c: rep["per_class"][c]["f1"] for c in POLARITIES},
                "elapsed_min": round((time.time() - t0) / 60, 1)}
         history.append(row)
         print(f"\n--- Epoch {epoch} --- train_loss={train_loss:.4f} val_loss={val_loss:.4f} | dev(n={row['dev_n_sentences']}) "
               f"P={rep['precision']} R={rep['recall']} F1={rep['f1']} macroF1={rep['macro_f1']} "
-              f"| F1/lớp={row['dev_f1_per_class']}")
+              f"| aspectF1={row['dev_aspect_f1']} polAcc={row['dev_polarity_acc']}% | F1/lớp={row['dev_f1_per_class']}")
 
         score = rep["f1"] if args.select_metric == "f1" else rep["macro_f1"]
         if score > best_score:
             best_score = score
+            no_improve = 0
             best_dir = os.path.join(args.output_dir, "best_model")
             model.save_pretrained(best_dir)
             tokenizer.save_pretrained(best_dir)
             row["is_best"] = True
             print(f"--> lưu best_model ({args.select_metric}={score})")
+        else:
+            no_improve += 1
 
         with open(os.path.join(args.output_dir, "history.json"), "w", encoding="utf-8") as f:
             json.dump(history, f, indent=2, ensure_ascii=False)
+
+        if args.early_stopping_patience > 0 and no_improve >= args.early_stopping_patience:
+            print(f"--> Dừng sớm (early stopping) sau {no_improve} epoch không cải thiện {args.select_metric}.")
+            break
 
     print(f"\nHoàn tất. Best dev {args.select_metric} = {best_score} | thời gian = {(time.time() - t0) / 60:.1f} phút")
 

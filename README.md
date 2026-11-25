@@ -1,122 +1,119 @@
-# 🎯 Báo Cáo Giữa Kỳ AI: Khai Phá Ý Kiến Dựa Trên Khía Cạnh Đa Miền (Multi-Domain ABSA)
+# 🎯 Phân Tích Quan Điểm Theo Khía Cạnh Đa Miền (Multi-Domain ABSA)
 
-Dự án nghiên cứu và triển khai bài toán **Aspect-Based Sentiment Analysis (ABSA)** trên dữ liệu đa miền (Restaurant, Laptop, Hotel) sử dụng kiến trúc Seq2Seq sinh chuỗi văn bản **mT5-small (Multilingual T5)**, tối ưu hóa hàm mất mát có trọng số (Weighted Loss) để giải quyết hiện tượng mất cân bằng nhãn trầm trọng.
+Dự án nghiên cứu và triển khai bài toán **Aspect-Based Sentiment Analysis (ABSA)** trên dữ liệu tiếng Anh đa miền (`hotel`, `laptop`, `restaurant`) sử dụng kiến trúc Seq2Seq sinh chuỗi văn bản **mT5-small (Multilingual T5)**, tích hợp kỹ thuật xử lý mất cân bằng nhãn (**Token-level Weighted Cross-Entropy** & **Oversampling**) và hệ thống đánh giá đa chiều (Micro-F1, Macro-F1, Per-class, Per-domain, Explicit vs `NULL`).
 
 ---
 
 ## 🌟 Điểm Nổi Bật Của Dự Án
 
-1. **Khung tiếp cận Text-to-Text đa tác vụ (Unified Seq2Seq ABSA):**
-   - Hỗ trợ tác vụ **uabsa** (Aspect-Sentiment extraction) và **tasd** (Triplet: Aspect-Category-Sentiment).
-   - Mô hình học biểu diễn khía cạnh và phân loại cảm xúc đồng thời theo cơ chế chia sẻ tham số toàn phần (Hard Parameter Sharing).
-2. **Xây dựng tập dữ liệu đa miền cân bằng:**
-   - Trích xuất và tiền xử lý từ bộ dữ liệu M-ABSA với 3 miền: `restaurant`, `laptop`, `hotel`.
-   - Tổng cộng **6,393 câu** (Train: 3,783, Dev: 950, Test: 1,660) và **9,209 khía cạnh**.
-3. **Giải quyết mất cân bằng nhãn (Class Imbalance Mitigation):**
-   - Thiết kế kỹ thuật **Token-level Weighted Loss** tăng trọng số phạt đối với các nhãn thiểu số (Neutral và Negative).
-   - Đưa F1 của lớp Neutral từ **0%** lên **16.83%** và cải thiện rõ rệt Recall nhãn Negative (từ **18.79%** lên **33.07%**).
-4. **Giao diện Web tương tác Streamlit (`app.py`):**
-   - **Tab 1: Live Demo Suy Luận** - Nhập câu đánh giá bất kỳ và trực quan hóa các cặp khía cạnh - cảm xúc dạng tag màu.
-   - **Tab 2: Khám Phá Dữ Liệu** - Biểu đồ phân phối mẫu, tỷ lệ cảm xúc theo từng miền thực tế.
-   - **Tab 3: Bảng Đánh Giá Hiệu Năng** - Phân tích chi tiết Precision / Recall / F1 từng nhãn, Confusion Matrix, và phân tích lỗi.
-5. **Tài liệu báo cáo & Slide thuyết trình đầy đủ:**
-   - Slide thuyết trình chuẩn mực kèm hình minh họa kiến trúc và kết quả tại `docs/slide.md` và `docs/picture/`.
+1. **Khung tiếp cận Text-to-Text đa tác vụ (Unified Seq2Seq UABSA):**
+   - Thực hiện đồng thời **Trích xuất khía cạnh (Aspect Extraction)** và **Phân loại cảm xúc (Sentiment Classification)** trong một forward pass duy nhất (chia sẻ 100% tham số Encoder–Decoder).
+   - Xử lý tự nhiên cả khía cạnh hiện và khía cạnh ẩn (`NULL`).
+2. **Tập dữ liệu tiếng Anh đa miền cân bằng 1 : 1 : 1:**
+   - Trộn từ 3 miền `hotel`, `laptop`, `restaurant` của bộ M-ABSA / SemEval (`src/build_multi_domain.py`).
+   - Tổng cộng **6,393 câu** (Train: 3,783 | Dev: 950 | Test: 1,660), **9,209 nhãn bộ ba** sau khi làm sạch nhãn `conflict`, tương ứng **7,882 cặp `(aspect, polarity)` duy nhất** (Test: 2,185 cặp chuẩn).
+3. **Xử lý mất cân bằng nhãn (Class Imbalance Mitigation):**
+   - Hỗ trợ `oversample`, `weighted_loss` (tăng trọng số trên đúng token cảm xúc hiếm trong từ điển SentencePiece) và `both`, với hệ số `--power` điều chỉnh mức cân bằng $w_c = (N_{\max} / N_c)^{\text{power}}$.
+4. **Giao diện Web tương tác Streamlit ([app.py](file:///f:/laptrinhPython/chuyenDe/github/ABSA/app.py)):**
+   - **Tab 1 – Live Demo:** Tự động phát hiện các checkpoint trong `checkpoints/`, suy luận trực tiếp trên tiếng Anh tự nhiên và tô màu khía cạnh an toàn.
+   - **Tab 2 – Khám Phá Dữ Liệu:** Biểu đồ phân bố cảm xúc và xem mẫu theo từng miền/ngôn ngữ.
+   - **Tab 3 – Bảng Đánh Giá Hiệu Năng:** Nạp động dữ liệu thật từ `results/*.json` và `results/*_predictions.tsv` (Per-class, Domain Breakdown, Confusion Matrix, bộ lọc soi lỗi).
 
 ---
 
 ## 📂 Cấu Trúc Thư Mục
 
 ```text
-├── app.py                     # Giao diện Web UI Streamlit tương tác
-├── requirements.txt           # Danh sách các thư viện phụ thuộc
+├── app.py                        # Giao diện Web UI Streamlit tương tác
+├── requirements.txt              # Danh sách các thư viện phụ thuộc
 ├── data/
-│   └── multi_domain/          # Dữ liệu 3 miền đã trộn (train.txt, dev.txt, test.txt)
-├── docs/                      # Slide, thuyết trình, biểu đồ minh họa và báo cáo
+│   └── multi_domain/             # Dữ liệu 3 miền đã trộn (train/dev/test.txt & *_domains.txt)
+├── docs/                         # Slide, lời thoại thuyết trình, biểu đồ và kế hoạch
 │   ├── noi_dung_slide_bao_cao_giua_ky.md
 │   ├── slide.md
 │   ├── progress.md
-│   └── picture/               # Các biểu đồ kiến trúc và kết quả huấn luyện
-├── M-ABSA/                    # Bộ dữ liệu gốc và mã nguồn tham chiếu M-ABSA
-├── results/                   # Báo cáo đánh giá chi tiết (JSON & TSV predictions)
-└── src/                       # Mã nguồn xử lý chính
-    ├── analyze_data.py        # Thống kê phân bố nhãn và từ vựng
-    ├── build_multi_domain.py  # Trộn tập dữ liệu đa miền
-    ├── dataset.py             # Xử lý nạp dữ liệu và tokenizer Seq2Seq
-    ├── engine.py              # Huấn luyện và đánh giá mô hình
-    ├── evaluate_model.py      # Đánh giá chi tiết từng lớp & confusion matrix
-    ├── metrics.py             # Tính toán F1, Precision, Recall với Fuzzy Matching
+│   └── picture/                  # Script generate_slide_charts.py & 10 ảnh biểu đồ 300 DPI
+├── M-ABSA/                       # Bộ dữ liệu gốc và mã nguồn tham chiếu M-ABSA
+├── results/                      # Báo cáo đánh giá thật (JSON & TSV predictions)
+└── src/                          # Mã nguồn xử lý chính
+    ├── analyze_data.py           # Thống kê dữ liệu thật -> results/data_analysis.json
+    ├── build_multi_domain.py     # Trộn tập dữ liệu 3 miền cân bằng 1:1:1
+    ├── dataset.py                # Dataset PyTorch, format_target & chuẩn hóa đầu vào tiếng Anh
+    ├── engine.py                 # trim_batch, compute_val_loss, generate_predictions
+    ├── evaluate_model.py         # Đánh giá đầy đủ dev/test -> JSON & TSV
+    ├── metrics.py                # Micro/Macro F1, Per-class, Per-domain, Confusion Matrix
     ├── remove_conflict_labels.py # Làm sạch nhãn conflict
-    ├── run_ablation.py        # Kịch bản thực nghiệm so sánh
-    └── train.py               # Script huấn luyện với Weighted Loss & AdamW
+    ├── run_ablation.py           # Chạy tự động các cấu hình ablation & đánh giá
+    └── train.py                  # Huấn luyện mT5 (AdamW, Warmup, Weighted Loss, Oversample)
 ```
 
 ---
 
 ## 🚀 Hướng Dẫn Cài Đặt & Sử Dụng
 
-### 1. Chuẩn Bị Môi Trường
+### 1. Chuẩn Bị Môi Trường (Python 3.10 / 3.11)
 
-Khuyến nghị Python 3.10 hoặc 3.11:
-
-```bash
-# Tạo môi trường ảo
+```powershell
 python -m venv .venv
-
-# Kích hoạt môi trường (Windows PowerShell)
-.venv\Scripts\Activate.ps1
-# Kích hoạt môi trường (Linux / macOS)
-# source .venv/bin/activate
-
-# Cài đặt các gói phụ thuộc
+.\.venv\Scripts\Activate.ps1
 pip install -r requirements.txt
 ```
 
-### 2. Chạy Ứng Dụng Web UI (Streamlit)
+### 2. Chạy Giao Diện Web UI (Streamlit)
 
-```bash
-streamlit run app.py
-```
-Truy cập ứng dụng tại địa chỉ: `http://localhost:8501`.
-
-### 3. Huấn Luyện Mô Hình (Training)
-
-Để huấn luyện mô hình với cấu hình tối ưu trên GPU 4GB VRAM (GTX 1650):
-
-```bash
-python src/train.py \
-    --data_dir data/multi_domain \
-    --output_dir checkpoints/weighted_loss_s42 \
-    --task uabsa \
-    --model_name google/mt5-small \
-    --num_train_epochs 3 \
-    --train_batch_size 4 \
-    --gradient_accumulation_steps 4 \
-    --fp16 \
-    --loss_mode weighted \
-    --neutral_weight 5.0 \
-    --negative_weight 2.0
+```powershell
+.\.venv\Scripts\streamlit.exe run app.py
 ```
 
-### 4. Đánh Giá Mô Hình (Evaluation)
+### 3. Huấn Luyện Mô Hình (Tối ưu cho GPU 4GB VRAM - GTX 1650)
 
-Đánh giá chi tiết mô hình trên tập kiểm thử:
+> **Lưu ý:** Không bật `--fp16` với `google/mt5-small` vì kiến trúc mT5 dễ bị tràn số `NaN` ở FP16; dùng FP32 kết hợp `trim_batch()` và `gradient_accumulation_steps=4`.
 
-```bash
-python src/evaluate_model.py \
-    --checkpoint checkpoints/weighted_loss_s42/best_model \
-    --task uabsa \
-    --data_file data/multi_domain/test.txt \
-    --output_json results/weighted_loss_s42_test.json \
-    --output_tsv results/weighted_loss_s42_test_predictions.tsv
+```powershell
+# Huấn luyện Baseline hội tụ (8 epoch)
+.\.venv\Scripts\python.exe src/train.py `
+    --model_name_or_path google/mt5-small `
+    --data_dir data/multi_domain `
+    --task uabsa `
+    --epochs 8 `
+    --batch_size 4 `
+    --gradient_accumulation_steps 4 `
+    --lr 3e-4 `
+    --max_seq_len 128 `
+    --max_target_len 64 `
+    --imbalance none `
+    --select_metric f1 `
+    --early_stopping_patience 3 `
+    --output_dir checkpoints/baseline_e8_s42
+
+# Hoặc chạy tự động toàn bộ Ablation (baseline, wl_p03, oversample)
+.\.venv\Scripts\python.exe src/run_ablation.py --configs baseline wl_p03 oversample --epochs 8 --seed 42
+```
+
+### 4. Đánh Giá Mô Hình Trên Toàn Bộ Tập Test / Dev
+
+```powershell
+.\.venv\Scripts\python.exe src/evaluate_model.py `
+    --model_path checkpoints/baseline_e8_s42/best_model `
+    --data_dir data/multi_domain `
+    --split test `
+    --run_name baseline_e8_s42 `
+    --num_examples_to_show 5
 ```
 
 ---
 
-## 📊 Kết Quả Thực Nghiệm
+## 📊 Kết Quả Thực Nghiệm (Tập Test Tiếng Anh Đa Miền — 1,660 câu, 2,185 cặp chuẩn)
 
-| Phương Pháp / Cấu Hình | Precision (%) | Recall (%) | Micro F1 (%) | Macro F1 (%) | Neutral F1 (%) |
-| :--- | :---: | :---: | :---: | :---: | :---: |
-| **Baseline Chuẩn (Standard Loss)** | 66.27 | 56.38 | 60.93 | 36.31 | 0.00 |
-| **Đề Xuất (Weighted Loss, Seed 42)** | 61.54 | 50.39 | 55.41 | **40.02** | **16.83** |
+| Cấu Hình Mô Hình | Precision (%) | Recall (%) | Micro-F1 (%) | Macro-F1 (%) | Positive F1 | Negative F1 | Neutral F1 | Aspect F1 | Polarity Acc* |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| **Baseline (CE chuẩn, 3 epoch)** | 66.33 | 56.34 | 60.93 | 39.09 | 65.91 | 51.36 | 0.00 | 70.77 | 84.96% |
+| **Weighted Loss (`power=0.5`, 3 epoch)** | 61.54 | 50.39 | 55.41 | 40.02 | 61.97 | 41.27 | 16.83 | 67.89 | 80.54% |
+| **Baseline Hội tụ (CE chuẩn, 8 epoch)** | 66.46 | 62.75 | 64.55 | 46.43 | 68.48 | **57.96** | 12.84 | **73.07** | 87.55% |
+| **Weighted Loss (`power=0.3`, 8 epoch — Tốt nhất)** | **66.54** | **62.79** | **64.61** | **52.23** | **68.84** | 57.35 | **30.51** | 73.05 | **87.72%** |
 
-*Ghi chú:* Nhờ cơ chế phạt có trọng số theo token, mô hình đã khắc phục triệt để điểm mù đối với lớp cảm xúc thiểu số (Neutral tăng từ 0% lên 16.83% F1, Negative Recall tăng từ 18.79% lên 33.07%).
+* **Phân rã theo 3 miền trên tập Test (`wl_p03_e8_s42`):**
+  * **Hotel (584 câu):** Micro-F1 = **65.14%** | Macro-F1 = **47.24%** | Neutral F1 = **23.53%**
+  * **Laptop (532 câu):** Micro-F1 = **65.12%** | Macro-F1 = **55.01%** | Neutral F1 = **31.46%**
+  * **Restaurant (544 câu):** Micro-F1 = **63.57%** | Macro-F1 = **51.84%** | Neutral F1 = **33.33%**
+* **Kiểm thử nhanh 20 câu tiếng Anh tự nhiên (`src/smoke_test_en.py`):** Đạt chất lượng chính xác cao trên cả câu khen, chê, trung tính, câu trái chiều và khía cạnh ẩn `NULL`.

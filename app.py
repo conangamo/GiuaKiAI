@@ -1,11 +1,13 @@
 import os
+import re
+import html
 import streamlit as st
 import pandas as pd
 import plotly.express as px
 import torch
 from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
 
-from src.dataset import resolve_data_path, read_mabsa_file, format_target
+from src.dataset import resolve_data_path, read_mabsa_file, format_target, normalize_english_spacing
 from src.metrics import parse_uabsa_string, compute_metrics
 
 # Page configuration
@@ -24,8 +26,7 @@ st.sidebar.header("⚙️ Cấu Hình Hệ Thống")
 device_str = "cuda" if torch.cuda.is_available() else "cpu"
 st.sidebar.success(f"Thiết bị sử dụng: **{device_str.upper()}** ({torch.cuda.get_device_name(0) if torch.cuda.is_available() else 'CPU'})")
 
-task_option = st.sidebar.selectbox("Tác vụ ABSA:", ["uabsa (Cặp Khía cạnh - Cảm xúc)", "tasd (Bộ ba Khía cạnh - Danh mục - Cảm xúc)"])
-task = "uabsa" if "uabsa" in task_option else "tasd"
+st.sidebar.info("Tác vụ hiện tại: **UABSA** — Trích xuất đồng thời cặp `(Khía cạnh, Cảm xúc)`")
 
 def has_weights(path):
     return os.path.isdir(path) and (
@@ -33,15 +34,28 @@ def has_weights(path):
         os.path.exists(os.path.join(path, "pytorch_model.bin"))
     )
 
-model_dict = {}
-if has_weights("checkpoints/weighted_loss_s42/best_model"):
-    model_dict["checkpoints/weighted_loss_s42/best_model (Weighted Loss - Đã cân bằng nhãn)"] = "checkpoints/weighted_loss_s42/best_model"
-if has_weights("checkpoints/best_model"):
-    model_dict["checkpoints/best_model (Baseline chuẩn)"] = "checkpoints/best_model"
-model_dict["google/mt5-small (Mô hình gốc chưa fine-tune)"] = "google/mt5-small"
+def discover_models():
+    models = {}
+    ckpt_root = "checkpoints"
+    if os.path.isdir(ckpt_root):
+        # Ưu tiên các thư mục con mới hơn (vd: baseline_e8_s42/best_model, wl_p03_e8_s42/best_model, ...)
+        for entry in sorted(os.listdir(ckpt_root), reverse=True):
+            sub_best = os.path.join(ckpt_root, entry, "best_model")
+            if has_weights(sub_best):
+                models[f"{entry}/best_model"] = sub_best
+    if has_weights("checkpoints/best_model"):
+        models["best_model (Baseline 3-epoch gốc)"] = "checkpoints/best_model"
+    models["google/mt5-small (Pre-trained chưa fine-tune)"] = "google/mt5-small"
+    return models
 
+model_dict = discover_models()
 selected_label = st.sidebar.selectbox("Mô hình suy luận:", list(model_dict.keys()))
 model_name = model_dict[selected_label]
+
+num_beams = st.sidebar.selectbox("Chế độ giải mã (Beam Search):", [1, 2, 4], index=0,
+                                 help="1 = Greedy (giống evaluate_model.py), 2-4 = Beam Search")
+use_norm_spacing = st.sidebar.checkbox("Chuẩn hóa dấu câu tiếng Anh (khớp SemEval)", value=True,
+                                       help="Thêm khoảng trắng quanh dấu câu như dữ liệu train SemEval/M-ABSA")
 
 @st.cache_resource
 def load_absa_model(model_path):
@@ -50,6 +64,35 @@ def load_absa_model(model_path):
     model = AutoModelForSeq2SeqLM.from_pretrained(model_path).to(device)
     model.eval()
     return tokenizer, model, device
+
+def highlight_aspects_html(sentence, pairs):
+    """Tô màu khía cạnh không phân biệt hoa/thường và an toàn HTML (không phá vỡ thẻ span)."""
+    explicit = {}
+    for aspect, polarity in pairs:
+        if aspect.lower() != "null" and aspect.strip():
+            explicit[aspect.lower()] = polarity
+    if not explicit:
+        return html.escape(sentence)
+
+    # Sắp xếp khía cạnh dài trước để ưu tiên khớp cụm từ dài (vd: 'battery life' trước 'battery')
+    sorted_terms = sorted(explicit.keys(), key=len, reverse=True)
+    pattern = re.compile(
+        r"(?i)(" + "|".join(re.escape(t) for t in sorted_terms) + r")"
+    )
+    parts = []
+    last = 0
+    for m in pattern.finditer(sentence):
+        parts.append(html.escape(sentence[last:m.start()]))
+        matched_text = m.group(0)
+        pol = explicit[matched_text.lower()]
+        color = "#28a745" if pol == "positive" else ("#dc3545" if pol == "negative" else "#e0a800")
+        parts.append(
+            f"<span style='background-color: {color}; color: white; padding: 2px 6px; "
+            f"border-radius: 4px; font-weight: bold;'>{html.escape(matched_text)} ({pol})</span>"
+        )
+        last = m.end()
+    parts.append(html.escape(sentence[last:]))
+    return "".join(parts)
 
 # Tabs
 tab1, tab2, tab3 = st.tabs(["🔍 Trực Quan Hóa Dự Đoán (Live Demo)", "📊 Khám Phá Dữ Liệu Đa Miền", "📈 Bảng Đánh Giá Hiệu Năng"])
@@ -62,10 +105,10 @@ with tab1:
         "The food was absolutely amazing, but the service was terrible and slow.",
         "Great battery life and clear screen, though the keyboard feels a bit cheap.",
         "The hotel location is perfect, near the beach, but the room was quite small.",
-        "Rooms are on the basic side , but they have everything that you ' d need .",
-        "screen is average by 2017 standards .",
-        "Đồ ăn ngon tuyệt vời, nhưng nhân viên phục vụ rất tệ và chậm chạp.",
-        "Phòng khách sạn rất sạch sẽ và view đẹp, tuy nhiên giá hơi đắt."
+        "Rooms are on the basic side, but they have everything that you'd need.",
+        "Screen is average by 2017 standards.",
+        "If you're in the area you shouldn't be disappointed.",
+        "No backlit keyboard.",
     ]
 
     selected_sample = st.selectbox("Chọn câu ví dụ:", ["(Tự nhập câu đánh giá... )"] + sample_sentences)
@@ -81,44 +124,41 @@ with tab1:
         else:
             with st.spinner("Đang nạp mô hình và phân tích câu..."):
                 tokenizer, model, device = load_absa_model(model_name)
-                
-                inputs = tokenizer(user_input, max_length=96, truncation=True, return_tensors="pt").to(device)
+                model_input_text = normalize_english_spacing(user_input) if use_norm_spacing else user_input.strip()
+                inputs = tokenizer(model_input_text, max_length=128, truncation=True, return_tensors="pt").to(device)
+                gen_kwargs = dict(
+                    input_ids=inputs["input_ids"],
+                    attention_mask=inputs["attention_mask"],
+                    max_length=64,
+                    num_beams=num_beams,
+                )
+                if num_beams > 1:
+                    gen_kwargs["early_stopping"] = True
                 with torch.no_grad():
-                    outputs = model.generate(
-                        input_ids=inputs["input_ids"],
-                        attention_mask=inputs["attention_mask"],
-                        max_length=64,
-                        num_beams=2,
-                        early_stopping=True
-                    )
+                    outputs = model.generate(**gen_kwargs)
                 raw_prediction = tokenizer.decode(outputs[0], skip_special_tokens=True)
 
             st.markdown("### Kết Quả Trích Xuất:")
             st.info(f"**Chuỗi dự đoán thô (Seq2Seq Output):** `{raw_prediction}`")
 
-            pairs = parse_uabsa_string(raw_prediction)
+            pairs = sorted(parse_uabsa_string(raw_prediction))
             if not pairs:
                 st.write("Không phát hiện khía cạnh nào mang cảm xúc trong câu.")
             else:
-                cols = st.columns(len(pairs))
+                cols = st.columns(min(len(pairs), 4))
                 for idx, (aspect, polarity) in enumerate(pairs):
+                    label_aspect = "KHÍA CẠNH ẨN (NULL)" if aspect == "null" else aspect.upper()
                     with cols[idx % len(cols)]:
                         if polarity == "positive":
-                            st.success(f"**Khía cạnh:** {aspect.upper()}\n\n**Cảm xúc:** Tích cực 👍")
+                            st.success(f"**Khía cạnh:** {label_aspect}\n\n**Cảm xúc:** Tích cực 👍")
                         elif polarity == "negative":
-                            st.error(f"**Khía cạnh:** {aspect.upper()}\n\n**Cảm xúc:** Tiêu cực 👎")
+                            st.error(f"**Khía cạnh:** {label_aspect}\n\n**Cảm xúc:** Tiêu cực 👎")
                         else:
-                            st.warning(f"**Khía cạnh:** {aspect.upper()}\n\n**Cảm xúc:** Trung tính 😐")
+                            st.warning(f"**Khía cạnh:** {label_aspect}\n\n**Cảm xúc:** Trung tính 😐")
 
-                # Highlight visualization
-                highlighted_html = user_input
-                for aspect, polarity in pairs:
-                    color = "#28a745" if polarity == "positive" else ("#dc3545" if polarity == "negative" else "#ffc107")
-                    badge = f"<span style='background-color: {color}; color: white; padding: 2px 6px; border-radius: 4px; font-weight: bold;'>{aspect} ({polarity})</span>"
-                    highlighted_html = highlighted_html.replace(aspect, badge)
-
+                highlighted_html = highlight_aspects_html(user_input, pairs)
                 st.markdown("### Trực quan hóa câu văn:")
-                st.markdown(f"<div style='font-size: 18px; padding: 15px; border-left: 5px solid #007bff; background: #f8f9fa;'>{highlighted_html}</div>", unsafe_allow_html=True)
+                st.markdown(f"<div style='font-size: 18px; padding: 15px; border-left: 5px solid #007bff; background: #f8f9fa; color: #212529;'>{highlighted_html}</div>", unsafe_allow_html=True)
 
 
 # TAB 2: DATASET EXPLORER

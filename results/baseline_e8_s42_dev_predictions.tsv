@@ -1,0 +1,951 @@
+domain	sentence	gold	prediction	exact_match
+hotel	Best of all, the staff were really friendly which all made for a really enjoyabe stay	None	None	1
+hotel	I just came for a stay with my two daughters, to tour colleges in the area.	None	None	1
+laptop	now i ' m just down to some gripes that are probably here to stay : the bluetooth on this thing is really fussy , the non - functional video output ( using usb - c video out through an hdmi cable sends just a blank desktop background and no audio , even if i am playing a movie or youtube visibly on the c302 screen ) , and that it can ' t hold a vpn connection without dropping it every 20 - 30 minutes .	(bluetooth, negative); (NULL, negative)	(bluetooth, negative); (hdmi cable, negative)	0
+laptop	it is a timeless design and a very respectable screen .	(design, positive); (screen, positive)	(design, positive); (screen, positive)	1
+restaurant	Sushi experience was unbelievable with my fiance .	(Sushi, positive)	(Sushi, positive)	1
+hotel	It is a budget hotel but was clean and comfortable and would happily stay here again .	(hotel, positive)	(hotel, positive); (hotel, positive)	1
+hotel	It is withing walking distance of Times Square , Bryant Park , Rockefeller Center , 5th Avenue and so much more .	(NULL, positive)	(NULL, positive)	1
+laptop	the picture clarity is amazing and the backlit keyboard is awesome .	(picture clarity, positive); (backlit keyboard, positive)	(picture clarity, positive); (backlit keyboard, positive)	1
+laptop	the battery life is incredible and literally lasts all day , not to mention it charges to 100 % in about an hour and a half .	(battery life, positive)	(battery life, positive)	1
+hotel	The carpets are stained and the interior is very poorly maintained.	None	None	1
+hotel	Matchless in Midtown	None	None	1
+laptop	if you ' re big on aesthetics then you ' ll love the look .	(look, positive)	(NULL, positive)	0
+laptop	i ' ve already recommended or bought this for 4 others .	(NULL, positive)	(NULL, positive)	1
+restaurant	Service was wonderful ;	(Service, positive)	(Service, positive)	1
+hotel	hanohano room travelled all the way from australia to marry my bride and had my wedding dinner at the hanohano room........	None	None	1
+restaurant	It is simply amazing .	(NULL, positive)	(NULL, positive)	1
+restaurant	The vibe is very relaxed and cozy , service was great and the food was excellent !	(vibe, positive); (service, positive); (food, positive)	(vibe, positive); (service, positive); (food, positive)	1
+restaurant	And evaluated on those terms Pastis is simply wonderful .	(Pastis, positive)	(pastis, positive)	1
+hotel	The Barcelona center hotel is a great hotel for an ecxelent price.	None	None	1
+restaurant	All in all , this midtown gem instantly became one of my favorite sushi restaurants in the city .	(NULL, positive)	(sushi restaurants, positive)	0
+hotel	Once again, my 3 day stay was a pleasant one.	None	None	1
+restaurant	Bagels are ok , but be sure not to make any special requests !	(Bagels, neutral); (NULL, negative)	(Bagels, neutral)	0
+restaurant	the food is always fresh ...	(food, positive)	(food, positive)	1
+hotel	Clean and Good Location	(Location, positive)	(Location, positive)	1
+laptop	neat and sleek build , great display and very nice os	(build, positive); (display, positive); (os, positive)	(build, positive); (display, positive); (os, positive); (os, positive)	1
+hotel	Very well decorated rooms with little balconies to let in some fresh air ( or smoke )  .	(rooms, positive)	(rooms, positive); (balconys, positive)	0
+restaurant	This is some really good , inexpensive sushi .	(sushi, positive)	(sushi, positive)	1
+hotel	The lobby is pretty nice , but the rooms and hallways are dated .	(lobby, positive); (rooms, negative); (hallways, negative)	(room, positive); (rooms, negative); (hallways, negative)	0
+hotel	caro ma	None	None	1
+laptop	which is really sad because in the time i could actually use the chromebook i absolutely loved it .	(chromebook, positive); (chromebook, negative)	(chromebook, positive)	0
+hotel	I cancelled my reservation for the rest of the week and stayed only the one night ( too late to cancel that night ) Not a 5 star hotel .	(hotel, negative)	(hotel, negative)	1
+restaurant	I 've been there three times and have always had wonderful experiences .	(NULL, positive)	(NULL, positive)	1
+restaurant	Everything was going good until we got our meals .	(NULL, positive)	(NULL, positive)	1
+hotel	The room was immaculate when my husband and I arrived after the wedding .	(room, positive)	(room, positive)	1
+hotel	You definitely get what you pay for here .	(NULL, positive)	(NULL, positive)	1
+hotel	While , it isn ' t cheap , I ' ve paid more and gotten much less .	(NULL, negative)	(NULL, negative)	1
+laptop	the best laptop i have ever owned .	(laptop, positive)	(laptop, positive)	1
+hotel	The motel is indeed on Lombard Street , which is in fact a section of the 101 , but as we had rooms away from the street we didn ' t have any trouble with the noise .	(rooms, positive)	(motel, positive)	0
+restaurant	In an area sadly lacking in decent Thai food , this is one of the best spots .	(Thai food, positive)	(Thai food, positive)	1
+hotel	shops in the hotel were however a rip off and so too were the guys selling in the hotel in the evening....go to the market 10 mins walk away and haggle for far better deals especially on cigars...........	None	(NULL, negative)	0
+laptop	thanks for the good quality !	(NULL, positive)	(quality, positive)	0
+restaurant	Go there once and oh yes ... you will go back ... you will ...	(NULL, positive)	None	0
+hotel	If you like bland food, cheap beer and rude Europeans - this is the place for you.11 of us just returned from a week in DR.	None	None	1
+laptop	the native chrome os media player would play the files from the drive but had very limited playback capabilities , i could not get it to ` ` play all ` ` , only repeat one , suffice to say i was frustrated at that point and did not feel like googling how to make a media player do what others ` ` just do ` ` .	(native chrome os media player, negative)	(native chrome os media player, negative)	1
+laptop	i had the chance to test the new radeon graphics card and it ' s really good .	(radeon graphics card, positive)	(radeon graphics card, positive)	1
+restaurant	good music , great food , speedy service affordable prices .	(music, positive); (food, positive); (service, positive); (NULL, positive)	(music, positive); (food, positive); (service, positive)	0
+laptop	battery issues aside , i really love this laptop and it is easily the nicest piece of electronics i have ever owned .	(battery, negative); (laptop, positive)	(battery, positive); (battery, positive)	0
+restaurant	This dish is my favorite and I always get it when I go there and never get tired of it .	(dish, positive)	(dish, positive)	1
+hotel	The furnishings in the room were fairly clean and in decent condition , although everything appeared to be in need of an overhaul , especially the bathroom .	(furnishings, positive); (bathroom, neutral)	(furnishings, positive); (bathroom, positive)	0
+laptop	it has exceeded my expectations for performance , functionality and utility .	(NULL, positive)	(performance, positive); (NULL, positive)	0
+restaurant	As always we had a great glass of wine while we waited .	(glass of wine, positive)	(glass of wine, positive)	1
+hotel	The staff is fine but the rooms here are so small as to defy belief .	(staff, positive); (rooms, negative)	(staff, positive); (rooms, negative)	1
+laptop	screen is amazing	(screen, positive)	(screen, positive)	1
+restaurant	This place is not worth the prices .	(place, negative)	(place, negative)	1
+restaurant	I have never before eaten 40 pieces of relatively good nigiri .	(nigiri, neutral)	(ngiri, positive)	0
+restaurant	For those that go once and do n't enjoy it , all I can say is that they just do n't get it .	(NULL, positive)	(NULL, negative)	0
+restaurant	THe perfect spot .	(spot, positive)	(spot, positive)	1
+hotel	"The Terror of Tinytown"	None	None	1
+restaurant	Great vibe , lots of people .	(vibe, positive)	(vibe, positive); (people, positive)	0
+restaurant	The concept of japanese tapas is newly created and clearly does n't work .	(japanese tapas, negative)	(japanese tapas, positive)	0
+restaurant	I have been doing all of the above at the Heartland Brewery for over 5 years now and I HAVE NEVER BEEN DISAPPOINTED !	(Heartland Brewery, positive)	(Heartland Brewery, positive)	1
+restaurant	The filet mignon dish was superb !	(filet mignon dish, positive)	(filet mignon dish, positive)	1
+restaurant	But for the Shabu Shabu , you won 't find much better in NY .	(Shabu Shabu, positive)	(Shabu Shabu, positive)	1
+hotel	The only downsides to our stay were (1)	None	None	1
+laptop	this works great .	(NULL, positive)	(NULL, positive)	1
+laptop	this is just perfect .	(NULL, positive)	(NULL, positive)	1
+laptop	every few weeks the system locks up and freezes .	(system, negative)	(system, negative)	1
+restaurant	But nonetheless -- great spot , great food .	(spot, positive); (food, positive)	(spot, positive); (food, positive)	1
+laptop	i was extremely hesitant to buy a used macbook pro ( it ' s still a lot of money ) but so far am surprisingly pleased with it .	(macbook pro, neutral); (macbook pro, positive)	(macbook pro, positive)	0
+laptop	it is not a very stable build at all .	(NULL, negative)	(build, negative)	0
+restaurant	The bread we received was horrible - rock hard and cold - and the `` free `` appetizer of olives was disappointing .	(bread, negative); (appetizer of olives, negative); (appetizer of olives, neutral)	(bread, negative); (appetizer of olives, negative)	0
+laptop	the wall power adapter charger is not working and then later caught fire .	(wall power adapter charger, negative)	(wall power adapter charger, negative)	1
+laptop	it charges very fast ; from near dead to full in less than an hour .	(NULL, positive)	(NULL, positive)	1
+laptop	i wanted an inexpensive chromebook and this fit the bill .	(chromebook, positive)	(chromebook, positive)	1
+laptop	the mouse pad is very touchy , but i use a separate bluetooth mouse anyways .	(mouse pad, neutral)	(mouse pad, neutral); (bluetooth mouse, neutral)	0
+laptop	after some use , the battery charge had logically gone down some ( down to about 80 % ) , and so i went back to my office to plug it in .	(battery, neutral)	(battery charge, negative)	0
+laptop	works great !	(NULL, positive)	(works, positive)	0
+laptop	construction looks and feels great .	(construction, positive)	( construction, positive)	1
+hotel	Overall difficult to fault.	None	None	1
+hotel	The staff was very friendly and helpful, the restaurant (Sophie's) had a nice breakfast buffet and the rooms were clean and comfortable.	None	None	1
+restaurant	The food was not fresh , the sauces were bland and very oily .	(food, negative); (sauces, negative)	(food, negative); (sauces, negative); (sauces, negative)	1
+laptop	anyhow , within a week , the speakers started crackling annoyingly when watching videos , or playing games .	(speakers, negative)	(speakers, negative)	1
+restaurant	Service is not exactly five star , but thats not really a big deal .	(Service, neutral)	(Service, negative)	0
+restaurant	Staff is very accomodating .	(Staff, positive)	(Staff, positive)	1
+laptop	i have had this laptop two months now and it has crashed as many times .	(laptop, negative)	(laptop, negative)	1
+restaurant	I go twice a month !	(NULL, positive)	(NULL, positive)	1
+restaurant	Delicious , creative and fun .	(NULL, positive)	(NULL, positive)	1
+restaurant	The have a great cocktail with Citrus Vodka and lemon and lime juice and mint leaves that is to die for !	(cocktail with Citrus Vodka and lemon and lime juice and mint leaves, positive)	(drink with Citrus Vodka and lemon and lime juice and mint leaves, positive)	0
+restaurant	On our last visit , they skipped over our name on the list , leaving us waiting an extra hour for a table .	(NULL, negative)	(NULL, negative)	1
+laptop	if bluetooth devices worked with this chromebook it would get 5 stars , but this is the least reliable device in regards to bluetooth i have ever owned .	(chromebook, positive)	(chromebook, positive); (chromebook, positive)	1
+restaurant	The food was good .	(food, positive)	(food, positive)	1
+hotel	We had a quiet room ( unbelievable in NY ) and although the bed was a lilttle bit on the small side , we had a comfortable rest .	(room, positive); (bed, neutral)	(room, positive); (bed, negative); (NULL, positive)	0
+hotel	My partner and I stayed at the Beresford Arms for five nights recently.	None	None	1
+restaurant	The service is ok , some of the people did n't get what they asked for .	(service, neutral)	(service, negative); (people, negative)	0
+hotel	OK hotel , Great Location	(hotel, neutral); (Location, positive)	(hotel, positive); (Location, positive)	0
+laptop	had problems with my acer chromebook from the very start .	(acer chromebook, negative)	(acer chromebook, negative)	1
+restaurant	At first we were a little taken aback , as this seemed to present a problem , although the restaurant looked fairly empty , but they hastily put the table together for us .	(NULL, positive)	(restaurant, negative); (restaurant, negative)	0
+laptop	linux is a fairly light os depending on the distro you use .	(linux, positive); (os, positive)	(linux, positive)	0
+restaurant	Excellent sashimi , and the millennium roll is beyond delicious .	(sashimi, positive); (millennium roll, positive)	(sashimi, positive); (millennium roll, positive)	1
+laptop	if you ' re mainly on youtube or reading stuff online , this chromebook functions well for that purpose .	(chromebook, positive)	(chromebook, positive)	1
+hotel	However, when you balance that with a very competitive 拢20.00 3 course price fixe menu it balances out.	None	None	1
+laptop	i have no issues with using the internal hard drive , it works fast enough for me when loading up my software and music .	(internal hard drive, positive)	(internal hard drive, positive)	1
+hotel	It ' s a great place unless you are looking for a posh - over - priced harbour place .	(NULL, positive)	(place, positive)	0
+laptop	i ' m usually peaked with ram ( ~ 95 % ) which is good because it ' s better used than not used .	(ram, positive)	(ram, positive)	1
+hotel	I have booked another reservation here for my upcoming trip!	None	None	1
+restaurant	The wine list is excellent .	(wine list, positive)	(wine list, positive)	1
+laptop	my desktop runs all my video editing software for my bigger and most demanding projects and mylaptop is great for editing video and running pc games in places other than my home ( like school ! )	(mylaptop, positive)	(desktop, positive); (laptop, positive)	0
+hotel	Public rooms are quietly elegant ; bedrooms are spacious and beds extremely comfortable .	(Public rooms, positive); (bedrooms, positive); (beds, positive)	(rooms, positive); (beds, positive); (beds, positive); (beds, positive)	0
+restaurant	Great friendly service , Fast seating , Fast Delivery , Excellent sushi .	(service, positive); (seating, positive); (Delivery, positive); (sushi, positive)	(service, positive); (seating, positive); (seating, positive); (seating, positive); (Sushi, positive)	0
+hotel	The staff from the doorman to the floor maid and from the front desk to the shift manager were most accommodating and professional .	(staff, positive)	(staff, positive)	1
+laptop	it ' s lighter , good construction , chromebook works perfectly and downloaded 10 different apps i normally use for free .	(NULL, positive); (construction, positive); (chromebook, positive)	(build, positive); (chromebook, positive)	0
+hotel	Swissotel comes through !	None	(Swissotel, positive)	0
+restaurant	Our visit their to say the least , was an unpleasant and costly experience !	(NULL, negative)	(NULL, negative)	1
+laptop	- sleek and nice texture on lid	(lid, positive)	(texture, positive); (lid, positive)	0
+laptop	i just opened it earlier today and my initial impressions is that it is very attractive and very sturdy feeling and i love the screen which non reflective , it ' s very nice not looking into a reflective glossy screen for a change .	(NULL, positive)	(screen, positive); (screen, positive)	0
+laptop	it feels responsive to me , and i went to settings to customize the speed , clicking , and scrolling .	(NULL, positive)	(NULL, positive)	1
+laptop	quality is excellent so far , and the software / hardware combination works like they were made for each other ( which is what you want : ) )	(quality, positive); (software, positive); (hardware, positive)	(quality, positive); (hardware combination, positive)	0
+restaurant	The sauce tasted more like Chinese fast food than decent Korean .	(sauce, negative)	(sauce, positive); (Korean fast food, positive)	0
+laptop	i ' m disappointed with macbook pro 15 ” because sometimes charger macbook pro 15 ” running overheating !	(NULL, negative)	(macbook pro 15 ” negative)	0
+laptop	these macbook pro computers are expensive .	(macbook pro computers, negative)	(macbook pro computers, negative)	1
+hotel	This is the first Caribbean resort I ' ve stayed at that didn ' t have blenders behind the bar .	(bar, negative)	(NULL, positive)	0
+laptop	similarly the task tray area of the main task bar is on the small side and lends itself to fat - fingering .	(task tray area, negative)	(task tray area, negative)	1
+laptop	on the other hand my least favorite feature is the track pad .	(track pad, negative)	(track pad, positive)	0
+laptop	to say i ' m disappointed in this chromebook would be an understatement .	(chromebook, negative)	(chromebook, negative)	1
+hotel	The location was , as every other guest of the Villa can affirm , superb .	(location, positive)	(location, positive)	1
+laptop	this is a very nice chromebook .	(chromebook, positive)	(chromebook, positive)	1
+hotel	The room was clean and the staff made sure that all of my needs were met.	None	None	1
+laptop	cons : no usb ports .	(usb ports, negative)	(usb ports, negative)	1
+restaurant	The fish was adequate , but inexpertly sliced .	(fish, negative)	(fish, positive); (sliced, negative)	0
+restaurant	I 'm a friendly person , so I wouldn 't mind had she not been so nasty and gotten so personal .	(NULL, negative)	(Person, positive)	0
+laptop	i ' m not a computer nerd but for a joe punch clock this is nice	(this, positive)	(computer, positive)	0
+hotel	Skip the pricey breakfast and walk to a nearby shop instead .	(breakfast, negative)	(breakfast, positive)	0
+restaurant	Inexpensive , unassuming , great time !	(NULL, positive)	(NULL, positive)	1
+laptop	this is a functional laptop , perfect for work and casual internet browsing .	(laptop, positive)	(laptop, positive); (internet browsing, positive)	0
+restaurant	The food is prepared quickly and efficiently .	(NULL, positive)	(food, positive)	0
+hotel	The view was great as well , which was expected considering the brillant location right on the harbour .	(NULL, positive); (location, positive)	(view, positive); (location, positive)	0
+hotel	Our Home in Florence	None	None	1
+laptop	- keyboard is not that good , i fell that there is uneven uniformity in the button press and travel , and definitely some flex .	(keyboard, negative)	(keyboard, negative); (NULL, negative)	0
+restaurant	I almost hesititate to write a review because the atmosphere was so great and I would hate for it too become to crowded .	(atmosphere, positive)	(atmosphere, positive)	1
+restaurant	I wish I COULD be refunded !	(NULL, negative)	(NULL, negative)	1
+restaurant	My party had the BBE $ 29 fixe prix menu , which was such a wonderful deal since it also came with a flight of sake !	(BBE $ 29 fixe prix menu, positive)	(BBE $ 29 fixe prix menu, positive)	1
+laptop	it has a full size keyboard , a number pad , a camera , and great big screen !	(keyboard, positive); (number pad, positive); (camera, neutral); (screen, positive)	(keyboard, positive); (number pad, positive); (screen, positive)	0
+laptop	this is the worst laptop i have ever bought in my entire life .	(laptop, negative)	(laptop, negative)	1
+hotel	Hotel had down duvets , pillow - top matresses and lush towels .	(Hotel, positive)	(Hotel, negative); (pillow, positive); (towels, positive)	0
+hotel	The ocean views are very beautiful .	(NULL, positive)	(ocean views, positive)	0
+hotel	This hotel was excellent and exceeded are expectations .	(hotel, positive)	(hotel, positive)	1
+restaurant	Definitely a neighborhood favorite .	(NULL, positive)	(NULL, positive)	1
+hotel	Been there last year with my wife and we simply loved every minute of being there!	None	None	1
+laptop	great product !	(product, positive)	(product, positive)	1
+restaurant	I got an excellent piece of cheesecake and we had several other nice pastries .	(cheesecake, positive); (pastries, positive)	(cheesecake, positive); (pastries, positive)	1
+hotel	Front desk staff was polite , helpful , and professional .	(Front desk staff, positive)	(Front desk staff, positive)	1
+hotel	The bathroom was huge and the price was reasonable -  - nice contrasts with Barcelona .	(bathroom, positive)	(bathroom, positive); (NULL, positive)	0
+restaurant	Oh , and I never write reviews -- I just was so moved by how bad this place was , I felt it was my duty to spread the word .	(place, negative)	(place, negative)	1
+hotel	Great place to stay !	(NULL, positive)	(place, positive)	0
+hotel	Wouldn ' t atay anywhere else in Manahattan Over the past ten years , we have stayed at Hotel Beacon four times and - having stayed at some other hotels - we would never stay anywhere else in NYC , The rooms are huge and very comfortable with a small but well - equipped kitchenette .	(rooms, positive); (kitchenette, positive); (kitchenette, negative)	(rooms, positive); (kitchenette, positive)	0
+restaurant	The pesto pizza was excellent , thin-crust pizza with a nice amount of spicy Italian cheese that I 'd never heard of before .	(pesto pizza, positive); (spicy Italian cheese, positive)	(pesto pizza, positive); (crust pizza, positive); (pizza, positive)	0
+laptop	unlike other asus laptops i ' ve tried , this unit won the display roulette .	(unit, positive)	(unit, negative)	0
+laptop	this computer has wasted so much of my time already .	(computer, negative)	(computer, negative)	1
+hotel	However rooms in older part of hotel need updating .	(rooms, negative)	(rooms, negative)	1
+laptop	the ports were another thing that i was really excited to see fully included on a laptop in this price range .	(ports, positive); (laptop, positive)	(ports, positive)	0
+restaurant	The Cypriot restaurant has a lot going for it .	(Cypriot restaurant, positive)	( Cypriot restaurant, positive)	1
+restaurant	Mussles and calamari were superb Saturday evening .	(Mussles, positive); (calamari, positive)	(Musles and calamari, positive)	0
+laptop	if i had it to do over , i would not purchase this computer .	(computer, negative)	(computer, negative)	1
+hotel	It needs to be closed 1	None	None	1
+restaurant	The workers there also absolutely load the bagel with cream cheese ( gets a little messy ) .	(bagel, negative)	(bagel with cream cheese, negative)	0
+restaurant	Ingredients are organic which is a real plus for me .	(Ingredients, positive)	(Ingredients, positive)	1
+laptop	there is a lot of ' bang for your buck ' in the lenovo ideapad 320 .	(lenovo ideapad 320, positive)	(lenovo ideapad 320, positive)	1
+laptop	in general , it has the look and feel of a premium laptop that is at home in any situation such as sitting down with a client .	(laptop, positive)	(laptop, positive)	1
+hotel	clean hotel , great price Seattle was sold out , and this place got good enough reviews on tripadvisor , so I chose it .	(hotel, positive)	(hotel, positive); (NULL, positive)	0
+laptop	usb port go dead until i do a restart .	(usb port, negative)	(usb port, negative)	1
+laptop	if i had it to do over again , i would not buy this pc .	(pc, negative)	(pc, negative)	1
+hotel	Spacious rooms , good bathrooms ( with towel warmer )  , great location and fabulous staff .	(rooms, positive); (bathrooms, positive); (towel warmer, positive); (location, positive); (staff, positive)	(rooms, positive); (bathrooms, positive); (staff, positive)	0
+restaurant	My father had the flank steak which was very good , and my mother had the swordfish .	(flank steak, positive)	(flank steak, positive); (swordfish, positive)	0
+restaurant	We had fun eating in there , we were there like around 3 a .m . in the morning !	(NULL, positive)	(NULL, positive)	1
+hotel	The rooms were nice , well equipped and very clean .	(rooms, positive)	(rooms, positive)	1
+restaurant	Raga 's is a romantic , cozy restaurant .	(Raga 's, positive)	(Rahara 's, positive)	0
+laptop	my kids have played roblox and minecraft on it along with fortnite so i think it can handle online gaming pretty good .	(NULL, positive)	(roblox, positive); (minecraft, positive)	0
+restaurant	The service is excellent , the decor is great , and the food is delicious and comes in large portions .	(service, positive); (decor, positive); (food, positive); (portions, positive)	(service, positive); (decor, positive); (food, positive)	0
+laptop	but my main concerns for everyone is the heat and fan noises , both are very apparent and if you have this on your lap you better have a laptop tray or keep it on a desk .	(fan, negative)	(NULL, negative); (laptop tray, negative)	0
+laptop	most of the laptop is actually very good , but is held back by a 5400 rpm hdd .	(laptop, positive); (5400 rpm hdd, positive)	(laptop, positive); (laptop, negative)	0
+laptop	as i bought 13 inch model , it is very portable .	(model, positive)	(model, positive)	1
+hotel	and I will never come back here !	(NULL, negative)	(NULL, positive)	0
+laptop	the machine ' s visible design itself was fine .	(machine, positive)	(machine ' s visible design, positive)	0
+restaurant	The owner truly caters to all your needs .	(owner, positive)	(owner, positive)	1
+hotel	I stayed at the Eastgate Tower with a large group of girls for a reunion weekend.	None	None	1
+restaurant	Skip this restaurant , it 's a big disappointment .	(restaurant, negative)	(restaurant, negative)	1
+laptop	it will not power on anymore after 2 mos of daily use - 4 hours per day .	(NULL, negative)	(NULL, negative)	1
+restaurant	I 've been to at Cafe Spice probably 5-8 times , it is probably still the best Indian restaurant around Union Square .	(Cafe Spice, positive)	(Cafe Spice, positive)	1
+laptop	thankfully , this time , acer has gotten that part right .	(acer, positive)	(acer, positive)	1
+laptop	i loved mine , so i got her the same one .	(NULL, positive)	(NULL, positive)	1
+laptop	it ` ` feels ` ` solid .	(NULL, positive)	(NULL, positive)	1
+restaurant	And even with it 's Pub atmosphere they were great to my kids too !	(NULL, positive)	( Pub atmosphere, positive)	0
+restaurant	I will be going back and heartily recommend it !	(NULL, positive)	(NULL, positive)	1
+restaurant	If you go , try the marinara/arrabiatta sauce , the mozzarella en Carozza is mmmmmmmm ... .. everything is just delicious .	(marinara/arrabiatta sauce, positive); (mozzarella en Carozza, positive); (NULL, positive)	(marinara/arrabiatta sauce, positive); (mozzarella en Carozza, positive)	0
+hotel	A+	None	None	1
+hotel	Book it before they run out of rooms for the summer tourist season!	None	None	1
+laptop	it ' s sturdy , and looks and feels great .	(NULL, positive)	(NULL, positive)	1
+hotel	Prices for this New York City eaterie is outragious when one can venture just down the block and go to a very fine resataurant named Keen's on west 36th Street for the same prices and have a far superior New York restaurant experience.	None	None	1
+laptop	so far i ' m enjoying it .	(NULL, positive)	(NULL, positive)	1
+hotel	Food and rest of the resort is nothing special .	(resort, negative); (Food, neutral)	(Food, negative); (rest of the resort, negative)	0
+hotel	but this is a good thing!	None	None	1
+laptop	just a home pc laptop that works very well .	(home pc laptop, positive)	(laptop, positive)	0
+hotel	The hotel should be closed until the work is done .	(hotel, negative)	(hotel, negative)	1
+restaurant	We were less than impressed .	(NULL, negative)	(NULL, negative)	1
+hotel	Great Hotel!	None	None	1
+hotel	On the whole .  .  .  . fab I have to say that most of the reviews are spot on .	(NULL, positive)	(NULL, positive)	1
+restaurant	I 've also been amazed at all the new additions in the past few years : A new Jazz Bar , the most fantastic Dining Garden , the Best Thin Crust Pizzas , and now a Lasagna Menu which is to die for ( these are not your average lasagnas ) !	(Dining Garden, positive); (Jazz Bar, positive); (Thin Crust Pizzas, positive); (Lasagna Menu, positive)	(Jazz Bar, positive); (dining Garden, positive); (The Thin Crust Pizzas, positive); (Lasagnas, positive)	0
+laptop	love this so much !	(NULL, positive)	(NULL, positive)	1
+restaurant	I like Cafe Noir dont get me wrong , it is jsut that the people who work there are evil and incompetent ! !	(people, negative); (Cafe Noir, positive)	(Cafe Noir, negative)	0
+hotel	Highly recommend , and take the subway -  - it ' s easy and quick .	(NULL, positive)	(NULL, positive)	1
+restaurant	I 'm glad I was introduced to this place and this is a rare gem in NY .	(place, positive)	(place, positive)	1
+restaurant	The best pad thai i 've ever had .	(pad thai, positive)	(pad thai, positive)	1
+laptop	easy set up , nice picture , responsive mouse pad , very lightweight , etc .	(set up, positive); (mouse pad, positive); (NULL, positive)	(set up, positive); (picture, positive); (mouse pad, positive)	0
+laptop	he loves it .	(NULL, positive)	(NULL, positive)	1
+restaurant	The food was lousy - too sweet or too salty and the portions tiny .	(food, negative); (portions, negative)	(food, negative); (portions, negative); (portions, negative)	1
+laptop	- the spacebar is finicky .	(spacebar, negative)	(spacebar, positive)	0
+laptop	battery life is outstanding .	(battery life, positive)	(battery life, positive)	1
+restaurant	A few tips : skip the turnip cake , roast pork buns and egg custards .	(turnip cake, negative); (roast pork buns, negative); (egg custards, negative)	(turnip cake, negative); (roast pork buns, negative); (egg custards, negative)	1
+restaurant	Moderate prices .	(NULL, neutral)	(NULL, negative)	0
+hotel	and I must say we got a GREAT deal for the Memorial Weekend .	(NULL, positive)	(Memorial Weekend, positive)	0
+restaurant	There is something about their atmosphere that makes me come back nearly every week .	(atmosphere, positive)	(atmosphere, positive)	1
+restaurant	No desert menu , no apology , nothing ! ! ! ! ! !	(NULL, negative)	(dessert menu, negative)	0
+restaurant	The food we ordered was excellent , although I would n't say the margaritas were anything to write home about .	(food, positive); (margaritas, neutral)	(food, positive); (margaritas, positive)	0
+restaurant	The ambience was so fun , and the prices were great , on top of the fact that the food was really tasty .	(ambience, positive); (NULL, positive); (food, positive)	(ambience, positive); (NULL, positive); (NULL, positive); (NULL, positive)	0
+laptop	keyboard is decent with good travel .	(keyboard, positive)	(keyboard, positive)	1
+restaurant	We had a great time at the Jekyll and hyde Pub last night .	(Jekyll and hyde Pub, positive)	(Jekyll and hyde Pub, positive)	1
+hotel	Most awful hotel we ever stayed at My husband and I stayed at the Raphael in May 04 .	(Raphael, negative)	(Hotel, negative)	0
+hotel	We wanted to stay somewhere that would accommodate all of us in one room and the two bedroom suite was more than enough space for us.	None	None	1
+restaurant	The buffet had a nice selection .	(buffet, positive)	(buffet, positive)	1
+restaurant	I was speechless by the horrible food .	(food, negative)	(food, negative)	1
+laptop	dedicated graphics card	(graphics card, positive)	(graphics card, positive)	1
+hotel	Best thing was having a Starbucks at the lobby and being able to walk right into the middle of Time Square .	(lobby, positive); (NULL, positive)	(NULL, positive)	0
+hotel	(We did not choose to use their breakfast option).	None	None	1
+restaurant	I ate here a week ago and found most dishes average at best and too expensive .	(dishes, negative)	(dishes, negative)	1
+restaurant	I highly recommend the Sophia pizza .	(Sophia pizza, positive)	(Sofalia pizza, positive)	0
+hotel	If you want to rent a room so small that you can't even open your luggage except on your bed, you've found the right place.	None	None	1
+restaurant	Great pizza and fantastic service .	(pizza, positive); (service, positive)	(pizza, positive); (service, positive)	1
+restaurant	Service , however , was excellent ... and I liked the setting/atmosphere a lot .	(Service, positive); (setting/atmosphere, positive)	(Service, positive); (atmosphere, positive)	0
+laptop	bought this on may , barely used it and now 4 months later it ' s randomly shutting down every few minutes .	(NULL, negative)	(NULL, negative)	1
+hotel	Room simple and small but immaculately clean, flat screen TV and fabulous view over the canal.	None	None	1
+laptop	always loved asus and they build amazing machines .	(asus, positive); (machines, positive)	(asus, positive); (machine, positive)	0
+laptop	monitor screen is ok , sometimes the contrast is poor but looks better in games .	(monitor screen, neutral); (contrast, negative); (contrast, positive)	(monitor screen, neutral); (contrast, negative)	0
+restaurant	Expensive	(NULL, negative)	None	0
+restaurant	Consistently good Japanese Tapas .	(Japanese Tapas, positive)	( Japanese Tapas, positive)	1
+laptop	but , honesty , for the intended use case of a budget chromebook ( youtube , bill paying , amazon prime watching machine ) this difference is negligible .	(chromebook, neutral)	(chromebook, negative)	0
+hotel	However , its location was unbeatable - reachable by all kinds of public transportation .	(location, positive)	(location, positive)	1
+hotel	A very good deal at the $75 a night rate I got, especially after shopping Manhattan hotels for next month!	None	None	1
+hotel	This is a particularly agreeable hotel with friendly staff, nice furnishings, and excellent value for money given the included breakfast, wine/cheese evenings, and coffee and tea on-tap, so to speak.	None	None	1
+laptop	the screen looks amazing , ips it seems .	(screen, positive)	(screen, positive); (ips, positive)	0
+laptop	it opens programs immediately .	(NULL, positive)	(NULL, positive)	1
+laptop	machine is totally unusable during the update .	(machine, negative)	(machine, negative)	1
+restaurant	La Rosa waltzes in , and I think they are doing it the best .	(La Rosa, positive)	(La Rosa waltzes, positive)	0
+laptop	this computer is really hard to use .	(computer, negative)	(computer, negative)	1
+laptop	the chromebook has instant connection and a hugely impressive 8 - hour battery life when left on .	(chromebook, positive); (battery life, positive)	(chromebook, positive); (battery life, positive)	1
+restaurant	A must try !	(NULL, positive)	(NULL, positive)	1
+restaurant	Restaurant with a view	(view, neutral)	None	0
+laptop	having ram problems after 1 .	(ram, negative)	(ram, negative)	1
+laptop	i also don ' t want the power cord draped down the right side and annoying me .	(power cord, negative)	(power cord, negative)	1
+laptop	this has been a very light convenient laptop for me .	(laptop, positive)	(laptop, positive)	1
+laptop	another expensive & poorly executed samsung product .	(samsung product, negative)	(samsung product, negative)	1
+laptop	- new ports that were not in the 2011 model : hdmi port , extra thunderbolt video port ( now it has two instead of one )	(ports, positive)	(hdmi port, positive); (thunderbolt video port, positive)	0
+laptop	- biggest disappointment is the track pad .	(track pad, negative)	(track pad, negative)	1
+restaurant	The atmosphere is noisy and the waiters are literally walking around doing things as fast as they can .	(atmosphere, negative); (waiters, positive)	(atmosphere, negative); (waiters, negative)	0
+laptop	it also had charging problems and got terrible warranty support .	(NULL, negative); (warranty support, negative)	(NULL, negative)	0
+restaurant	This is undoubtedly my favorite modern Japanese brasserie ( that don ’ t serve sushi ) , and in my opinion , one of the most romantic restaurants in the city !	(modern Japanese brasserie, positive)	(modern Japanese brasserie, positive); (restaurant, positive)	0
+laptop	the overall material the laptop is made of feels incredibly cheap .	(overall material the laptop, negative)	(laptop, positive)	0
+hotel	I will not recommend this hotel to anyone !  !  !  !  !  !	(hotel, negative)	(hotel, negative)	1
+restaurant	The menu is limited but almost all of the dishes are excellent .	(menu, negative); (dishes, positive)	(menu, negative); (dishes, positive)	1
+hotel	It is a fairly new tall and narrow building squeezed between two larger ones so there ' s little natural light , but the rooms are what you ' d typically expect from a Marriott Courtyard , and surprisingly roomy for Manhattan .  .  . clean with comfortable bedding and plush towels , free internet , good in - room coffee ( avoid the lobby machine stuff )  , flat screen TV , and most of all , a very professional and helpful staff .	(Marriott Courtyard, neutral); (Marriott Courtyard, negative); (rooms, positive); (bedding, positive); (plush towels, positive); (internet, positive); (in-room coffee, positive); (staff, positive); (flat screen TV, positive)	(NULL, positive); (rooms, positive); (room, positive); (room, positive); (room, positive); (room, positive); (room, positive); (room, positive); (room, positive); (room, positive); (room, positive); (room, positive); (room,	0
+restaurant	My six year old loved it .	(NULL, positive)	(NULL, positive)	1
+hotel	good value for the money I stayed at the hotel before when it was the Alisa .	(hotel, positive)	(hotel, positive)	1
+laptop	this laptop has all the necessary ports .	(laptop, positive)	(laptop, positive)	1
+restaurant	We were seated outside and the waiter spilled red wine and hot tea on myself and my date .	(waiter, negative)	(waiter, positive); (hot tea, positive)	0
+restaurant	Just straight up cheap , good food .	(food, positive)	(food, positive)	1
+hotel	This was the worst place I have ever stayed .	(NULL, negative)	(place, negative)	0
+hotel	Take care on the Rambla, if someone approaches you be ready to defend yourself, it's the only way you'll keep your money.	None	None	1
+hotel	Harbour - Wow!	None	(Harbour, positive)	0
+restaurant	Not a very fancy place but very good Chinese style Indian food .	(place, neutral); (Chinese style Indian food, positive)	(Indian food, positive)	0
+restaurant	Guacamole+shrimp appetizer was really great , we both had the filet , very good , did n't much like the frites that came with , but the filet was so good , neither of us cared .	(Guacamole+shrimp appetizer, positive); (filet, positive); (frites, negative)	(Gugulamole+shrimp appetizer, positive); (filet, positive); (filet, positive); (filet, positive); (filet, positive); (filet, positive); (filet, positive); (filet, positive); (filet, positive);	0
+laptop	it worked perfectly right out of the box .	(NULL, positive)	(NULL, positive)	1
+hotel	I stayed at this motel for two nights last week , and found it to be fantastic value for money .	(motel, positive)	(motel, positive)	1
+hotel	wonderful staff .	(staff, positive)	(staff, positive)	1
+laptop	disadvantage of amazon seller , it was delivered to my usps not my home .	(amazon seller, negative)	(amazon seller, negative)	1
+laptop	i ' m extremely disappointed with the performance of this laptop .	(laptop, negative)	(laptop, negative)	1
+hotel	We had a Time Square view at no extra cost, the room was huge with sofa's and chairs, the bed was huge clean linen every day.	None	None	1
+laptop	this unit is ` ` pretty ` ` and stylish , so my high school daughter was attracted to it for that reason .	(unit, positive)	(unit, positive)	1
+restaurant	sometimes i get bad food and bad service , sometimes i get good good and bad service .	(food, negative); (service, negative); (good, positive)	(food, negative); (service, negative); (service, negative)	0
+hotel	I feel comfortable in knowing that I will always have a place to call when I am planning another trip to Boston.	None	None	1
+hotel	We arrived in San Francisco after rush hour, easy to find with our Tom-Tom, right on Lombard.	None	None	1
+laptop	the speakers are super clear and get loud enough , but obviously lack bass .	(speakers, positive); (speakers, negative)	(speakers, positive); (bass, negative)	0
+restaurant	The food is good , I ca n't lie .	(food, positive)	(food, positive)	1
+laptop	the chromebook was packaged well and we saw no defects ( ours was used ) .	(chromebook, positive)	(chromebook, positive)	1
+restaurant	Regardless , we 'll be back and can 't wait to visit in the summer to take advantage of the patio .	(NULL, positive)	(patio, positive)	0
+hotel	We enjoyed eating at Ginger and Olsen - two nearby restaurants , and if we had had time would have tried more as recommended by the staff .	(staff, positive)	(Ginger and Olsen, positive)	0
+restaurant	The hostess was very pleasant .	(hostess, positive)	(hostess, positive)	1
+laptop	moreover , the 8th gen i5 cpu is amazing .	(8th gen i5 cpu, positive)	(cpu, positive)	0
+restaurant	However , I think this place is a good hang out spot .	(place, positive)	(place, positive)	1
+restaurant	I will be going back very soon .	(NULL, positive)	(NULL, positive)	1
+hotel	Starbucks on block, train on corner.	None	None	1
+laptop	should not of bought this chromebook .	(chromebook, negative)	(chromebook, negative)	1
+laptop	games / video apps perform absolutely awfully .	(games / video apps, negative)	(games, positive); (video apps, positive)	0
+laptop	freezes with red lines across it , froze five times the first afternoon .	(NULL, negative)	(NULL, negative)	1
+laptop	excellent laptop good speed on uploads and download .	(laptop, positive)	(laptop, positive)	1
+hotel	Our room was good sized and our room looked out to the beach .	(room, positive)	(room, positive); (room, positive)	1
+laptop	gamers , do not fool yourself with the fancy ` ` intel i5 , 8th generation ` ` , nothing can fix an incompetent hard drive , that 8gb ram is worth nothing .	(intel i5, positive); (hard drive, negative); (ram, negative)	(intel i5, negative); (hard drive, negative)	0
+restaurant	By far , the best pizza in Manhattan .	(pizza, positive)	(pizza, positive)	1
+restaurant	The Steak Tartare is a great bet , they fix it for you at the table .	(Steak Tartare, positive)	(Steak Tartare, positive)	1
+restaurant	Love it .	(NULL, positive)	(NULL, positive)	1
+restaurant	The food is great .	(food, positive)	(food, positive)	1
+hotel	The location was perfect for access to all parts of Hong Kong , Kowloon and the New Terrotries - through the MTR and a Hong Kong Octopus Card .	(location, positive)	(location, positive)	1
+restaurant	And $ 11 for a plate of bland guacamole ?	(guacamole, negative)	(guacamole, negative)	1
+hotel	I was promised a specifichotel room and when I arrived , they said they did not have those types of rooms at their hotel .	(hotel, negative)	(room, negative)	0
+hotel	There are a lot of steps and steep inclines on the property, but overall it was well worth the money.	None	None	1
+laptop	so android is fun for tablet features , but its like embedding an android inside , without letting android apps out to utilize the full abilities of the chromium system .	(android, positive); (android, negative)	(android, positive); (chromeum system, positive)	0
+laptop	love the screen resolution .	(screen resolution, positive)	(screen resolution, positive)	1
+restaurant	I would go back .	(NULL, positive)	(NULL, positive)	1
+restaurant	Best meal in a long time !	(meal, positive)	(meal, positive)	1
+laptop	- good screen .	(screen, positive)	(screen, positive)	1
+restaurant	Best In ALL of NYC	(NULL, positive)	None	0
+laptop	this little vivo had the speed / storage that we need , the materials feel substantial instead of cheap .	(vivo, positive); (materials, positive)	(vivo, negative); (storage, negative)	0
+restaurant	We left , never to return .	(NULL, negative)	(NULL, negative)	1
+restaurant	Service was prompt , friendly and great .	(Service, positive)	(Service, positive)	1
+restaurant	None was made so i hung up .	(NULL, negative)	(NULL, negative)	1
+hotel	Average friendly staff .	(staff, positive)	(staff, positive)	1
+restaurant	The side dishes were passable , and I did get a refill upon request .	(side dishes, neutral); (side dishes, positive)	( side dishes, negative)	0
+laptop	navigates well .	(navigates, positive)	(NULL, positive)	0
+laptop	great computer and great value , our second chromebook and first one still doing fine just needed another for family .	(computer, positive)	(computer, positive); (chromebook, positive)	0
+restaurant	Our waitress was n't mean , but not especially warm or attentive either .	(waitress, neutral)	(waitress, negative)	0
+laptop	i love the retina display .	(retina display, positive)	(retina display, positive)	1
+restaurant	the spinach is fresh , definately not frozen ...	(spinach, positive)	(spinach, positive)	1
+restaurant	it 's a perfect place to have a amazing indian food .	(indian food, positive)	(indian food, positive)	1
+restaurant	Service was very good - prompt , attentive and non-intrusive .	(Service, positive)	(Service, positive)	1
+hotel	Practical hotel with great location	None	None	1
+laptop	as a windows and mac user , i wasn ' t sure if i could benefit from using chromeos , but i find myself using it more than i anticipated .	(NULL, positive)	(chromeos, negative)	0
+restaurant	What a hassle !	(NULL, negative)	(NULL, positive)	0
+restaurant	The food is yummy , especially their cooked-to-perfection mussels in spicy tomato sauce and their shoestring crispy fries .	(food, positive); (mussels in spicy tomato sauce, positive); (fries, positive)	(food, positive); (chicken-to-perfection sauce, positive); (sushiy tomato sauce, positive); (sushi fries, positive)	0
+laptop	at a ` ` black friday ` ` price , this computers specs could not be beat for the value to dollar performance ratio .	(computers specs, positive)	(computer specs, negative)	0
+hotel	Peakin' at the Beacon!	None	None	1
+restaurant	JUST AWSOME .	(NULL, positive)	(NULL, negative)	0
+restaurant	This was my frist time at Cafe St. Bart 's and I must say how delicious the food and the service was .	(food, positive)	(food, positive); (service, positive)	0
+hotel	however I was very dissapointed .	(NULL, negative)	(NULL, negative)	1
+laptop	love the backlit keyboard .	(backlit keyboard, positive)	(backlit keyboard, positive)	1
+restaurant	While it is understandable that every place is indeed different , there was not a need to be uncourteous to customers and downright rude .	(NULL, negative)	(place, positive)	0
+laptop	only thing i really didn ' t like about this was how quickly the battery drained .	(battery, negative)	(battery, negative)	1
+hotel	I will never stay there again.	None	None	1
+laptop	for ~ $ 400 , i ' m happy with this product after a couple months .	(product, positive)	(product, positive)	1
+restaurant	Great sushi experience .	(sushi, positive)	(sushi, positive)	1
+restaurant	Great Indian food and the service is incredible .	(Indian food, positive); (service, positive)	(Indian food, positive); (service, positive)	1
+laptop	overall i like its slim design and feather light - weight alone with well equipped spec that can meet my daily work environment .	(design, positive); (spec, positive)	(design, positive); (spec, positive)	1
+laptop	before the review this package has nice presentation and solid build .	(package, positive); (build, positive)	(package, positive); (build, positive)	1
+laptop	maybe that ' s a consequence of how the retina display is built , but yeah , it ' s harder to keep the screen clean .	(screen, negative)	(retina display, negative)	0
+hotel	Would recommend this hotel to anyone wanting decent accomodation in NY but don ' t want to pay the higher prices of the hotel chains .	(hotel, positive)	(hotel, positive)	1
+laptop	some apps don ' t work but the play store is still in beta right now	(apps, negative); (play store, neutral)	(apps, negative); (play store, negative)	0
+restaurant	The chicken lollipop is my favorite , most of the dishes ( I have to agree with a previous reviewer ) are quite oily and very spicy , espeically the Chilli Chicken .	(chicken lollipop, positive); (dishes, negative); (Chilli Chicken, negative)	(chicken lollipop, positive); (dishes, positive); (Clini Chicken, positive)	0
+hotel	This hotel is so well located , within walking distance of Grand Central Terminal , and ideal for theatergoers .	(hotel, positive)	(hotel, positive)	1
+restaurant	They have authentic Indian at amazin prices .	(Indian, positive)	(Indian, positive)	1
+hotel	If the service were more personable and efficient, then we would have had no complaints about the Mazarin.	None	None	1
+restaurant	Overpriced and not tasty	(NULL, negative)	None	0
+hotel	Absolutely Fabulous!	None	None	1
+laptop	honestly , i think nobody uses these ports anyway .	(ports, neutral)	(ports, negative)	0
+hotel	Good location , but get an inside room	(location, positive)	(location, positive); (room, positive)	0
+restaurant	The nakgi-bokum was horrible .	(nakgi-bokum, negative)	(nakgi-bokum, negative)	1
+laptop	however , i have to remove one star for the very unreliable magnetic charging connector .	(charging connector, negative)	(magnetic charging connector, negative)	0
+laptop	the laptop its - self is great and is made of good build quality .	(laptop, positive); (build quality, positive)	(laptop, positive); (build quality, positive)	1
+restaurant	Loved it	(NULL, positive)	(NULL, positive)	1
+hotel	Great price for a downtown two star motel Quite possibly the cheapest price for a motel room in a major city in the downtown area .	(motel, positive); (room, positive)	(hotel room, positive)	0
+restaurant	Considering we were the last patrons there and it was after the closing time , the waitstaff did not rush us at all and made us feel comfortable and relaxed .	(waitstaff, positive)	(waitstaff, positive)	1
+restaurant	Downstairs lounge is always a good attraction	(Downstairs lounge, positive)	None	0
+restaurant	The freshest , best variety , and the fastest delivery .	(NULL, positive); (delivery, positive)	(NULL, positive); (delivery, positive)	1
+restaurant	Just want to warn you all - do n't waste your time and money .	(NULL, negative)	(NULL, positive)	0
+laptop	as others have already reported , the headphone jack produces extremely weak volume , even at max .	(headphone jack, negative)	(headphone jack, negative); (headphone jack, negative)	1
+laptop	acer made a winner here !	(acer, positive)	(acer, positive)	1
+restaurant	Sauce was watery and the food did n't have much flavor .	(Sauce, negative); (food, negative)	(Sauce, negative); (food, negative)	1
+hotel	loved this place	(NULL, positive)	(place, positive)	0
+hotel	Police not interested, they just watch!	None	None	1
+hotel	Reasonably priced , and very comfortable , our only complaint was one rude staff member who was there when we checked in ( all other staff were friendly and helpful )  .	(NULL, positive); (staff, negative); (staff, positive)	(staff member, positive); (staff member, positive)	0
+hotel	We rent a car at Hertz and we picked it up just outside the hotel.	None	None	1
+restaurant	Great Indian food	(Indian food, positive)	None	0
+hotel	Five star exterior , three star hotel room and one star management .	(hotel, positive); (room, neutral); (management, negative)	(exterior, positive); (hotel room, positive); (management, positive)	0
+restaurant	It 's very spicy but not offensive .	(NULL, positive)	(NULL, positive)	1
+restaurant	Small servings for main entree , i had salmon ( wasnt impressed ) girlfriend had chicken , it was good .	(salmon, negative); (chicken, positive); (servings for main entree, negative)	(servings, positive); (chicken, positive)	0
+restaurant	You will not be disapointed at all .	(NULL, positive)	(NULL, positive)	1
+laptop	i went through two of them , both came with sharp edges that made them dangerous and uncomfortable to use .	(NULL, negative)	(edges, negative)	0
+laptop	the chromebook r 11 was hardly used and only a few months old .	(chromebook r 11, negative)	(chromebook r 10, negative)	0
+laptop	it still is nice looking with a textured cover and being black overall .	(NULL, positive)	(NULL, positive)	1
+laptop	i have n ' t used it much for gaming but i imagine it works fine .	(NULL, positive)	(NULL, positive)	1
+hotel	Nice walk to Checkpoint Charlie and plenty of restaurants around .	(NULL, positive)	(NULL, positive)	1
+laptop	configuring the printer was a little tricky but not bad .	(printer, neutral)	(NULL, negative)	0
+hotel	you get treated like royalty .	(NULL, positive)	(NULL, positive)	1
+hotel	Nice choice of small cafe ' s and shops in the area .	(NULL, positive)	(NULL, positive)	1
+laptop	unfortunately i was never able to complete this task , because after booting the laptop it suddenly shut - off on me and wouldn ' t turn back on again .	(laptop, negative)	(laptop, negative)	1
+restaurant	Best . Sushi . Ever .	(Sushi, positive)	(Sushi, positive)	1
+hotel	And while the room was on the shabby side , it was clean !  !  ! You can ' t beat the price , especially for the location .	(room, positive)	(room, positive); (location, positive)	0
+restaurant	The restaurant is a bit noisy but that is something that can be overlooked once you sit down and enjoy a great meal	(meal, positive); (restaurant, negative)	None	0
+laptop	it works perfectly and feels very tight but it is something i noticed .	(NULL, positive)	(NULL, positive)	1
+hotel	A beautiful, first class hotel in a super convenient location.	None	None	1
+hotel	Fantastic!	None	(NULL, positive)	0
+restaurant	delicious bagels , especially when right out of the oven .	(bagels, positive)	(bagels, positive)	1
+laptop	+ backlight kb and travel feels pretty nice on the keys .	(backlight kb, positive); (keys, positive)	(keys, positive); (backlight kb, positive); (travel, positive)	0
+hotel	Great hotel!	None	None	1
+laptop	loving the laptop .	(laptop, positive)	(laptop, positive)	1
+laptop	using wifi the signal seems to drop , not sure if the wifi adapter needs an update but there are issues .	(wifi, negative); (wifi adapter, negative)	(wifi, negative)	0
+laptop	the processor on this chromebook is one of the best you can get on a chromebook at this price ( i did plenty of research ) , but you start to notice a lag when you have more than 3 browsers open at once .	(processor, positive); (processor, negative)	(processor, positive); (chromebook, positive)	0
+laptop	it is very good for the price .	(NULL, positive)	(NULL, positive)	1
+restaurant	The stuff tilapia was horrid ... tasted like cardboard .	(stuff tilapia, negative)	(NULL, negative)	0
+hotel	Good service We stayed at the hotel fr 8 Sep 08 to 11 Sep 08 and were very happy with stay in this hotel.	None	None	1
+restaurant	What we did do was waste 3 hours being trapped in a table waiting and waiting for food and drinks and hooka . . some of which we never received !	(NULL, negative)	(NULL, negative)	1
+laptop	don ' t waste your money on this computer , it will disapoint you in every way possible .	(computer, negative)	(computer, negative)	1
+hotel	We stayed on the 10th floor but were accompanied by renovations taking place in a room on that floor from 7 . 30am on 2 mornings !	(room, negative)	(room, negative)	1
+restaurant	Can 't argue about that , but they are clearly over priced .	(NULL, negative)	(NULL, positive)	0
+restaurant	I recommend it !	(NULL, positive)	(NULL, positive)	1
+laptop	this computer is loud !	(computer, negative)	(computer, negative)	1
+restaurant	Although we were looking for regular lettuce and some walnuts the salads we got were great .	(salads, positive)	(lettuce, positive); (salads, positive)	0
+laptop	the new touchpad takes a little getting used to , but otherwise it ' s been perfect .	(touchpad, neutral); (NULL, positive)	(touchpad, positive)	0
+laptop	pros : lightweight and looks nice .	(NULL, positive)	(pro, positive)	0
+laptop	i can ' t use my printer because it ' s not supported .	(printer, negative)	(NULL, negative)	0
+restaurant	On a recent Sunday afternoon , a friend and I accidently found this great restaurant on our way to see the pulitzer prize winning play DOUBT .	(restaurant, positive)	(restaurant, positive)	1
+hotel	Very old , dusty and very expensiv -	(NULL, negative)	(NULL, negative)	1
+restaurant	$ 20 for all you can eat sushi can not be beaten .	(all you can eat sushi, positive)	(sushi, negative)	0
+hotel	I had friends staying in one of the suites and that was great, so if you want a bit more of a treat for an extra 30 euros book one of those.	None	None	1
+hotel	The Staff was fabulous !  !  !	(Staff, positive)	(Staff, positive)	1
+hotel	Average Rooms - Beware of Biting Ants!!!	None	None	1
+laptop	i tried it , and it is very limited for the current price of $ 550 .	(NULL, negative)	(NULL, negative)	1
+laptop	the build quality seems very good .	(build quality, positive)	(build quality, positive)	1
+hotel	We have just returned from a wonderful stay at the Alicia .	(the Alicia, positive)	(Alicia, positive)	0
+hotel	Friendly	None	(NULL, positive)	0
+laptop	but it is a bit big and heavy .	(NULL, negative)	(NULL, negative)	1
+laptop	i ' ve been able to play fortnite on this laptop , medium settings , with no issues or lag / stutter .	(laptop, neutral)	(laptop, positive)	0
+restaurant	Everything about this restaurant was special .	(restaurant, positive)	(restaurant, positive)	1
+laptop	for home users , these cheap machines fit many use cases from casual browsing and two - screening , to watching videos and calling family .	(machines, positive)	(machine, positive)	0
+hotel	The staff are certainly accomodating and room service was adequate , but I would wait until a complete renovation of the rooms before ever staying at the Biltmore again .	(staff, positive); (room service, positive); (Biltmore, negative)	(staff, positive); (room service, positive)	0
+hotel	- it was above average but only a typical business stop - over hotel .	(hotel, neutral)	(hotel, negative)	0
+restaurant	Everything I had was good , and I 'm a eater .	(NULL, positive)	(NULL, positive)	1
+hotel	We will definitely return .	(NULL, positive)	(NULL, positive)	1
+restaurant	The food is authentic Italian - delicious !	(food, positive)	(food, positive)	1
+laptop	don ' t buy this machine .	(machine, negative)	(machine, negative)	1
+hotel	staff ok , clean hotel , very modern , excellent shower , free internet .	(staff, neutral); (hotel, positive); (shower, positive); (internet, positive)	(staff, positive); (hotel, positive); (shower, positive); (wifi, positive)	0
+laptop	unfortunately , this particular computer is 100 % unusable after only 2 years and 2 weeks .	(computer, negative)	(computer, negative)	1
+laptop	battery life is a huge plus !	(battery life, positive)	(battery life, positive)	1
+restaurant	Two complaints -- their appetizer selection stinks , it would be nice to get some mozzarella sticks on the menu .	(appetizer selection, negative)	(appetizer selection, negative)	1
+hotel	Most of attractions were walking distance .	(NULL, positive)	(NULL, positive)	1
+hotel	From the moment we checked in , the staff was very accomodating and nice .	(staff, positive)	(staff, positive)	1
+laptop	i ' m using it mainly to store movies , and the 1 tb drive is nice .	(drive, positive)	(tb drive, positive)	0
+hotel	Awesome location , secured parking and an interesting interior .	(location, positive); (parking, positive); (NULL, positive)	(location, positive); (location, positive); (location, positive); (interior, positive)	0
+restaurant	I just do n't understand all the hype ...	(NULL, negative)	None	0
+laptop	as a 5 - year chromebook veteran , i ' ve been waiting for this machine .	(machine, positive)	(machine, positive)	1
+laptop	i ' m four months into owning this lean , mean , little machine .	(machine, positive)	(machine, negative)	0
+restaurant	The hostess and the waitress were incredibly rude and did everything they could to rush us out .	(hostess, negative); (waitress, negative)	(hostess, negative); (waitress, negative)	1
+hotel	The staff were very nice , the room was quite large , clean and comfortable .	(staff, positive); (room, positive)	(staff, positive); (room, positive)	1
+laptop	first , the factory default driver configuration of this thing is unstable , which makes installing a correct configuration more difficult .	(factory default driver, negative)	(factory default driver configuration, negative)	0
+hotel	We found this hotel on Trip advisor and went with the reviews.	None	None	1
+laptop	sometimes they felt a bit half - baked , but i loved the idea , and the keyboard made a world of difference in what you could do with that tablet .	(NULL, positive); (keyboard, positive)	(keyboard, positive); (tablet, negative)	0
+hotel	5 stars without the fussing	(NULL, positive)	None	0
+laptop	apple has always priced their hardware high , but you could always make an argument for the style , nice hardware and the unique osx experience .	(hardware, negative); (NULL, positive); (osx, positive)	(apple, positive); (osx experience, positive)	0
+restaurant	I was there on sat . for my birthday and we had an excellent time .	(NULL, positive)	(NULL, positive)	1
+hotel	While the refurbished lobby , restaurants and bars are still elegant and luxurious , the standard rooms are far more reminiscent of a decrepit dorm room .	(restaurants and bars, positive); (rooms, negative)	(room, positive); (rooms, positive); (rooms, positive)	0
+hotel	Good bedding .	(NULL, positive)	(bedding, positive)	0
+laptop	what really did it was when i tried contacting acer support i was simply told ` ` try a restart ` ` and then ` ` call google , we can ' t help you ` ` .	(support, negative)	(acer support, negative)	0
+restaurant	I found the food , service and value exceptional everytime I have been there .	(food, positive); (service, positive); (value, positive)	(food, positive); (service, positive)	0
+restaurant	With the great variety on the menu , I eat here often and never get bored .	(menu, positive)	(menu, positive)	1
+hotel	It was fine!	None	None	1
+restaurant	For each course we waited over 1 /2 hour to 45 minutes and were never offered a drink .	(NULL, negative)	(drink, negative)	0
+hotel	Loved it.	None	None	1
+laptop	can get pretty warm running an intensive android app for a while .	(android app, negative)	(android app, positive)	0
+restaurant	Wonderful strawberry daiquiries as well !	(strawberry daiquiries, positive)	(strawberry daiquiries, positive)	1
+laptop	i would * not * recommend this laptop .	(laptop, negative)	(laptop, negative)	1
+restaurant	With the theater 2 blocks away we had a delicious meal in a beautiful room .	(meal, positive); (room, positive); (NULL, positive)	(room, positive)	0
+restaurant	Not worth it .	(NULL, negative)	(NULL, negative)	1
+laptop	i only mention this because , in my opinion , you ' re getting about $ 300 worth of performance here ; anyone telling you this device runs like a $ 500 or $ 800 computer is exaggerating .	(device, negative)	(device, negative)	1
+restaurant	We even had a visit from the Manager who wanted to make sure we were enjoying ourselves .	(Manager, positive)	(Manager, positive)	1
+hotel	Although hotel and roof top is a very nice amenity defintely stay away from their restaurant and their very arrogant mangager Alex .	(hotel, positive); (restaurant, negative); (mangager Alex, negative)	(hotel, positive); (rooftop, negative)	0
+hotel	The bellmen were very helpful , we had tons of stuff because we were doing a destination wedding .	(bellmen, positive)	(bellmen, positive)	1
+hotel	Perfecty	None	(NULL, positive)	0
+laptop	a big part of this device is its gorgeous aesthetic .	(device, positive)	(device, positive)	1
+hotel	great value for money hi all . just back from 2nights stay in tulip inn central .	(tulip inn central, positive)	(NULL, positive)	0
+restaurant	I have worked in restaurants and cook a lot , and there is no way a maggot should be able to get into well prepared food .	(food, negative)	(food, positive)	0
+restaurant	The bagels always warm , soft on the inside , crispy on the outside and enormous in size .	(bagels, positive)	(bagels, positive)	1
+laptop	if you can save for 750 - 800 i would recommend going up a bit in the asus line .	(asus, positive)	(asus line, positive)	0
+hotel	It is also great because it is right on both streetcar lines .	(NULL, positive)	(NULL, positive)	1
+restaurant	We ate at this Thai place following the reviews but very unhappy with the foods .	(foods, negative)	(Thai place, negative)	0
+restaurant	Although we were told 10-15 minutes and it was more like 45 minutes .	(NULL, negative)	(NULL, negative)	1
+restaurant	It was wonderful .	(NULL, positive)	(NULL, positive)	1
+laptop	however , other than video calls it does really well .	(NULL, positive)	(video calls, positive)	0
+hotel	2nd . the hotel was fully booked for regular rooms , so when i checked in i was upgraded to an executive floor , just for the room , not for the service . the hotel is just above a big shopping center with ok food , and a subway station which isn ' t the most convenient , but it will do . the room was clean , the service was ok , but definitely not something to write about either way , if you need a good hotel in HK , and Mongkok is your region take it , but only if they give a good price , i wanted to extend my stay but they gave me a ridiculous offer	(hotel, positive); (food, neutral); (hotel, negative); (room, positive); (service, positive)	(hotel, positive); (food, positive); (service, positive)	0
+laptop	i like that it ' s got the 8th generation i5 cpu .	(8th generation i5 cpu, positive)	(cpu, positive)	0
+hotel	As a first time Hotwire user, I was pleasantly surprised by HotelMela.	None	None	1
+restaurant	Food took some time to prepare , all worth waiting for .	(Food, positive); (NULL, neutral)	(Food, positive)	0
+restaurant	You must have the crabmeat lasagna which is out of this world and the chocolate bread pudding for dessert .	(crabmeat lasagna, positive)	(crabmeat lasagna, positive); ( chocolate bread pudding, positive)	0
+hotel	You simply print out the booking receipt and present it on arrival.	None	None	1
+restaurant	Possibly the Most Romantic Restaurant in the City	(Restaurant, positive)	None	0
+hotel	Great Location , Dirty rooms After changing our room 3 times we finally got a half decent room .	(Location, positive); (rooms, negative); (rooms, neutral)	(Location, positive); (rooms, negative)	0
+hotel	Not that this is the Ritz - Carlton , but my room had a mini - fridge and microwave , with a bathtub and shower curtain around it .	(mini-fridge, positive); (shower curtain, positive); (bathtub, positive); (microwave, positive)	(room, positive); (microwave, positive); (shower curtain, positive)	0
+hotel	A good location in Tokyo , the Metro is really close ( use the covered underground walkway most of the way that means you don ' t have to cross any roads to get there ) and provides good access to both East and West of the city and Akasaka has a good mix of restaurants , bars , and coffee shops .	(location, positive)	(location, positive); (Metro, positive)	0
+laptop	less of a fault of the much lauded diving board and more a factor of the very well designed new hardware .	(hardware, positive)	(diving board, positive); (hardware, negative)	0
+laptop	seems unlikely but whatever , i ' ll go with it .	(NULL, neutral)	(NULL, negative)	0
+hotel	Staff were very obliging.	None	None	1
+restaurant	To sum it up : Service varies from good to mediorce , depending on which waiter you get ; generally it is just average Ok .	(Service, neutral)	(Service, neutral); (waiter, negative)	0
+laptop	+ comfortable keyboard	(keyboard, positive)	(keyboard, positive)	1
+restaurant	The food was pretty tradional but it was hot and good with large portions .	(food, positive); (portions, positive)	(food, positive); (portions, positive)	1
+hotel	We were going on a cruise and needed a taxi to get to the cruise port (12 - 20 euro, depending on the driver).The trip in from the airport cost just over 30 Euros and takes about 20 minutes depending on traffic although evening rush hours can take over an hour easily.	None	None	1
+laptop	i love the keyboard , trackpad and screen .	(keyboard, positive); (trackpad, positive); (screen, positive)	(keyboard, positive); (trackpad, positive); (screen, positive)	1
+hotel	The service is very good.	None	(service, positive)	0
+restaurant	Okay-i do n't mind the oily part ( cause most are cooked that way ) but it was way too bland .	(NULL, negative)	(oily part, negative)	0
+restaurant	We were then shooed inside .	(NULL, negative)	(NULL, negative)	1
+hotel	The accomadations , amedities , food and most of all the entertainment , made this resort a return vacation in the future .	(resort, positive)	(accomadations, positive); (food, positive); (entertainment, positive)	0
+hotel	Do not leave any personal belongings in the room .	(room, negative)	(room, negative)	1
+restaurant	Probably would not go back here .	(NULL, negative)	(NULL, negative)	1
+laptop	i got the same failure to charge issue that others have reported .	(charge, negative)	(NULL, negative)	0
+laptop	such a nice mac	(mac, positive)	(mac, positive)	1
+laptop	* extremely weak graphics card .	(graphics card, negative)	(graphics card, negative)	1
+hotel	Very clean room with kitchenette on 3rd level facing the street.	None	None	1
+restaurant	One of my favorite places in Brooklyn .	(NULL, positive)	(NULL, positive)	1
+hotel	Good hotel in great location	(hotel, positive); (location, positive)	None	0
+laptop	now , i have been stressed with fixing this laptop since every day has been something new that i need to fix with it .	(laptop, negative)	(laptop, negative)	1
+hotel	Great locale and Service , a bit tattered Stayed here two nights in april visiting family etc .	(Service, positive); (locale, positive)	(NULL, positive); (service, negative)	0
+laptop	buy this computer and you ' ll be very happy with it .	(computer, positive)	(computer, positive)	1
+restaurant	Have been dozens of times and never failed to enjoy the experience .	(NULL, positive)	(NULL, positive)	1
+hotel	No regrets...	None	None	1
+restaurant	Anybody who likes this place must be from a different planet , where greasy , dry and tasteless are complimentary .	(NULL, negative)	(place, positive)	0
+restaurant	This place is a great bargain .	(place, positive)	(place, positive)	1
+laptop	at least the volume through bluetooth was tolerable .	(volume through bluetooth, neutral)	(volume through bluetooth, positive)	0
+laptop	the product looks reasonable at this price range .	(product, positive)	(product, positive)	1
+hotel	It is small rooms but we didn麓t mind .	(rooms, negative)	(rooms, negative)	1
+hotel	Darling Harbor Sydney for 3 nights.	None	None	1
+restaurant	We asked for beverages and never received them .	(NULL, negative)	(NULL, negative)	1
+hotel	Yes, you can hear the cable cars from your room, but that's part of SF's charm.	None	None	1
+hotel	also enjoyed the restaurant.	None	(restaurant, positive)	0
+restaurant	The food was average or above including some surprising tasty dishes .	(food, positive); (dishes, positive)	(food, negative); (dishes, positive)	0
+laptop	i received the item after 18 days of ordering .	(item, negative)	(item, negative)	1
+laptop	can ' t really find a viewing angle where all of it looks right at the same time .	(NULL, negative)	(NULL, positive)	0
+laptop	it ' s pretty fast for a laptop especially a laptop in this price point .	(laptop, positive); (NULL, positive)	(laptop, positive)	0
+laptop	the manufacturer was not helpful in trying to resolve this issue .	(manufacturer, negative)	(product, negative)	0
+laptop	battery life is also solid .	(battery life, positive)	(battery life, positive)	1
+laptop	it keep going off on sleep mode without any way to wake it up .	(NULL, negative)	(NULL, negative)	1
+restaurant	The food however , is what one might expect .	(food, negative)	(food, positive)	0
+restaurant	Good Food	(Food, positive)	None	0
+laptop	it doesn ' t effect any of the functionality , but it was a little disappointing to open the box to see a dent on something i ' d just spend $ 1 , 000 on .	(dent, negative)	(NULL, negative)	0
+laptop	a good product !	(product, positive)	(product, positive)	1
+hotel	you will not be disappointed .	(NULL, positive)	(NULL, positive)	1
+laptop	( good ) as for the laptop ( when it worked , and i mean for the whole 30 minutes ) it was extremely fast .	(laptop, positive)	(laptop, positive)	1
+hotel	The best points of this hotel are the staff , the rooms and the proximity to the tube station .	(staff, positive); (rooms, positive); (NULL, positive)	(staff, positive); (rooms, positive)	0
+hotel	Nice, cozy Very comfortable bed (+), we liked that it is a green hotel.	None	(bed, positive); (hotel, positive)	0
+laptop	the plastic that borders the screen kind of comes out ever so slightly .	(screen, negative)	(plastic, positive)	0
+hotel	loved the place	None	(place, positive)	0
+restaurant	The food is wonderful , tasty and filling , and the service is professional and friendly .	(food, positive); (service, positive)	(food, positive); (service, positive)	1
+hotel	The hotel has a beautiful garden where you can sit and unwind after a day touring the city .	(garden, positive)	(hotel, positive)	0
+restaurant	We ate out in the back patio , which is worth it as it 's cool and the music is hear well there .	(back patio, positive); (music, positive)	(back patio, positive); (music, positive)	1
+hotel	dinner was amazing , breakfast was good .	(dinner, positive); (breakfast, positive)	(dinner, positive); (breakfast, positive)	1
+laptop	a great computer !	(computer, positive)	(computer, positive)	1
+restaurant	The service was terrible , we had to wait for everything and ask several of different people for the same thing before we were allowed to be served .	(service, negative)	(service, negative)	1
+hotel	Great pool area and fitness centre too .	(fitness centre, positive); (pool, positive)	(pool area, positive); (gym centre, positive)	0
+hotel	We were incredulous that when we arrived, the doorman stood and watched whilst we carried our luggage in without even opening the door for us.	None	None	1
+restaurant	One special roll and one regular roll is enough to fill you up , but save room for dessert !	(dessert, positive); (special roll, positive); (regular roll, positive)	(rolls, positive); (rolls, positive)	0
+laptop	this is the best laptop for the price .	(laptop, positive)	(laptop, positive)	1
+restaurant	My boyfriend had the New England Chowder it was good but I think the award should go to the Lobster Bisque .	(New England Chowder, positive); (Lobster Bisque, positive)	(New England Chowder, positive)	0
+restaurant	The spicy Tuna roll is huge and probably the best that I 've had at this price range .	(spicy Tuna roll, positive)	(spicey Tuna roll, positive)	0
+laptop	love this chromebook !	(chromebook, positive)	(chromebook, positive)	1
+hotel	I would definitely stay there again and would recommend it to anyone.	None	None	1
+restaurant	If you like your music blasted and the system isnt that great and if you want to pay at least 100 dollar bottle minimun then you 'll love it here .	(bottle, negative); (music, negative)	(system, positive)	0
+restaurant	Poor service and management	(service, negative); (management, negative)	(service, negative); (management, negative)	1
+hotel	Don't Believe the Reviews - Read	None	(NULL, negative)	0
+laptop	it ' s fast and the screen is nice .	(NULL, positive); (screen, positive)	(screen, positive)	0
+hotel	The staff are super friendly and ever so helpful which makes our stay even more comfortable.	None	None	1
+hotel	There are lots of great restaurants and tapas bars in Madrid but be sure to try La Casa del Abuelo (Near Puerto del Sol) for shrimp with garlic.	None	None	1
+laptop	overall , this was a good buy and i still love my purchase nonetheless .	(NULL, positive)	(NULL, positive)	1
+restaurant	THe back garden sitting area is very pleasant , where you can see their personal herb garden .	(back garden sitting area, positive)	(back garden sitting area, positive)	1
+laptop	at the moment , it is everything it was advertised to be .	(NULL, positive)	(NULL, positive)	1
+hotel	Perfect Location , friendly staff , very plesant stay !	(Location, positive); (staff, positive); (NULL, positive)	(Location, positive); (staff, positive); (NULL, positive)	1
+hotel	I found the place very clean , friendly , and in great location .	(NULL, positive); (location, positive)	(place, positive); (location, positive)	0
+restaurant	And the Tom Kha soup was pathetic .	(Tom Kha soup, negative)	(Tom Kha soup, positive)	0
+laptop	it is a basic little laptop and i love it .	(laptop, positive)	(laptop, positive)	1
+laptop	this is my third chromebook and easily the best i ' ve encountered .	(chromebook, positive)	(chromebook, positive)	1
+restaurant	The exotic food is beautifully presented and is a delight in delicious combinations .	(exotic food, positive)	(food, positive)	0
+laptop	acer seems to be the only one who puts together stuff like this .	(acer, positive)	(acer, neutral)	0
+restaurant	The rice to fish ration was also good -- they did n't try to overpack the rice .	(rice to fish ration, positive)	(rice, positive); (rice, positive)	0
+laptop	asus customer support was through chat and cumbersome .	(asus customer support, negative)	(asus customer support, positive)	0
+laptop	the first issue is that the speakers are on either side of the computer , and you can barely hear them on max volume .	(speakers, negative)	(speakers, negative)	1
+laptop	i am extremely happy with this laptop .	(laptop, positive)	(laptop, positive)	1
+restaurant	The view is breathtaking the service is top notch ... the ambiance is wonderful .	(view, positive); (service, positive); (ambiance, positive)	(view, positive); (ambiance, positive)	0
+restaurant	The staff was accomodating , the food was absolutely delicious and the place is lovely .	(staff, positive); (food, positive); (place, positive)	(staff, positive); (food, positive); (place, positive)	1
+laptop	external speakers were decent sounding until right one gave away and now is heavily distorted at even mid vol .	(external speakers, positive); (external speakers, negative)	(internal speakers, negative); (speakers, negative)	0
+laptop	for now i ' m okay with upping the experience & device to 3 out of 5 stars .	(device, neutral)	(device, positive)	0
+laptop	returned because had it less than a month and it decided to go crazy and start typing by its self ect .	(NULL, negative)	(NULL, negative)	1
+hotel	I was impressed with the rooms given the great location and low cost - definitely a treasure we found and can ' t wait to stay there again !	(rooms, positive); (location, positive); (NULL, positive)	(rooms, positive); (location, positive)	0
+restaurant	Pizza is terrific , as is homemade pasta .	(Pizza, positive); (homemade pasta, positive)	(Pizza, positive); (pasta, positive)	0
+laptop	works great .	(NULL, positive)	(works, positive)	0
+hotel	Mini bar as usual was very expensive and the place overcharges for things like the heath center and internet .	(Mini bar, negative); (heath center, negative); (internet, negative)	(Mini bar, negative); (location, negative)	0
+laptop	if you are in the google echo system , then this is great .	(google echo system, positive)	(google echo system, positive)	1
+restaurant	The service is awful .	(service, negative)	(service, negative)	1
+hotel	It ' s not as convienient as a hotel that is actually in the airport , but the location off site makes it nice and quiet - the rooms are extremely well insulated .	(location, negative); (location, positive); (rooms, positive)	(rooms, positive); (location, positive)	0
+laptop	nice screen .	(screen, positive)	(screen, positive)	1
+restaurant	This place doesn 't make any sense	(place, negative)	None	0
+restaurant	Everyone was more then happy with his choices .	(NULL, positive)	(NULL, positive)	1
+hotel	We found it centrally located (we walked to most of the major tourist sites) and the rooms were decent sized and comfortable.	None	None	1
+laptop	screen is good .	(screen, positive)	(screen, positive)	1
+hotel	This is a 2 star hotel ( maybe ?  ?  )	(hotel, neutral)	(hotel, positive)	0
+laptop	i do not think i will need to upgrade the ram .	(ram, neutral)	(ram, negative)	0
+restaurant	Lexicographers take note : a new and fascinating definition of rudeness is alive and flourishing right here in Brooklyn .	(NULL, negative)	(lexicographers, positive)	0
+hotel	can't even begin to tell you how happy my wife was with this restrauant!!if	None	None	1
+restaurant	The food is great and the environment is even better .	(food, positive); (environment, positive)	(food, positive); (environment, positive)	1
+hotel	A good stay at a really good price	None	None	1
+laptop	this seems to be a somewhat common issue with chromebooks but this asus model doesn ' t have a way to preform an external reset , which is a big problem if you ' ve setup any personal info on it and it has to be sent back .	(asus model, negative)	(asus model, negative)	1
+laptop	battery charger is super tiny and lightweight , which is an additional advantage vs the 1 lb brick that you have to lug around with the ux501vw .	(battery charger, positive)	(battery charger, positive)	1
+hotel	We have stayed at numerous properties throughout the city and was pleasantly suprised at this hotel .	(hotel, positive)	(hotel, positive)	1
+restaurant	Vanison was good but not amazing .	(Vanison, neutral)	(Vanison, positive)	0
+restaurant	The owner and staff are all Japanese as well and that adds to the entire ambiance .	(ambiance, positive)	(owner, positive); (staff, positive)	0
+laptop	i loved the tablet transition to it .	(tablet transition, positive)	(tablet, positive)	0
+restaurant	The ambience was nice , but service was n't so great .	(ambience, positive); (service, negative)	(ambience, positive); (service, negative)	1
+hotel	The hallway to our room was dark and dingy , with stained carpeting .	(hallway, negative)	(room, negative); (carpeting, negative)	0
+laptop	i feel like i bought a decent machine but it ' s unable to handle the ram workload .	(machine, positive); (machine, negative)	(machine, negative)	0
+hotel	IT IS a lovely little hotel , great value , great location , nice staff , and I would without a doubt stay there again .	(hotel, positive); (location, positive); (staff, positive)	(hotel, positive); (location, positive); (staff, positive); (staff, positive)	1
+laptop	the keyboard is stiff and unresponsive to my typing at times .	(keyboard, negative)	(keyboard, negative)	1
+laptop	love the form factor and the light weight as i often use my laptop while laying down .	(my laptop, positive)	(form factor, positive); (light weight, positive)	0
+laptop	don ' t get me wrong , the device flips back and forth very well .	(device, positive)	(device, positive)	1
+hotel	The room was spacious and clean and the oversized bathroom was a bonus .	(room, positive); (bathroom, positive)	(room, positive); (bathroom, positive)	1
+laptop	there are several traps inside and outside of laptop .	(laptop, negative)	(laptop, negative)	1
+restaurant	this little place has a cute interior decor and affordable city prices .	(interior decor, positive); (place, positive)	(interior decor, positive); (place, positive)	1
+restaurant	I don ’ t usually visit the same establishment more than once , what more twice , but I ’ ll come to Zenkichi anytime for a quiet , unhurried and memorable dinner .	(Zenkichi, positive)	(Zenkichi, positive)	1
+restaurant	If you like spicy food get the chicken vindaloo .	(chicken vindaloo, positive)	(chicken vindaloo, positive)	1
+laptop	i would knock a star for the hard drive size since it ' s incredibly small but at this price you can easily pick up large one to add if you want to and it ' s not like you aren ' t warned when you buy it .	(hard drive size, positive)	(hard drive size, negative)	0
+hotel	It was in a good location , right next to Chinatown , but it should not be called a hotel , but a cheap motel or a hovel .	(location, positive); (hotel, negative)	(location, positive); (hotel, positive)	0
+restaurant	They honored reservation on Sunday afternoon very well .	(NULL, positive)	(NULL, positive)	1
+restaurant	Delivery is fast too .	(Delivery, positive)	(Delivery, positive)	1
+restaurant	Planet Thai is great !	(Planet Thai, positive)	(Planet Thai, positive)	1
+restaurant	Decor is nice though service can be spotty .	(Decor, positive); (service, negative)	(Decor, positive); (service, positive)	0
+restaurant	Quite simply it 's like stepping out of Manhattan and into a haven of tranquility .	(NULL, positive)	(NULL, positive)	1
+hotel	The buffet lunch was nice, but room service meal was apalling and once done tray and leftovers sat in the hallway for almost a full-day.	None	None	1
+hotel	Recommend avoiding if possible .	(NULL, negative)	(NULL, positive)	0
+laptop	can ' t beat it for the price .	(NULL, positive)	(NULL, negative)	0
+restaurant	Winnie and her staff are the best crew you can find serving you .	(staff, positive); (Winnie, positive)	(Winnie, positive); (staff, positive)	1
+laptop	this is a great device and the $ 450 asking price seems fair .	(device, positive); (device, neutral)	(device, positive); (NULL, positive)	0
+restaurant	The food here does a great service to the name ( Cantonese that is ... ) .	(food, positive)	(food, positive); (service, positive)	0
+hotel	Great Stay	(NULL, positive)	None	0
+laptop	it ' s light weight , sleek , the screen resolution is great and it runs very well for everyday use .	(NULL, positive); (screen resolution, positive)	(screen resolution, positive); (screen resolution, positive)	0
+hotel	I would definitely stay here again .	(NULL, positive)	(NULL, positive)	1
+hotel	A Return Visit that did not disappoint Following our visit in October 2005 for a stop over, we used the Langham Place as our base for an extended visit to Hong Kong.	None	None	1
+hotel	The Louvres Tuileries Notre Dame and Left Bank are all within easy walking distance .	(NULL, positive)	(Louvres Tuileries Notre Dame, positive)	0
+hotel	Upgrading to Executive Suites is well worth it as you will get complimentary full bar happy hour and breakfast.	None	None	1
+hotel	Great Breakfast Stayed at the Catalonia Aragon for 3 nights last month ( November 2005 )  .	(Breakfast, positive)	(Breakfast, positive)	1
+restaurant	Although they do the typical what kind of water would you like questions the service was good and overall very relaxing to place to eat .	(service, positive); (place, positive)	(service, positive)	0
+restaurant	Service ok but unfriendly , filthy bathroom .	(Service, negative); (bathroom, negative)	(Service, negative); (bathroom, negative)	1
+restaurant	I would defiantly come back here again as one of my top choices .	(NULL, positive)	(NULL, positive)	1
+restaurant	Love Pizza 33 ...	(Pizza 33, positive)	(Pizza 32, positive)	0
+restaurant	The atmosphere is unheralded , the service impecible , and the food magnificant .	(atmosphere, positive); (service, positive); (food, positive)	(atmosphere, negative); (service, positive); (food, positive)	0
+hotel	Service was simply excellent , prompt valet service , great concierge , helpful staff , excellent breakfast .	(Service, positive); (valet service, positive); (concierge, positive); (staff, positive); (breakfast, positive)	(Service, positive); (valet service, positive); (staff, positive); (breakfast, positive)	0
+hotel	I should have been better about writing down all of the cancellation info , because a month later , they charged me for the room I didn ' t even stay in , and refuse to refund my money .	(NULL, negative)	(room, negative)	0
+restaurant	My roommate and I LOVE this place .	(place, positive)	(roommate, positive)	0
+hotel	Restaurant attached to hotel is fantastic -  - a delightful surprise .	(Restaurant, positive)	(Hotel, positive)	0
+laptop	very expensive for what you get .	(NULL, negative)	(NULL, negative)	1
+laptop	the screen is very dim however .	(screen, negative)	(screen, negative)	1
+hotel	We had an enjoyable stay at the Longwood Inn a couple of years ago, so upon returning on a business trip I stayed there again.	None	None	1
+hotel	Not a 5 stars hotel !	(hotel, negative)	(hotel, negative)	1
+hotel	The bathroom smelled so badly like mold that we could not open the door without the entire room smelling .	(bathroom, negative)	(bathroom, negative)	1
+laptop	light thin best price power laptop	(laptop, positive)	(laptop, positive)	1
+restaurant	Excellent spot for holiday get togethers with co-workers or friends that you have n't seen in a while .	(spot, positive)	(spot, positive)	1
+restaurant	The place 's decor and hidden bathrooms made for a good laugh .	(decor, positive); (hidden bathrooms, positive)	(decor, positive); (bathrooms, positive)	0
+laptop	one of the keys is especially flimsy and feels like it could break at any moment .	(one of the keys, negative)	(keys, positive)	0
+laptop	- an optical drive if you ever want to play a classic game or watch a dvd .	(optical drive, neutral)	(NULL, positive)	0
+laptop	i like the security built in .	(NULL, positive)	(security, positive)	0
+laptop	less than that , for me , the screen looks dull .	(screen, negative)	(screen, negative)	1
+laptop	all metal body , very slim form factor , and has a pretty decent touchscreen .	(factor, positive); (touchscreen, positive)	(metal body, positive); (touchscreen, positive); (touchscreen, positive)	0
+laptop	it boots in seconds although i usually just leave it on constantly .	(boots, positive)	(boots, neutral)	0
+restaurant	The food is reliable and the price is moderate .	(food, positive); (NULL, neutral)	(food, positive); (NULL, positive)	0
+hotel	the sink in bathroom was mildewed .	(sink, negative)	(sink, negative)	1
+laptop	opening it was a little hard but once opened , it ' s easy to add the ram or ssd .	(NULL, positive)	(NULL, negative)	0
+restaurant	Terrible Waste of money . . scammers	(NULL, negative)	(NULL, negative)	1
+restaurant	The decor in this place is very diner-ish and the kind of place you expect in the East Village - not romantic , just simple , small and sparse .	(decor, neutral)	(decor, positive); (place, negative)	0
+laptop	battery life doesn ' t seem to be more than 5 hours , but i expected that going in .	(battery life, neutral)	(battery life, negative)	0
+restaurant	Not a great place for family or general dining .	(place, negative)	(place, positive)	0
+hotel	would definetly stay there again when I return to Amsterdam .	(NULL, positive)	(NULL, positive)	1
+restaurant	Try green curry with vegetables .	(green curry with vegetables, positive)	(green curry with vegetables, positive)	1
+hotel	Even though it was cheap ~  $ 75 / night , it really wasn ' t worth it .	(NULL, positive); (NULL, negative)	(NULL, negative)	0
+restaurant	Do n't miss Bloom 's on your next trip to Manhatten .	(Bloom 's, positive)	(Bloom 's, positive)	1
+restaurant	It is expensive but well worth the money .	(NULL, negative); (NULL, positive)	(NULL, negative)	0
+hotel	Room cosy, extremely clean, light and well maintained throughout.	None	None	1
+hotel	And the price .  .  .  $ 299 for a king - size .  .  . is matchless for a nice place in midtown .	(NULL, positive)	(NULL, positive)	1
+laptop	the funny part is that the customer service people have been great but they have no control to take care of problems .	(customer service, positive)	(customer service people, positive)	0
+restaurant	Try the Pad Thai , or sample anything on the appetizer menu ... they 're all delicious .	(Pad Thai, positive); (appetizer menu, positive)	(Pad Thai, positive)	0
+laptop	google is expecting to add that in sometime in the next year .	(google, neutral)	(google, negative)	0
+laptop	other than this , it ' s a decent product .	(product, positive)	(product, positive)	1
+hotel	Considering that accommodation in Florence can be expensive	None	None	1
+restaurant	The food is very average ... the Thai fusion stuff is a bit too sweet , every thing they serve is too sweet here .	(food, negative); (Thai fusion stuff, negative); (NULL, negative)	(food, negative); (Thai fusion stuff, positive)	0
+restaurant	The bar drinks were Eh , ok to say the least .	(bar drinks, negative)	(bar drinks, negative)	1
+laptop	this is my second asus product , and i have been very happy with both .	(asus product, positive)	(asus product, positive)	1
+restaurant	I asked for a menu and the same waitress looked at my like I was insane .	(waitress, negative)	(menu, positive); (waitress, positive)	0
+laptop	this chromebook looks and feels great , performs even better and will soon support google play apps .	(chromebook, positive)	(chromebook, positive)	1
+hotel	We would stay again.	None	None	1
+hotel	The breakfast was more substantial than we thought it would be so again a good bonus .	(breakfast, positive)	(breakfast, positive)	1
+laptop	not to mention , the touchbar is just another gimmicky addition to the ` ` future of apple ` ` ( really not as effective as one would think ) .	(touchbar, positive)	(touchbar, negative)	0
+restaurant	We did arrive late for our reservation so I can not complain too much about the wait for a table .	(wait, neutral)	(wait, positive)	0
+hotel	Even with remodeling going on , our stay at the Bienville House was wonderful !	(Bienville House, positive)	(Bienville House, positive)	1
+hotel	Insufficient towels , smelly bathroom , indifferent service ( no answer to housekeeping or reception for about 10 minutes when trying to solve the towels problem )  .	(towels, negative); (bathroom, negative); (service, negative)	(bathroom, negative); (service, negative); (service, negative)	0
+hotel	La Rambla and the Gothic District are right out the door as are two metro stops on different lines .	(NULL, positive)	(La Rambla, positive); (Gothic District, positive)	0
+laptop	overall , this budget laptop ticks all the boxes and there is nothing on the market that is new with so many features crammed in at this price .	(budget laptop, positive)	(laptop, positive)	0
+hotel	The service was excellent and the people were warm and always happy to help .	(service, positive)	(service, positive); (people, positive)	0
+laptop	i was pleasantly surprised at how good it is .	(NULL, positive)	(NULL, positive)	1
+laptop	low rpm hdd .	(hdd, negative)	(rpm hdd, negative)	0
+hotel	I had my mobile phone stolen from my room during my stay .	(room, negative)	(mobile phone, negative)	0
+restaurant	Easily the worst stir-fried squid I 've ever tasted .	(stir-fried squid, negative)	(stir-fried squid, negative)	1
+laptop	my only complaint is that the mouse keypad is a little big .	(mouse keypad, negative)	(mouse keypad, negative)	1
+laptop	i do wish the screen were bigger , but i had to go with the 13 ` ` due to budget constraints , so that ' s on me .	(screen, neutral)	(screen, neutral); (NULL, negative)	0
+restaurant	I was shocked that my friends wanted to stay after the waitress said , `` can I help you `` and `` how many are in your party . ``	(waitress, negative)	(waitress, negative)	1
+hotel	Great value, great location, friendly staff and loads of character Stayed for one night at the end of a business conference.	None	None	1
+hotel	We found the location to be great , but would not stay in this hotel again due to the cleanless .	(location, positive); (hotel, negative)	(location, positive)	0
+laptop	either they were so slow i couldn ' t get any work done or they just flat out broke after a couple months .	(NULL, negative)	(NULL, negative)	1
+hotel	The room was very nice , great room service , excellent check - in ( they check you in directly in your room )  .	(room, positive); (room service, positive)	(room, positive); (room, positive)	0
+hotel	The room was absolutely fantastic , very spacious , beautiful bathroom and fully equipped with everything you need .	(room, positive); (bathroom, positive)	(room, positive); (bathroom, positive); (NULL, positive)	0
+laptop	it seems like there is a problem with the processor because it constantly starts and stops while i ' m trying to surf the web .	(processor, negative)	(processor, negative)	1
+hotel	If you ' re looking for a good place for a decent price , this hotel would be an excellent choice !	(hotel, positive)	(hotel, positive)	1
+hotel	I love the location of the hotel, close to the Sol Metro station and walking distance to almost all major tourist sites.	None	None	1
+laptop	the retina screen is amazing .	(retina screen, positive)	(retina screen, positive)	1
+restaurant	This is a nice pizza place with good selection of thin crust pizza including the Basil slice .	(selection of thin crust pizza, positive); (pizza place, positive); (Basil slice, positive)	(pizza place, positive); (crust pizza, positive); (Bacer slice, positive)	0
+restaurant	Maitre-D- `` Eat and get out ``	(Maitre-D, negative)	None	0
+hotel	We paid 拢40 a night for 4 nights and basicly we couldn ' t believe our luck .	(NULL, positive)	(NULL, negative)	0
+hotel	mfortable and fine We found this hotel to be perfect for our first night stay in San Juan before leaving for Viequez .	(hotel, positive)	(hotel, positive)	1
+restaurant	We were planning to get dessert but the waitress basically through the bill at us before we had a chance to order .	(waitress, negative)	(waitress, negative)	1
+hotel	Inn for 10 days in April 2005 and thoroughly enjoyed it .	(NULL, positive)	(Inn, positive)	0
+laptop	the screen is plenty bright , and the sound from the speakers is fine for a laptop ( you won ' t be filling a room with sound ) .	(sound, positive); (speakers, positive)	(screen, positive); (sound, positive); (speakers, positive)	0
+laptop	the screen is really amazing and you can easily change it to 1080p with no issues ( it ' s set lower out of the box ) .	(screen, positive)	(screen, positive)	1
+restaurant	Leon is an East Village gem : casual but hip , with well prepared basic French bistro fare , good specials , a warm and lively atmosphere .	(Leon, positive); (specials, positive); (atmosphere, positive); (French bistro fare, positive)	(Leon, positive); (specials, positive); (atmosphere, positive)	0
+restaurant	So rude ! ! !	(NULL, negative)	(NULL, negative)	1
+restaurant	Subtle food and service	(food, positive); (service, positive)	None	0
+restaurant	I had the Thai style Fried Sea Bass ... which was very good .	(Thai style Fried Sea Bass, positive)	(Thai style Fried Sea Bass, positive)	1
+restaurant	Hurley 's is like Cheers where everyone knows your name and they are ACTUALLY glad you came .	(Hurley 's, positive)	(Hurley 's, positive)	1
+restaurant	A gentleman , maybe the manager , came to our table , and without so much as a smile or greeting asked for our order .	(gentleman, negative)	(manager, negative)	0
+hotel	My friend and I stayed there for two nights.	None	None	1
+restaurant	The place is a lot of fun .	(place, positive)	(place, positive)	1
+hotel	this is	None	(NULL, positive)	0
+restaurant	I have lived in Japan for 7 years and the taste of the food and the feel of the restaurant is like being back in Japan .	(food, positive); (feel, positive)	(food, positive); (restaurant, positive)	0
+restaurant	The takeout is great too since they give high quality tupperware as well .	(takeout, positive)	(takeout, positive)	1
+hotel	Restaurant Hotel is very nice .	(Restaurant Hotel, positive)	(Restaurant Hotel, positive)	1
+hotel	The courtyard rooms surround the Moore Theater, so you might not want to stay there on a concert night (unless you don't go to bed early).	None	None	1
+hotel	Good-sized clean rooms but service could be improved We booked a standard room at the Villa Mazarin.	None	None	1
+laptop	this is where the r11 gets interesting .	(r11, positive)	(r11, positive)	1
+hotel	Only problems were that the safe was locked upon arrival and the maid took the robe on the 2nd night and didn ' t replace it .	(safe, negative); (maid, negative)	(NULL, negative)	0
+hotel	The hotel could use some freshening up , and I agree that it ' s not four - star quality .	(hotel, neutral)	(hotel, negative)	0
+laptop	looks like the hdmi port may be defective or something - - another reviewer had a similar problem .	(hdmi port, negative)	(hdmi port, negative)	1
+laptop	i ' ve only had the computer for a little over a month , that is annoying on many levels .	(computer, negative)	(computer, negative)	1
+restaurant	I thanked my friend who recommended me this restaurant and will certainly recommend it to others .	(restaurant, positive)	(restaurant, positive)	1
+laptop	very happy with this laptop although not a fan of windows 10 .	(laptop, positive); (windows 10, negative)	(laptop, positive)	0
+hotel	Not bad at all I stayed at the Grant in 1998 and was fairly impressed enough to come back again in 2007 .	(the Grant, neutral)	(Grant, positive)	0
+hotel	It ' s in need of an uplift but met our needs and the weather around poolside was fabulous .	(poolside, positive)	(poolside, positive); (NULL, positive)	0
+hotel	only complaint is the charge to use the pool/health club.	None	None	1
+hotel	Unfortunately the hotel did not live up to our expectations, and was certainly not the same hotel that other reviewers had been praising.	None	None	1
+restaurant	Food is usually very good , though ocasionally I wondered about freshmess of raw vegatables in side orders .	(Food, positive); (raw vegatables in side orders, negative)	(Food, positive); (freshmess of raw vegatables, positive)	0
+hotel	I would book this hotel agian .	(hotel, positive)	(hotel, positive)	1
+laptop	the laptop now does n ' t even function without needing a full factory reset every 3 hours .	(NULL, negative)	(laptop, negative)	0
+laptop	so , i have had this laptop for almost a week and have put it through the ringer .	(laptop, neutral)	(laptop, positive)	0
+laptop	also love that access to the hd / ssd and ram slots is really easy .	(ram slots, positive); (hd / ssd, positive)	(hdm / ssd, positive); (ram slots, positive)	0
+restaurant	The hanger steak was like rubber and the tuna was flavorless not to mention it tasted like it had just been thawed .	(hanger steak, negative); (tuna, negative)	(hanger steak, negative); (tuna, negative)	1
+restaurant	bad staff	(staff, negative)	None	0
+hotel	Infact i'm back there the weekend 21st nov 2003.	None	None	1
+hotel	The rooms near the street were refurbished a couple of years ago , so I requested a room there .	(rooms, positive)	(rooms, negative)	0
+restaurant	First of all Dal Bukhara Rocks .	(Dal Bukhara, positive)	(Dal Bukhara Rocks, positive)	0
+hotel	And as others have stated - a great breakfast !	(breakfast, positive)	(breakfast, positive)	1
+hotel	Staff wonderfully helpful .	(Staff, positive)	(Staff, positive)	1
+laptop	i am a mac person in every other way , but i love this chromebook !	(chromebook, positive)	(chromebook, positive)	1
+restaurant	Good spreads , great beverage selections and bagels really tasty .	(spreads, positive); (beverage selections, positive); (bagels, positive)	(spreads, positive); (beverage selections, positive); (bagels, positive)	1
+restaurant	also it 's great to have dinner in a very romantic and comfortable place , the service it 's just perfect ... they 're so frendly that we never want to live the place !	(place, positive); (service, positive)	(place, positive); (service, positive)	1
+restaurant	Toons has recently been redone , so it 's now a very attractive space .	(Toons, positive)	(Toons, positive)	1
+restaurant	Each time we 've been , the front of house staff ( not the waiters - they 're fantastic - but the people who greet and seat you ) has been so hideous to us that were it not for the exceptional fish dishes I would never return .	(waiters, positive); (front of house staff, negative); (fish dishes, positive)	(front of house staff, positive); (waiters, negative); (NULL, negative)	0
+restaurant	He served me an Uni Hand roll , which I never had before , and let me tell you ... IT WAS HEAVEN !	(Uni Hand roll, positive)	(Uni Hand roll, positive)	1
+hotel	It did show some age in the walls and furniture but serves the purpose for a place to stay .	(NULL, neutral); (NULL, positive)	(walls, positive); (furniture, positive)	0
+restaurant	The lobster sandwich is $ 24 and although it was good it was not nearly enough to warrant that price .	(lobster sandwich, positive); (lobster sandwich, negative)	(lobster sandwich, positive)	0
+hotel	Chipped paint , rusting fixtures , moldy grout and an utter lack of amenities .	(NULL, negative); (amenities, negative)	(NULL, negative); (NULL, negative)	0
+laptop	i have not had any freezing or screen flashing issues .	(screen, positive)	(screen flashing, negative)	0
+laptop	i can not stand the trackpad or the keyboard keys .	(trackpad, negative); (keyboard keys, negative)	(trackpad, negative); (keyboard keys, negative)	1
+laptop	my first mac is awesome !	(mac, positive)	(mac, positive)	1
+hotel	I stayed there in late jan 2005 as a single traveller , got a great deal of 85 euro per night , and upon arrival , got upgraded into a double room !	(room, positive); (NULL, positive)	(room, positive)	0
+laptop	the bluetooth connects easily to everything .	(bluetooth, positive)	(bluetooth, positive)	1
+laptop	i got this laptop for school and it is simply amazing .	(laptop, positive)	(laptop, positive)	1
+hotel	showReview(20794517, 'full');	None	(NULL, positive)	0
+laptop	using it for doing programming , app development , and electronics projects .	(NULL, neutral)	(NULL, positive)	0
+laptop	returning it after one day	(NULL, negative)	None	0
+laptop	i have had it about 4 days and have been checking out how well it runs my favorite android apps .	(NULL, positive); (android apps, positive)	(android apps, positive)	0
+laptop	price was very good and met my expectations also shipping was very quick .	(NULL, positive); (shipping, positive)	(NULL, positive); (shipping, positive)	1
+hotel	the dinner in the hotel's haute cuisine restaurant, Petrus, which was good, but not good enough for the prices charged (our best meals in HK were in Nobu and in M at the Fringe); and (2) the afternoon tea in the lounge in the Shangri La, which didn't live up to the standards of a five star hotel.	None	None	1
+hotel	The hotel saff was very nice and they had a decent breakfast in a beautiful room .	(saff, positive); (breakfast, positive)	(hotel saff, positive); (breakfast, positive)	0
+hotel	Had a great stay !	(NULL, positive)	(NULL, positive)	1
+hotel	Elegantly confortable	(NULL, positive)	(NULL, positive)	1
+laptop	update : the c302 now supports google play store services on the stable channel .	(c302, neutral)	(c302, positive)	0
+hotel	Great location good efficient well located hotel .	(location, positive); (hotel, positive)	(location, positive)	0
+hotel	Very close to Union Square ( 2 min walk ) and right in the heart of the action .	(NULL, positive)	(NULL, positive)	1
+restaurant	The atmosphere is n't the greatest , but I suppose that 's how they keep the prices down .	(atmosphere, negative); (NULL, positive)	(atmosphere, negative)	0
+hotel	$31 / day .  - The restaurant ( Cafe 15 ) had very slow service when I eat there , even though they weren ' t doing much business .	(service, negative)	(restaurant, negative); (service, negative)	0
+restaurant	The pizza was pretty good and huge .	(pizza, positive)	(pizza, positive)	1
+laptop	it arrived on time and in excellent condition and my hubby has been happily using it now for several weeks with no problems .	(NULL, positive)	(NULL, positive)	1
+laptop	i had it on my desk and was watching youtube videos and it went black .	(NULL, negative)	(NULL, negative)	1
+laptop	thin bezels allow for a compact frame	(bezels, positive)	(bezels, positive); (bezels, positive)	1
+restaurant	The tables are crammed way too close , the menu is typical of any Italian restaurant , and the wine list is simply overpriced .	(tables, negative); (menu, neutral); (wine list, negative)	(tables, negative); (menu, negative); (wine list, negative)	0
+restaurant	overpriced japanese food with mediocre service	(japanese food, negative); (service, neutral)	None	0
+laptop	nice keyboard .	(keyboard, positive)	(keyboard, positive)	1
+laptop	but do not dare will only be good for playing games maybe it will get better .	(it, positive)	(NULL, positive)	0
+hotel	All in all nice hotel , the rooms are great , spotless , well stocked , and mine anyway would have had excellent wheelchair access , the reception and staff are helpful and the breakfast was simple , but tasty and filling .	(hotel, positive); (rooms, positive); (reception, positive); (staff, positive); (breakfast, neutral); (breakfast, positive)	(rooms, positive); (staff, positive); (breakfast, positive); (breakfast, positive); (breakfast, positive); (breakfast, positive); (breakfast, positive); (breakfast, positive); (breakfast, positive); (breakfast, positive); (breakfast, positive	0
+restaurant	However , our $ 14 drinks were were horrible !	(drinks, negative)	(drinks, negative)	1
+hotel	It was central , clean  friendly .	(NULL, positive)	(NULL, positive)	1
+hotel	My family of three just returned from 6 great days in Berlin.	None	None	1
+restaurant	Best drumsticks over rice and sour spicy soup in town !	(drumsticks over rice, positive); (sour spicy soup, positive)	(drumsticks over rice and sour spicy soup, positive)	0
+laptop	i think for others they are just buying into the brand .	(brand, neutral)	(brand, negative)	0
+hotel	Close to San Marco square and busses, but on a quiet charming street.	None	None	1
+laptop	if you plan on buying this beware that your patience may run thin .	(NULL, negative)	(NULL, negative)	1
+laptop	setup was fast and easy , but then again i ' ve been a gmail / gcal / gdocs purist for a while now .	(setup, positive)	(setup, positive); (google / gdocs, negative)	0
+hotel	The staff was excellent and so were the rooms .	(staff, positive)	(staff, positive); (rooms, positive)	0
+laptop	i have always loved loved the kindles .	(kindles, positive)	(NULL, positive)	0
+restaurant	The food was good too .	(food, positive)	(food, positive)	1
+hotel	Speaking of the rooms - they are very dated - the furniture in living room was coming apart , the drawers in the dresser of our bedroom had no tracks and	(rooms, negative); (furniture, negative); (drawers, negative)	(rooms, negative); (drawers, negative); (rooms, negative); (rooms, negative)	0
+laptop	i really liked it when i first got it , it performs very well and the software is very easy to use .	(NULL, positive); (software, positive)	(NULL, positive); (software, positive)	1
+hotel	Thank goodness because when I saw it as I drove by on the highway , it looked pretty terrible .	(NULL, negative)	(NULL, negative)	1
+laptop	after a week of use , i can safely say it is the most impressive chromebook i have used to - date .	(chromebook, positive)	(chromebook, positive)	1
+hotel	It is clean , with wall to wall hard wood floors , sound proof windows , large modern bathroom and kitchenette which is great for late night or for early morning snacks .	(NULL, positive); (bathroom, positive); (kitchenette, positive)	(NULL, positive); (bathroom, positive); (bathroom, positive); (bathroom, positive); (kitchenette, positive)	1
+restaurant	I did not try the caviar but I tried their salmon and crab salad ( they are all good )	(salmon, positive); (crab salad, positive)	(caviar, positive); (crab salad, positive)	0
+laptop	the only drawback is that it only comes with 32 gb of hard drive .	(hard drive, negative)	(hard drive, negative)	1
+restaurant	The food is very good , but not outstanding .	(food, neutral)	(food, positive); (food, negative)	0
+restaurant	Very good wine choices .	(wine choices, positive)	(wine choices, positive)	1
+laptop	i was skeptical ordering this because of the conflicting reviews .	(NULL, negative)	(NULL, negative)	1
+laptop	the laptop was dead on arrival .	(laptop, negative)	(laptop, negative)	1
+hotel	The best thing about the hotel is the honesty and integrity of the staff which I have found lacking in some Venetian Hotels .	(staff, positive)	(hotel, positive); (staff, positive)	0
+hotel	it	None	(NULL, positive)	0
+hotel	Return trip to Boston	None	None	1
+hotel	Room typical smallish European , but we didn ' t go to Berlin to stay in the hotel !	(Room, negative)	(Room, negative)	1
+restaurant	awesome	(NULL, positive)	(NULL, positive)	1
+hotel	I shudder every time I think about this hotel.	None	None	1
+hotel	Simply Fantastic location	None	(location, positive)	0
+laptop	i don ' t think that i was adequately prepared for how dark the screen is at its highest brightness in comparison to other devices .	(screen, negative)	(screen, positive)	0
+restaurant	It was divine melts in your mouth .	(NULL, positive)	(NULL, positive)	1
+hotel	Great value in a good location	None	(location, positive)	0
+laptop	other than that its components are actually very good .	(components, positive)	(components, positive)	1
+hotel	A faultless stay and highly recommended .	(NULL, positive)	(NULL, negative)	0
+hotel	Excelent experience	None	(NULL, positive)	0
+laptop	after about 5 / 10 minutes of use the screen goes crazy and you have to force to power down and wait to restart .	(screen, negative)	(screen, negative)	1
+restaurant	Fabulous food - if the front of house staff do n't put you off –	(food, positive); (front of house staff, negative)	None	0
+restaurant	I have reservations about the all you can eat deal , however -- the choices are fairly limited and you can probably order more food than you can eat for less than $ 18 by just going off the menu .	(all you can eat deal, negative)	(NULL, negative); (menu, negative)	0
+laptop	very easy to set up .	(set up, positive)	(set up, positive)	1
+restaurant	I was n't here for the pizza so I can 't comment on that yet but what I had was very good .	(NULL, positive)	(pizza, positive)	0
+restaurant	I would highly recommend this place !	(place, positive)	(place, positive)	1
+hotel	Dear, oh dear.	None	None	1
+laptop	i am so disgusted and disheartened by my dealings with asus support , it ' s hard to believe .	(asus support, negative)	(asus support, negative)	1
+hotel	la qualit脿	None	(NULL, positive)	0
+restaurant	I honestly do n't even know where to begin .	(NULL, negative)	(NULL, positive)	0
+restaurant	great hot dogs .	(hot dogs, positive)	(hot dogs, positive)	1
+laptop	i ' ve been happy being able to plug in and run overwatch from time to time on this laptop , with higher settings .	(laptop, positive)	(laptop, positive)	1
+laptop	on it ' s own , it performance great !	(NULL, positive)	(performance, positive)	0
+hotel	A lot of space , blowdryers , safes in room , refrigerator in room , and plenty of soap / shampoo .	(room, positive); (soap/shampoo, positive)	(NULL, positive); (NULL, positive)	0
+hotel	Clean, comfortable, great service.	None	(service, positive)	0
+laptop	but , until that time , this review stands as : do not buy if your care about the display ' s life .	(display ' s life, negative)	(display ' s life, negative)	1
+hotel	I would stay again, helpful staff .	None	(staff, positive)	0
+hotel	Decent package deal Hotel room was decent for the price paid for .	(Hotel, positive); (room, positive)	(Hotel room, positive)	0
+hotel	There is a continental buffet breakfast in the lobby daily and a wine reception in the evening , both complimentary .	(continental buffet breakfast, positive); (wine reception, positive)	(breakfast, positive); (wine reception, positive)	0
+restaurant	We had Pam 's special fried fish and it was amazing .	(Pam 's special fried fish, positive)	(Pa 's special fried fish, positive)	0
+restaurant	This is where it really really gets bad : the manager said , there is absolutely nothing we can do , it 's a matter of taste that she did n't like it , and I can not comp it .	(manager, negative)	(manager, negative)	1
+laptop	the laptop was shipped in what looked like a new case but upon opening it , it appeared used and repackaged .	(laptop, negative)	(laptop, negative)	1
+restaurant	The location is perfect .	(location, positive)	(location, positive)	1
+hotel	great value for money .	(NULL, positive)	(NULL, positive)	1
+restaurant	Rao 's has the best service and atmosphere in NYC .	(service, positive); (atmosphere, positive)	(Rao 's, positive); (atmosphere, positive)	0
+restaurant	its just a fun place to go , not a five star restaraunt .	(restaraunt, neutral)	(place, positive)	0
+laptop	was initially impressed by design but after normal use without any rough handling or dropping of the chromebook , the metal corner tip covering the lcd peels off & warps / bends upwards !	(metal corner tip, negative)	(design, negative); (chromebook, negative)	0
+laptop	after two years , or almost , the worst thing about this machine is lack of printer support .	(machine, negative)	(machine, negative)	1
+restaurant	These are overpriced and you can get better just around the corner :	(NULL, negative)	(NULL, negative)	1
+laptop	i guess i got one of the good ones as i have had no trouble at all .	(NULL, positive)	(NULL, positive)	1
+hotel	Christine was very helpfull and very patient with all the questions we had as the first time travelers to Paris with absolutly no knowledge of French .	(Christine, positive)	(Christine, positive)	1
+restaurant	A great place to meet up for some food and drinks ...	(place, positive)	None	0
+restaurant	I have to say I have never had a disapointing meal here .	(meal, positive)	(meal, negative)	0
+laptop	this version has been my least favorite version i ' ve had for the following reasons listed bellow the pros .	(version, negative)	(pro, positive)	0
+restaurant	I can 't remember the last time I had such gross food in New York .	(food, negative)	(food, negative)	1
+laptop	keyboard is not good .	(keyboard, negative)	(keyboard, negative)	1
+hotel	Great location, within walking distance from 5th ave and all the tourist sights.	None	None	1
+hotel	Excellent service .	(service, positive)	(service, positive)	1
+laptop	that being said , my son loves it .	(NULL, positive)	(NULL, positive)	1
+hotel	My husband and I spent one night at this hotel before flying out early the next morning.	None	None	1
+laptop	overall : i ' m super happy with this product .	(product, positive)	(product, positive)	1
+restaurant	Food was just average ... if they lowered the prices just a bit , it would be a bigger draw .	(Food, neutral)	(Food, negative)	0
+hotel	I would recommend it highly .	(NULL, positive)	(NULL, positive)	1
+laptop	overall this is a good system for the price and i do recommend the ssd for the price .	(system, positive); (ssd, positive)	(system, positive); (ssd, positive)	1
+laptop	one day it just would not power up .	(NULL, negative)	(NULL, negative)	1
+restaurant	I highly recommend Caviar Russe to anyone who wants delicious top grade caviar and fantastic service .	(caviar, positive); (service, positive)	(caviar Russe, positive); (service, positive)	0
+restaurant	This is one of my favorite restaurants and it is not to be missed .	(NULL, positive)	(restaurant, positive)	0
+hotel	This place does just as it says on the bottle.	None	None	1
+laptop	did i mention , i can access all my word , excel , and powerpoint files using the google apps .	(google apps, positive)	(google apps, positive)	1
+hotel	Or if you prefer there are plenty of restaurants and bakeries within a few minutes walk.	None	None	1
+laptop	i will never use another microsoft program as long as i live .	(microsoft program, negative)	(microsoft program, negative)	1
+restaurant	Would NEVER go back there .	(NULL, negative)	(NULL, negative)	1
+laptop	this is the absolute worst laptop i have ever owned .	(laptop, negative)	(laptop, negative)	1
+restaurant	This is a nice restaurant if you are looking for a good place to host an intimate dinner meeting with business associates .	(restaurant, positive)	(restaurant, positive)	1
+hotel	We couldn ' t have been more pleased with Aqua Palms and Spa .	(Aqua Palms and Spa, positive)	(Aqua Palms and Spa, positive)	1
+restaurant	After dinner the manager grabbed my boyfriend , asked him : Where are you from ... maybe you dont know how things work in America ... and in the end stormed away almost teareyed yelling that tips are the only thing they survive on .	(manager, negative)	(manager, negative)	1
+hotel	This is definitly a good value for an airport hotel .	(hotel, positive)	(hotel, positive)	1
+restaurant	There 's nice and quiet , small but enough for 6 ( or more ) .	(NULL, positive)	(NULL, positive)	1
+laptop	after one charge , the battery would not take charge .	(battery, negative)	(battery, negative)	1
+hotel	Balcony.	None	None	1
+laptop	set up is take out of box and open cover .	(set up, positive)	(set up, neutral)	0
+laptop	asus has really set a new standard with the c302ca ' s internals and physical design .	(asus, positive); (c302ca ' s internals, positive); (physical design, positive)	(asus, positive); (c302ca ' s internals, positive)	0
+hotel	no view but cuts out the noise as SF is very loud at night .	(NULL, negative)	(NULL, negative)	1
+restaurant	The service was excellent and the food was delicious .	(service, positive); (food, positive)	(service, positive); (food, positive)	1
+hotel	One of the best hotels that I麓ve been no doubt!	None	None	1
+laptop	the brand new vivobook is dead in the water !	(vivobook, negative)	(vivobook, negative)	1
+restaurant	Ess-A-Bagel ( either by Sty-town or midtown ) is by far the best bagel in NY .	(bagel, positive)	(Seating-A-Bagel, positive)	0
+laptop	many apps aren ' t ` ` compatible ` ` and even the ones that work , they look awful .	(apps, negative)	(apps, negative)	1
+hotel	Comments in other reviews about dirty pool areas are true .	(pool, negative)	(pool areas, positive)	0
+laptop	sounds like a good deal for a $ 620 laptop but battery doesn ' t perform as promised i am hardly getting 4 hrs .	(laptop, positive); (battery, negative)	(laptop, positive); (battery, negative)	1
+hotel	Will definitely return !	(NULL, positive)	(NULL, positive)	1
+laptop	things are less clear here ; the toshiba again has better performance , and uses a real ssd , but it has less impressive build quality and even less impressive materials ; it does offer a backlit keyboard and an even nicer screen , still the nicest of these three .	(toshiba, positive); (build quality, negative); (screen, positive)	(toshiba, positive); (build quality, positive); (screen, positive); (NULL, positive); (toshiba, positive); (NULL, positive); (NULL, positive); (NULL, positive); (NULL, positive); (NULL, positive); (NULL, positive); (NULL, positive);	0
+restaurant	The food was amazing , and the service was prompt and helpful , but not over-bearing or rushed .	(food, positive); (service, positive)	(food, positive); (service, positive)	1
+restaurant	But the pizza is way to expensive .	(pizza, negative)	(pizza, negative)	1
+restaurant	It 's cuz it 's so good you need to taste it ! ! !	(NULL, positive)	(NULL, positive)	1
+restaurant	But $ 500 for a dinner for two that didn 't include Wine ?	(dinner for two, negative)	(NULL, negative)	0
+laptop	adequate screen .	(screen, positive)	(screen, positive)	1
+hotel	The hotel is comfortable , and posesses great character .	(hotel, positive)	(hotel, positive)	1
+restaurant	Took my mom for Mother 's Day , and the maitre d ' was pretty rude .	(maitre d ', negative)	(maitre d ', negative)	1
+hotel	The staff couldn ' t have been more kind and helpful .	(staff, positive)	(staff, negative)	0
+hotel	The rooms are of a reasonable size with standard tv , radio , telephone , fan , safe , trouser press and tea and coffee making facilites .	(rooms, positive); (facilites, positive)	(rooms, positive); (room, positive)	0
+laptop	my only fair complaint is that it occasionally restarts itself without warning ( usually no more than once every day or two ) .	(NULL, negative)	(NULL, negative)	1
+laptop	i just got it today and i love it !	(NULL, positive)	(NULL, positive)	1
+laptop	the intel iris sucks .	(intel iris, negative)	(intel iris, negative)	1
+hotel	The room was OK but the bathroom was kind of obsolete , with very old and loose faucets	(room, positive); (bathroom, negative)	(room, negative); (bathroom, negative); (bathroom, negative)	0
+hotel	I will be staying here again .	(NULL, positive)	(NULL, positive)	1
+hotel	The only good thing about this hotel is its excellent location .	(location, positive)	(location, positive)	1
+restaurant	The only downside ... they only take cash which is OK if you know about it ahead of time .	(NULL, negative)	(NULL, negative)	1
+restaurant	Will prob . not return but it is a great dinning experience to try atleast once .	(NULL, negative); (NULL, positive)	(NULL, positive)	0
+hotel	The rooms are average but I had a horrible experience.	None	None	1
+hotel	The elevators are tiny and you have to pay $25 per day to park across the street from the hotel.	None	None	1
+laptop	i didn ' t even call for tech help because a brand new laptop should not be giving me such a headache .	(brand new laptop, negative)	(laptop, negative)	0
+restaurant	Be sure not to get anything other than bagels ! . .	(NULL, negative)	(bagels, positive)	0
+hotel	Chose this hotel through reviews by others, and was extremely pleased by the location, the staff, and the general atmosphere.	None	None	1
+hotel	The hotel was easy to find , and our room turned out to be quite nice .	(hotel, positive); (room, positive)	(hotel, positive); (room, positive)	1
+restaurant	Red Dragon Roll - my favorite thing to eat , of any food group - hands down	(Red Dragon Roll, positive)	(Red Dragon Roll, positive)	1
+restaurant	I really loved the different and inovated touch that 's the cheff gives to the food .	(cheff, positive)	(touch, positive); (cheff, positive)	0
+laptop	one of the features of chromeos that i find very convenient is the way in which all of your configuration settings are stored in the cloud with your gmail account .	(chromeos, positive)	(chromeos, positive)	1
+restaurant	$ 6 and there is much tasty food , all of it fresh and continually refilled .	(food, positive)	(food, positive); (food, positive)	1
+hotel	Good room and location We only had one night in Florence , so I chose this place for its good proximity to tourist sites and train station and based on the excellent reviews it received here .	(room, positive); (location, positive)	(room, positive); (location, positive)	1
+restaurant	I literally just got back home after visiting Casa La Femme and was so offended by my visit felt it necessary to try and warn other diners who value their money and time .	(Casa La Femme, negative)	(Casa La Femme, negative)	1
+hotel	The staff were all helpful and friendly and overall I would recommend it as a good city hotel , but perhaps more suited to singles / couples than families .	(staff, positive); (hotel, positive)	(staff, positive); (NULL, positive)	0
+hotel	Oh dear.	None	None	1
+laptop	a great chromebook at a very reasonable price , includes the google play store .	(chromebook, positive)	(chromebook, positive); (google play store, positive)	0
+hotel	The room is pretty clean , especially the bathroom .	(room, positive); (bathroom, positive)	(room, positive); (bathroom, positive)	1
+laptop	it gets what you need done .	(NULL, positive)	(NULL, positive)	1
+restaurant	However , go for the ambience , and consider the food just a companion for a trip across the world !	(food, neutral)	(ambience, positive); (food, positive)	0
+laptop	decent enough build , but the mouse pad is terrible .	(build, positive); (mouse pad, negative)	(build, positive); (mouse pad, negative)	1
+hotel	Our room was large , decorated with period furnishings / antiques and the bed was the most comfortable we have had at any hotel .	(room, positive); (bed, positive)	(room, positive); (NULL, positive); (bed, positive)	0
+laptop	- the battery life is excellent ( i get 6 - 8 hours of normal university student usage out of it ) and even when i ' m using it , it charges as fast as my phone .	(battery life, positive)	(battery life, positive)	1
+laptop	beautiful screen .	(screen, positive)	(screen, positive)	1
+laptop	i ' ve been extremely impressed by this device .	(device, positive)	(device, positive)	1
+laptop	it ' s their policy to only repair not replace .	(policy, negative)	(NULL, negative)	0
+hotel	Nice hotel , good location , good faclities A great hotel in lovely grounds .	(hotel, positive); (location, positive); (faclities, positive)	(hotel, positive); (location, positive); (facilities, positive)	0
+restaurant	I went there for lunch and it was not as good as I expected from the reviews I read .	(lunch, negative)	(NULL, negative)	0
+laptop	this computer was 10 fold what i had expected .	(computer, positive)	(computer, neutral)	0
+restaurant	fresh restaurant was amazing ... ... .. food was delicious and of course fresh .	(fresh restaurant, positive); (food, positive)	(restaurant, positive); (food, positive)	0
+hotel	Very convienant to the Eiffel Tower ( 5 min walk )  .	(NULL, positive)	(Eiffel Tower, positive)	0
+hotel	They are a couple of things that others have mentioned which are also true , thin walls ( felt like someone else was in the room )	(room, negative)	(walls, negative); (room, negative)	0
+laptop	this laptop is small and thin for a 15 .	(laptop, positive)	(laptop, positive)	1
+hotel	Great location and spacious room	None	(location, positive); (room, positive)	0

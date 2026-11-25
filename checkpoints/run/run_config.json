@@ -14,20 +14,16 @@
   "seed": 42,
   "output_dir": "checkpoints/run",
   "select_metric": "f1",
+  "early_stopping_patience": 0,
   "fp16": false,
-  "imbalance": "weighted_loss",
+  "imbalance": "none",
   "power": 0.5,
   "dry_run": true,
   "train_polarity_counts": {
     "positive": 3145,
     "negative": 1229,
-    "neutral": 208,
-    "conflict": 1
+    "neutral": 208
   },
-  "class_weights": {
-    "positive": 1.0,
-    "negative": 1.5996846719381443,
-    "neutral": 3.8884691470670445
-  },
+  "class_weights": null,
   "train_samples_per_epoch": 3780
 }

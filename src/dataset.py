@@ -1,7 +1,21 @@
 import os
+import re
 import ast
 import warnings
 from torch.utils.data import Dataset
+
+
+def normalize_english_spacing(text):
+    """
+    Chuẩn hóa khoảng trắng quanh dấu câu cho câu tiếng Anh tự nhiên khi suy luận,
+    giúp khớp hơn với định dạng tokenized của dữ liệu SemEval/M-ABSA
+    (vd: "amazing, but slow." -> "amazing , but slow .").
+    """
+    text = text.strip()
+    text = re.sub(r"([.,!?;:()\"])", r" \1 ", text)
+    text = re.sub(r"(\w)'(\w)", r"\1 ' \2", text)
+    text = re.sub(r"\s+", " ", text).strip()
+    return text
 
 
 def read_mabsa_file(file_path):
@@ -66,11 +80,11 @@ def format_target(triplets, task="uabsa"):
         for tri in triplets:
             if len(tri) < 3:
                 continue
-            key = (tri[0], tri[2])
+            key = (tri[0].strip().lower(), tri[2].strip().lower())
             if key in seen:
                 continue
             seen.add(key)
-            pairs.append(f"({tri[0]}, {tri[2]})")
+            pairs.append(f"({tri[0].strip()}, {tri[2].strip().lower()})")
         return "; ".join(pairs) if pairs else "None"
 
     elif task == "tasd":

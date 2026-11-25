@@ -74,6 +74,11 @@ Các công việc đã thực hiện:
     - **Neutral F1 theo từng miền:** Hotel đạt 17.65%, Laptop đạt 15.24%, Restaurant đạt 19.05% (toàn bộ trước đó đều 0.00%).
     - **Test Macro-F1:** Tăng từ **39.09% ➔ 40.02%**.
   - [x] Xuất báo cáo so sánh chi tiết và tích hợp trực tiếp vào Tab 3 Web UI Streamlit.
+- [x] HOÀN THIỆN HỆ THỐNG TIẾNG ANH ĐA MIỀN (HỘI TỤ 8 EPOCH & KIỂM THỬ):
+  - [x] Sửa toàn bộ lỗi logic trong `src/dataset.py`, `src/train.py`, `src/run_ablation.py`, `app.py` và đồng bộ `README.md`.
+  - [x] Huấn luyện hội tụ 8 epoch cho `baseline_e8_s42` (Test Micro-F1 = 64.55%, Macro-F1 = 46.43%) và `wl_p03_e8_s42` (Test Micro-F1 = 64.61%, Macro-F1 = 52.23%, Neutral F1 = 30.51%, Polarity Acc = 87.72%).
+  - [x] Kiểm thử thành công trên 20 câu đánh giá tiếng Anh tự nhiên (`src/smoke_test_en.py`).
+  - [x] Cập nhật tự động biểu đồ từ `results/*.json` (`docs/picture/generate_slide_charts.py`) và đồng bộ Slide/README.
 📌 GIAI ĐOÀN 5: Mở rộng Cuối kỳ (Final Term Scope - Đa ngôn ngữ)
 Thời gian dự kiến: Thực hiện sau khi kết thúc báo cáo giữa kỳ.
 Thuận lợi lớn: Codebase M-ABSA và mô hình mT5 vốn được xây dựng cho 21 ngôn ngữ.
